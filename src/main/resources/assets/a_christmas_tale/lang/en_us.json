@@ -1,4 +1,7 @@
 {
-  "item.a_christmas_tale.candybar": "Candybar",
-  "item.a_christmas_tale.snowflake": "Snowflake"
+  "item.a_christmas_tale.candy": "Candy",
+  "item.a_christmas_tale.snowflake": "Snowflake",
+
+  "block.a_christmas_tale.candy_block": "Block of Candy",
+  "itemgroup.a_christmas_tale.a_christmas_tale_items": "A Christmas Tale"
 }
