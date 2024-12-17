@@ -19,7 +19,7 @@
 			"sweetskylia.act.AChristmasTale"
 		],
 		"client": [
-			"sweetskylia.act.AChristmasTaleClient"
+			"sweetskylia.act.AChristmasTaleMain"
 		],
 		"fabric-datagen": [
 			"sweetskylia.act.AChristmasTaleDataGenerator"
