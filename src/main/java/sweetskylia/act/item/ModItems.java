@@ -8,11 +8,12 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import sweetskylia.act.AChristmasTale;
+import sweetskylia.act.item.Custom.HotChocolate;
 
 public class ModItems {
     public static final Item CANDY = registerItem("candy", new Item(new Item.Settings().food(ModFoodComponents.CANDY)));
     public static final Item SNOWFLAKE = registerItem("snowflake", new Item(new Item.Settings()));
-
+    public static final Item HOT_CHOCOLATE = registerItem("hot_chocolate", new HotChocolate(new HotChocolate.Settings().food(ModFoodComponents.HOT_CHOCOLATE)));
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(AChristmasTale.MOD_ID, name), item);
     }

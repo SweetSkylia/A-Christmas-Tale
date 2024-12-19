@@ -20,6 +20,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.SNOWFLAKE);
                         entries.add(ModItems.CANDY);
+                        entries.add(ModItems.HOT_CHOCOLATE);
                         entries.add(ModBlocks.CANDY_BLOCK);
                     }).build());
 
