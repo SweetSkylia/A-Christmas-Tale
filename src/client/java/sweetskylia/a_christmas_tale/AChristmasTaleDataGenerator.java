@@ -1,4 +1,4 @@
-package sweetskylia.act;
+package sweetskylia.a_christmas_tale;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

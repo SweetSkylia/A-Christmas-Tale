@@ -1,12 +1,12 @@
-package sweetskylia.act;
+package sweetskylia.a_christmas_tale;
 
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sweetskylia.act.block.ModBlocks;
-import sweetskylia.act.item.ModItemGroups;
-import sweetskylia.act.item.ModItems;
+import sweetskylia.a_christmas_tale.block.ModBlocks;
+import sweetskylia.a_christmas_tale.item.ModItemGroups;
+import sweetskylia.a_christmas_tale.item.ModItems;
 
 public class AChristmasTale implements ModInitializer {
 	public static final String MOD_ID = "a_christmas_tale";

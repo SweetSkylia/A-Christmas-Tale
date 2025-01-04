@@ -16,13 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"sweetskylia.act.AChristmasTale"
+			"sweetskylia.a_christmas_tale.AChristmasTale"
 		],
 		"client": [
-			"sweetskylia.act.AChristmasTaleMain"
+			"sweetskylia.a_christmas_tale.AChristmasTaleMain"
 		],
 		"fabric-datagen": [
-			"sweetskylia.act.AChristmasTaleDataGenerator"
+			"sweetskylia.a_christmas_tale.AChristmasTaleDataGenerator"
 		]
 	},
 	"mixins": [

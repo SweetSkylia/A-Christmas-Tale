@@ -1,8 +1,6 @@
-package sweetskylia.act.item;
+package sweetskylia.a_christmas_tale.item;
 
-import net.minecraft.block.Portal;
 import net.minecraft.component.type.FoodComponent;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 

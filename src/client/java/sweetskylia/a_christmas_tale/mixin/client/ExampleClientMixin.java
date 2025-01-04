@@ -1,4 +1,4 @@
-package sweetskylia.act.mixin.client;
+package sweetskylia.a_christmas_tale.mixin.client;
 
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;

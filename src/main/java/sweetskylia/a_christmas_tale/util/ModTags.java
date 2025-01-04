@@ -1,7 +1,7 @@
-package sweetskylia.act.util;
+package sweetskylia.a_christmas_tale.util;
 
 
-import sweetskylia.act.AChristmasTale;
+import sweetskylia.a_christmas_tale.AChristmasTale;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
