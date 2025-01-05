@@ -22,6 +22,10 @@ public class ModItemGroups {
                         entries.add(ModItems.CANDY);
                         entries.add(ModItems.HOT_CHOCOLATE);
                         entries.add(ModBlocks.CANDY_BLOCK);
+
+                        //CORE ORE
+                        entries.add(ModBlocks.STELLAR_HEART_ORE);
+                        entries.add(ModItems.STELLAR_HEART);
                     }).build());
 
     public static void registerItemGroups() {
