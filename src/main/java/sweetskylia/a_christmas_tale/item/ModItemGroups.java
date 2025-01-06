@@ -17,15 +17,16 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.SNOWFLAKE))
                     .displayName(Text.translatable("itemgroup.a_christmas_tale.a_christmas_tale_items"))
                     .entries((displayContext, entries) -> {
-
-                        entries.add(ModItems.SNOWFLAKE);
+                        //Blocks
+                        entries.add(ModBlocks.STELLAR_HEART_ORE);
+                        entries.add(ModBlocks.CANDY_BLOCK);
+                        //Items
+                        entries.add(ModItems.STELLAR_HEART);
                         entries.add(ModItems.CANDY);
                         entries.add(ModItems.HOT_CHOCOLATE);
-                        entries.add(ModBlocks.CANDY_BLOCK);
+                        entries.add(ModItems.SNOWFLAKE);
+                        entries.add(ModItems.FROZEN_SWORD);
 
-                        //CORE ORE
-                        entries.add(ModBlocks.STELLAR_HEART_ORE);
-                        entries.add(ModItems.STELLAR_HEART);
                     }).build());
 
     public static void registerItemGroups() {

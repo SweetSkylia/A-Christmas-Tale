@@ -25,7 +25,7 @@ public class ModBlocks {
     //====== CUSTOM ORES
     public static final Block STELLAR_HEART_ORE = registerBlock("stellar_heart_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
-                    AbstractBlock.Settings.create().strength(3f).requiresTool()));
+                    AbstractBlock.Settings.create().strength(5.5f).requiresTool()));
 
     //INIT BLOCKS REGISTERING
     private static void registerBlockItem(String name, Block block) {
