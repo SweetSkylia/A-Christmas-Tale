@@ -26,7 +26,7 @@ public class ModItemGroups {
                         entries.add(ModItems.HOT_CHOCOLATE);
                         entries.add(ModItems.SNOWFLAKE);
                         entries.add(ModItems.FROZEN_SWORD);
-
+                        entries.add(ModItems.FROZEN_STELLAR_HEART);
                     }).build());
 
     public static void registerItemGroups() {

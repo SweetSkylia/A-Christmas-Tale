@@ -12,6 +12,7 @@ public class ModItems {
     public static final Item CANDY = registerItem("candy", new Item(new Item.Settings().food(ModFoodComponents.CANDY)));
     public static final Item SNOWFLAKE = registerItem("snowflake", new Item(new Item.Settings()));
     public static final Item STELLAR_HEART = registerItem("stellar_heart", new Item(new Item.Settings()));
+    public static final Item FROZEN_STELLAR_HEART = registerItem("frozen_stellar_heart", new Item(new Item.Settings()));
     public static final Item HOT_CHOCOLATE = registerItem("hot_chocolate", new HotChocolate(new HotChocolate.Settings().food(ModFoodComponents.HOT_CHOCOLATE)));
 
     public static final Item FROZEN_SWORD = registerItem("frozen_sword",new SwordItem(ToolMaterials.IRON, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 3, 5f))));
@@ -25,6 +26,7 @@ public class ModItems {
             entries.add(CANDY);
             entries.add(SNOWFLAKE);
             entries.add(STELLAR_HEART);
+            entries.add(FROZEN_STELLAR_HEART);
         } );
     }
 }
