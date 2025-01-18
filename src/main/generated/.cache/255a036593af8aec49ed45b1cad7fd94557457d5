@@ -1,0 +1,4 @@
+// 1.21	2025-01-18T18:07:10.9003521	A Christmas Tale/Tags for minecraft:block
+1f72a5a894a35f78c803fead21c3719cec52bd64 data\minecraft\tags\block\mineable\pickaxe.json
+254f98b0f9752da333f9a1ea50752b085f1421a1 data\minecraft\tags\block\needs_iron_tool.json
+180eb8363e05cb4e7e875739e77d427a6377d9ec data\minecraft\tags\block\needs_diamond_tool.json

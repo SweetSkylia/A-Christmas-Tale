@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "a-christmas-tale",
+	"id": "a_christmas_tale",
 	"version": "${version}",
 	"name": "A Christmas Tale",
 	"description": "This is an example description! Tell everyone what your mod is about!",
@@ -12,7 +12,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/a-christmas-tale/icon.png",
+	"icon": "assets/a_christmas_tale/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [

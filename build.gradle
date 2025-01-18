@@ -22,7 +22,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"a-christmas-tale" {
+		"a_christmas_tale" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
