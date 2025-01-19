@@ -15,6 +15,7 @@ import sweetskylia.a_christmas_tale.item.ModItems;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.item.ItemStack;
+import sweetskylia.a_christmas_tale.world.gen.ModWorldGeneration;
 
 public class AChristmasTale implements ModInitializer {
 	public static final String MOD_ID = "a_christmas_tale";
@@ -63,6 +64,7 @@ public class AChristmasTale implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModWorldGeneration.generateModWorldGen();
 		LOGGER.info("uwu");
 
 		ServerTickEvents.START_WORLD_TICK.register(world -> {
