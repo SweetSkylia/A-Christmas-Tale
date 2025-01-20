@@ -18,11 +18,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.CANDY_BLOCK)
-                .add(ModBlocks.STELLAR_HEART_ORE);
+                .add(ModBlocks.STELLAR_HEART_ORE)
+                .add(ModBlocks.STELLAR_BLOCK)
+                .add(ModBlocks.FROZEN_STELLAR_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.CANDY_BLOCK);
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.STELLAR_HEART_ORE);
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.STELLAR_HEART_ORE)
+                .add(ModBlocks.STELLAR_BLOCK)
+                .add(ModBlocks.FROZEN_STELLAR_BLOCK);
     }
 }

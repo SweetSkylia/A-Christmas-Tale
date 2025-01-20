@@ -27,6 +27,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.CANDY_BLOCK);
+        addDrop(ModBlocks.STELLAR_BLOCK);
+        addDrop(ModBlocks.FROZEN_STELLAR_BLOCK);
         addDrop(ModBlocks.STELLAR_HEART_ORE, multipleDrops(ModBlocks.STELLAR_HEART_ORE,ModItems.STELLAR_HEART,1,3));
     }
 

@@ -18,6 +18,9 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CANDY_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STELLAR_HEART_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STELLAR_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FROZEN_STELLAR_BLOCK);
+
     }
 
     @Override

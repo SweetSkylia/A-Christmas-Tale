@@ -20,7 +20,11 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.GLASS)));
 
+    public static final Block STELLAR_BLOCK = registerBlock("stellar_block",
+            new Block(AbstractBlock.Settings.create().strength(5.5f).requiresTool()));
 
+    public static final Block FROZEN_STELLAR_BLOCK = registerBlock("frozen_stellar_block",
+            new Block(AbstractBlock.Settings.create().strength(5.5f).requiresTool()));
 
     //====== CUSTOM ORES
     public static final Block STELLAR_HEART_ORE = registerBlock("stellar_heart_ore",

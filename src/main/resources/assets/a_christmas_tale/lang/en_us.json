@@ -7,5 +7,7 @@
   "item.a_christmas_tale.stellar_heart": "Stellar Heart",
   "block.a_christmas_tale.stellar_heart_ore": "Stellar Heart Ore",
   "block.a_christmas_tale.candy_block": "Block of Candy",
-  "itemgroup.a_christmas_tale.a_christmas_tale_items": "A Christmas Tale"
+  "itemgroup.a_christmas_tale.a_christmas_tale_items": "A Christmas Tale",
+  "block.a_christmas_tale.stellar_block": "Block of Stellar",
+  "block.a_christmas_tale.frozen_stellar_block": "Block of Frozen Stellar"
 }

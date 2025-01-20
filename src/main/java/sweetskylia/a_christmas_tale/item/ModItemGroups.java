@@ -20,6 +20,8 @@ public class ModItemGroups {
                         //Blocks
                         entries.add(ModBlocks.STELLAR_HEART_ORE);
                         entries.add(ModBlocks.CANDY_BLOCK);
+                        entries.add(ModBlocks.STELLAR_BLOCK);
+                        entries.add(ModBlocks.FROZEN_STELLAR_BLOCK);
                         //Items
                         entries.add(ModItems.STELLAR_HEART);
                         entries.add(ModItems.CANDY);
