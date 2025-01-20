@@ -3,15 +3,32 @@ package sweetskylia.a_christmas_tale.world;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.structure.rule.RuleTest;
+import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
+import net.minecraft.world.gen.feature.*;
 import sweetskylia.a_christmas_tale.AChristmasTale;
+import sweetskylia.a_christmas_tale.block.ModBlocks;
+
+import java.util.List;
 
 public class ModConfiguredFeatures {
 
+    public static final RegistryKey<ConfiguredFeature<?,?>> STELLAR_HEART_ORE_KEY = registerKey("stellar_heart_ore");
+
+
     public static void bootstrap(Registerable<ConfiguredFeature<?,?>> context){
+        RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES); //règle pour générer les minerais dans la stone classique
+
+        List<OreFeatureConfig.Target> overworldStellarHeartOres =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.STELLAR_HEART_ORE.getDefaultState())
+                        //ajouter ici les futures règles pour ce block
+                        );
+
+        register(context,STELLAR_HEART_ORE_KEY,Feature.ORE, new OreFeatureConfig(overworldStellarHeartOres, 4));
+
+
 
     }
 

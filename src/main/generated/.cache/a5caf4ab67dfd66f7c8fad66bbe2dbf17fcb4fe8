@@ -1,10 +1,10 @@
-// 1.21	2025-01-20T14:13:56.6306181	A Christmas Tale/Model Definitions
+// 1.21	2025-01-20T23:19:26.2988374	A Christmas Tale/Model Definitions
 bcf237c4ab87893fab4d7bced8e1e764bc011c9a assets\a_christmas_tale\blockstates\stellar_block.json
 0f07a32647b22112e668745c0db9e154bf417cbd assets\a_christmas_tale\models\item\stellar_block.json
 ec328bafce42d196af672f3d63576ec3656f5a44 assets\a_christmas_tale\models\item\candy_block.json
 525eb8643c4a67ba17e8c7bed730adb3959158a1 assets\a_christmas_tale\models\item\candy.json
-1bf4bf223a64b8632a5b61e25b17d61fefbed52b assets\a_christmas_tale\models\item\snowflake.json
 475c71e2eb1ab65e863232fad1eb48cee52e13ab assets\a_christmas_tale\models\item\stellar_heart.json
+1bf4bf223a64b8632a5b61e25b17d61fefbed52b assets\a_christmas_tale\models\item\snowflake.json
 057a7f3630532bdd23e9b754d677ce5d9cd0a64f assets\a_christmas_tale\models\block\candy_block.json
 26e55f7042d13a2fc3c8065433e99479cdf69373 assets\a_christmas_tale\models\item\stellar_heart_ore.json
 992ba1cef4f5ef16c255a662192118f310eeca6a assets\a_christmas_tale\models\item\frozen_stellar_block.json
