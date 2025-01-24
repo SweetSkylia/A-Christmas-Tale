@@ -9,5 +9,10 @@
   "block.a_christmas_tale.candy_block": "Block of Candy",
   "itemgroup.a_christmas_tale.a_christmas_tale_items": "A Christmas Tale",
   "block.a_christmas_tale.stellar_block": "Block of Stellar",
-  "block.a_christmas_tale.frozen_stellar_block": "Block of Frozen Stellar"
+  "block.a_christmas_tale.frozen_stellar_block": "Block of Frozen Stellar",
+  "block.a_christmas_tale.christmas_carpet": "Christmas Carpet",
+  "block.a_christmas_tale.winter_carpet": "Winter Carpet",
+  "block.a_christmas_tale.winter_wool": "Winter Wool",
+  "block.a_christmas_tale.christmas_wool": "Christmas Wool"
+
 }

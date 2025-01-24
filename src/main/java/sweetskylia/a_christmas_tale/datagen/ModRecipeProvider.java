@@ -41,5 +41,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 //        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD)
 
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD,ModItems.HOT_CHOCOLATE)
+                .pattern("SC")
+                .input('S', Items.SUGAR)
+                .input('C', Items.COCOA_BEANS)
+                .criterion(hasItem(Items.COCOA_BEANS),conditionsFromItem(Items.COCOA_BEANS))
+                .offerTo(exporter);
     }
 }

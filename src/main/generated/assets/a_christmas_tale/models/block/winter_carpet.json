@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "a_christmas_tale:block/winter_wool"
+  }
+}

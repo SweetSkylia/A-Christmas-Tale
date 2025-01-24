@@ -1,5 +1,7 @@
-// 1.21	2025-01-20T23:19:26.3003539	A Christmas Tale/Block Loot Tables
+// 1.21	2025-01-24T14:18:02.102771	A Christmas Tale/Block Loot Tables
+a0ff94f1de31a0cb7da095cc330234f8037fe63b data\a_christmas_tale\loot_table\blocks\winter_carpet.json
 acd6fbbb921ecc32d76abad9049bdb4d2a1aa0b2 data\a_christmas_tale\loot_table\blocks\frozen_stellar_block.json
 6263fba9ea6656520ab5bc94887c47566c624bc8 data\a_christmas_tale\loot_table\blocks\stellar_heart_ore.json
 dff51e029b3ff73544fce33ac2f5d0243b5c85eb data\a_christmas_tale\loot_table\blocks\stellar_block.json
+76692b73a01d239a834f45b501f763cb0e2a0a08 data\a_christmas_tale\loot_table\blocks\christmas_carpet.json
 a7c81d273c5f0625c52e9645b20d66915fe49f63 data\a_christmas_tale\loot_table\blocks\candy_block.json

@@ -18,17 +18,28 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.a_christmas_tale.a_christmas_tale_items"))
                     .entries((displayContext, entries) -> {
                         //Blocks
+                        entries.add(ModBlocks.CHRISTMAS_CARPET);
+                        entries.add(ModBlocks.CHRISTMAS_WOOL);
+                        entries.add(ModBlocks.WINTER_CARPET);
+                        entries.add(ModBlocks.WINTER_WOOL);
                         entries.add(ModBlocks.STELLAR_HEART_ORE);
-                        entries.add(ModBlocks.CANDY_BLOCK);
                         entries.add(ModBlocks.STELLAR_BLOCK);
                         entries.add(ModBlocks.FROZEN_STELLAR_BLOCK);
+                        entries.add(ModBlocks.CANDY_BLOCK);
+
+
+
                         //Items
                         entries.add(ModItems.STELLAR_HEART);
+                        entries.add(ModItems.FROZEN_STELLAR_HEART);
                         entries.add(ModItems.CANDY);
                         entries.add(ModItems.HOT_CHOCOLATE);
                         entries.add(ModItems.SNOWFLAKE);
                         entries.add(ModItems.FROZEN_SWORD);
-                        entries.add(ModItems.FROZEN_STELLAR_HEART);
+
+
+
+
                     }).build());
 
     public static void registerItemGroups() {
