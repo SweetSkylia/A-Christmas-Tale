@@ -7,12 +7,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 
@@ -41,32 +39,9 @@ public class FrozenSword extends SwordItem {
                 });}
 
 
-//            spawnParticles(target.getWorld(), target.getBlockPos(), ParticleTypes.EXPLOSION);
         }
 
         return super.postHit(context, target, attacker);
     }
-
-    private void spawnParticles(World world, BlockPos pos, ParticleEffect particles){
-
-        System.out.println(world.isClient);
-        if (world.isClient){
-        double radius = 1.5;
-        for (int i = 0; i < 100; i++) {
-            double xOffset = (world.random.nextDouble() - 0.5) * 2 * radius; // Décalage aléatoire en x
-            double yOffset = (world.random.nextDouble() - 0.5) * 2 * radius; // Décalage aléatoire en y
-            double zOffset = (world.random.nextDouble() - 0.5) * 2 * radius; // Décalage aléatoire en z
-
-
-            double x = (pos.getX() + xOffset);
-            double y = (pos.getY() + yOffset + 1);
-            double z = (pos.getZ() + zOffset);
-
-            System.out.println("Particle: " + particles.toString() + "x: " + x + "y: " + y + "z: " + z);
-            world.addParticle(particles,true, x, y, z, 0, 0, 0);
-        }
-
-        }
-        }//Nombres de particules
 
 }

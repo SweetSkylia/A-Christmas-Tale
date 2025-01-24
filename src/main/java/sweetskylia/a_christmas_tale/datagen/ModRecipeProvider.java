@@ -4,12 +4,10 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
@@ -34,11 +32,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
        offerBlasting(exporter, STELLAR_HEART_SMELTABLES, RecipeCategory.MISC,ModItems.STELLAR_HEART,0.25f,100, "stellar_heart");
 
        offerReversibleCompactingRecipes(exporter, RecipeCategory.FOOD, ModItems.CANDY, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CANDY_BLOCK);
-//       offerSmithingTrimRecipe();
+
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.PAPER),Ingredient.ofItems(Items.IRON_SWORD),Ingredient.ofItems(ModItems.FROZEN_STELLAR_HEART), RecipeCategory.TOOLS, ModItems.FROZEN_SWORD)
                 .criterion(hasItem(ModItems.FROZEN_STELLAR_HEART), conditionsFromItem(ModItems.FROZEN_STELLAR_HEART))
                 .offerTo(exporter, Identifier.of(AChristmasTale.MOD_ID, "frozen_sword_from_smithing"));
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD)
+
 
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD,ModItems.HOT_CHOCOLATE)
