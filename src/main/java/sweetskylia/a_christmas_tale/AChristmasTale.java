@@ -5,8 +5,11 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBiomeTags;
 import net.minecraft.entity.ItemEntity;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
+import net.minecraft.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
@@ -16,6 +19,8 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.item.ItemStack;
 import sweetskylia.a_christmas_tale.world.gen.ModWorldGeneration;
+
+import java.util.UUID;
 
 public class AChristmasTale implements ModInitializer {
 	public static final String MOD_ID = "a_christmas_tale";
@@ -51,6 +56,7 @@ public class AChristmasTale implements ModInitializer {
 				.forEach(itemEntity -> {
 					if ((itemEntity.getStack().getItem() == ModItems.STELLAR_HEART) && (isBiomeCold(world, itemEntity))) {
 						ConvertToFrozenStellarHeart(world,itemEntity);
+						spawnSnowParticles(world, itemEntity);
 					}
 				});
 	}
@@ -76,9 +82,12 @@ public class AChristmasTale implements ModInitializer {
 
 		}
 
-
-
-
+		
+private void spawnSnowParticles(World world, ItemEntity itemEntity) {
+	if (world instanceof ServerWorld serverWorld) {
+		serverWorld.spawnParticles(ParticleTypes.SNOWFLAKE, itemEntity.getX(), itemEntity.getY(), itemEntity.getZ(), 50, 0.4, 0.4, 0.4, 0.1);
+	}
+}
 
 
 
