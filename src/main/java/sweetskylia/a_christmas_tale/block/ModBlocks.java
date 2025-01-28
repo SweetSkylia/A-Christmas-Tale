@@ -56,6 +56,15 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(CANDY_BLOCK);
+            entries.add(STELLAR_HEART_ORE);
+            entries.add(STELLAR_BLOCK);
+            entries.add(FROZEN_STELLAR_BLOCK);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(entries -> {
+            entries.add(CHRISTMAS_WOOL);
+            entries.add(CHRISTMAS_CARPET);
+            entries.add(WINTER_WOOL);
+            entries.add(WINTER_CARPET);
         });
     }
 }
