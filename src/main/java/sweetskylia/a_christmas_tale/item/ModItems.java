@@ -8,6 +8,7 @@ import net.minecraft.util.Identifier;
 import sweetskylia.a_christmas_tale.AChristmasTale;
 import sweetskylia.a_christmas_tale.item.Custom.FrozenSword;
 import sweetskylia.a_christmas_tale.item.Custom.HotChocolate;
+import sweetskylia.a_christmas_tale.item.Custom.SnowCannon;
 
 public class ModItems {
     public static final Item CANDY = registerItem("candy", new Item(new Item.Settings().food(ModFoodComponents.CANDY)));
@@ -16,6 +17,7 @@ public class ModItems {
     public static final Item FROZEN_STELLAR_HEART = registerItem("frozen_stellar_heart", new Item(new Item.Settings()));
     public static final Item HOT_CHOCOLATE = registerItem("hot_chocolate", new HotChocolate(new HotChocolate.Settings().food(ModFoodComponents.HOT_CHOCOLATE)));
 
+    public static final Item SNOW_CANNON = registerItem("snow_cannon", new SnowCannon(new Item.Settings()));
     public static final Item FROZEN_SWORD = registerItem("frozen_sword",new FrozenSword(ToolMaterials.IRON, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 3, 5f))));
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(AChristmasTale.MOD_ID, name), item);
@@ -24,10 +26,17 @@ public class ModItems {
     public static void registerModItems(){
         AChristmasTale.LOGGER.info("Registering Mod Items for " + AChristmasTale.MOD_ID);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries ->{
-            entries.add(CANDY);
             entries.add(SNOWFLAKE);
             entries.add(STELLAR_HEART);
             entries.add(FROZEN_STELLAR_HEART);
         } );
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+            entries.add(FROZEN_SWORD);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
+            entries.add(HOT_CHOCOLATE);
+            entries.add(CANDY);
+        });
     }
 }
