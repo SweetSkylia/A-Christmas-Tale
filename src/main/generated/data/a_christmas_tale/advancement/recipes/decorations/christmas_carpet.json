@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_christmas_wool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "a_christmas_tale:christmas_wool"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "a_christmas_tale:christmas_carpet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_christmas_wool"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "a_christmas_tale:christmas_carpet"
+    ]
+  }
+}

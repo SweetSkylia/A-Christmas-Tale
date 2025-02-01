@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": {
+      "item": "a_christmas_tale:winter_wool"
+    }
+  },
+  "pattern": [
+    "WW"
+  ],
+  "result": {
+    "count": 3,
+    "id": "a_christmas_tale:winter_carpet"
+  }
+}

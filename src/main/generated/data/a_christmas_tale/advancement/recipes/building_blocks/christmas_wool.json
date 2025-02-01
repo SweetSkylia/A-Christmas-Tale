@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stellar_heart": {
+      "conditions": {
+        "items": [
+          {
+            "items": "a_christmas_tale:stellar_heart"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "a_christmas_tale:christmas_wool"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stellar_heart"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "a_christmas_tale:christmas_wool"
+    ]
+  }
+}

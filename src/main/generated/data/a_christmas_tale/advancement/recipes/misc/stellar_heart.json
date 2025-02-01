@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stellar_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "a_christmas_tale:stellar_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:stellar_heart"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stellar_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:stellar_heart"
+    ]
+  }
+}
