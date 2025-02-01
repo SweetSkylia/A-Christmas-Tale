@@ -18,18 +18,19 @@ public class ModItems {
     public static final Item HOT_CHOCOLATE = registerItem("hot_chocolate", new HotChocolate(new HotChocolate.Settings().food(ModFoodComponents.HOT_CHOCOLATE)));
 
     public static final Item SNOW_CANNON = registerItem("snow_cannon", new SnowCannon(new Item.Settings()));
-    public static final Item FROZEN_SWORD = registerItem("frozen_sword",new FrozenSword(ToolMaterials.IRON, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 3, 5f))));
+    public static final Item FROZEN_SWORD = registerItem("frozen_sword", new FrozenSword(ToolMaterials.IRON, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.IRON, 3, 5f))));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(AChristmasTale.MOD_ID, name), item);
     }
 
-    public static void registerModItems(){
+    public static void registerModItems() {
         AChristmasTale.LOGGER.info("Registering Mod Items for " + AChristmasTale.MOD_ID);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries ->{
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(SNOWFLAKE);
             entries.add(STELLAR_HEART);
             entries.add(FROZEN_STELLAR_HEART);
-        } );
+        });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(FROZEN_SWORD);

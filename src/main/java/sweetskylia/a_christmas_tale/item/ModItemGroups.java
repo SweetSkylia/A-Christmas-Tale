@@ -28,7 +28,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CANDY_BLOCK);
 
 
-
                         //Items
                         entries.add(ModItems.STELLAR_HEART);
                         entries.add(ModItems.FROZEN_STELLAR_HEART);
@@ -36,8 +35,6 @@ public class ModItemGroups {
                         entries.add(ModItems.HOT_CHOCOLATE);
                         entries.add(ModItems.SNOWFLAKE);
                         entries.add(ModItems.FROZEN_SWORD);
-
-
 
 
                     }).build());

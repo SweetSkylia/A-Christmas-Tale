@@ -5,6 +5,7 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.CarpetBlock;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -28,18 +29,18 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(5.5f).requiresTool()));
 
     public static final Block CHRISTMAS_CARPET = registerBlock("christmas_carpet",
-            new CarpetBlock(AbstractBlock.Settings.create().strength(0.1f).requiresTool()));
+            new CarpetBlock(AbstractBlock.Settings.create().strength(0.1F).sounds(BlockSoundGroup.WOOL).burnable()));
 
     public static final Block CHRISTMAS_WOOL = registerBlock("christmas_wool",
-            new Block(AbstractBlock.Settings.create().strength(0.8f).requiresTool()));
-    
-    public static final Block WINTER_CARPET = registerBlock("winter_carpet", new CarpetBlock(AbstractBlock.Settings.create().strength(0.1f).requiresTool()));
+            new Block(AbstractBlock.Settings.create().instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sounds(BlockSoundGroup.WOOL).burnable()));
+
+    public static final Block WINTER_CARPET = registerBlock("winter_carpet", new CarpetBlock(AbstractBlock.Settings.create().strength(0.1F).sounds(BlockSoundGroup.WOOL).burnable()));
 
     public static final Block WINTER_WOOL = registerBlock("winter_wool",
-            new Block(AbstractBlock.Settings.create().strength(0.8f).requiresTool()));
+            new Block(AbstractBlock.Settings.create().instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sounds(BlockSoundGroup.WOOL).burnable()));
     //====== CUSTOM ORES
     public static final Block STELLAR_HEART_ORE = registerBlock("stellar_heart_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
                     AbstractBlock.Settings.create().strength(5.5f).requiresTool()));
 
     //INIT BLOCKS REGISTERING
@@ -47,10 +48,12 @@ public class ModBlocks {
         Registry.register(Registries.ITEM, Identifier.of(AChristmasTale.MOD_ID, name),
                 new BlockItem(block, new Item.Settings()));
     }
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(AChristmasTale.MOD_ID,name), block);
+        return Registry.register(Registries.BLOCK, Identifier.of(AChristmasTale.MOD_ID, name), block);
     }
+
     public static void registerModBlocks() {
         AChristmasTale.LOGGER.info("[" + AChristmasTale.MOD_ID + "] Registering Blocks");
 

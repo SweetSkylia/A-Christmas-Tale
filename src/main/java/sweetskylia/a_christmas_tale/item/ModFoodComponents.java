@@ -9,6 +9,5 @@ public class ModFoodComponents {
             .saturationModifier(0.25f).build();
 
     public static final FoodComponent HOT_CHOCOLATE = new FoodComponent.Builder().alwaysEdible().nutrition(3)
-            .saturationModifier(0.25f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100*20, 2), 100.0f).build();
-
+            .saturationModifier(0.25f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 3 * 20, 1), 100.0f).build();
 }
