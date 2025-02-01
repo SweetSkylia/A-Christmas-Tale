@@ -20,9 +20,12 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.CHRISTMAS_WOOL,ModBlocks.CHRISTMAS_CARPET);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.WINTER_WOOL,ModBlocks.WINTER_CARPET);
 
+        blockStateModelGenerator.registerLog(ModBlocks.RED_OMORIKA_LOG).log(ModBlocks.RED_OMORIKA_LOG).wood(ModBlocks.RED_OMORIKA_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_RED_OMORIKA_LOG).log(ModBlocks.STRIPPED_RED_OMORIKA_LOG).wood(ModBlocks.STRIPPED_RED_OMORIKA_WOOD);
 
-
-
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RED_OMORIKA_PLANKS);
+        blockStateModelGenerator.registerSingleton(ModBlocks.RED_OMORIKA_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.RED_OMORIKA_SAPLING,BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override

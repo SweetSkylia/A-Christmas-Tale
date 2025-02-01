@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "a_christmas_tale:block/red_omorika_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "a_christmas_tale:block/red_omorika_wood"
+    },
+    "axis=z": {
+      "model": "a_christmas_tale:block/red_omorika_wood",
+      "x": 90
+    }
+  }
+}

@@ -32,6 +32,15 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CHRISTMAS_CARPET);
         addDrop(ModBlocks.WINTER_CARPET);
         addDrop(ModBlocks.STELLAR_HEART_ORE, multipleDrops(ModBlocks.STELLAR_HEART_ORE,ModItems.STELLAR_HEART,1,3));
+
+        addDrop(ModBlocks.RED_OMORIKA_LOG);
+        addDrop(ModBlocks.RED_OMORIKA_WOOD);
+        addDrop(ModBlocks.STRIPPED_RED_OMORIKA_LOG);
+        addDrop(ModBlocks.STRIPPED_RED_OMORIKA_WOOD);
+        addDrop(ModBlocks.RED_OMORIKA_PLANKS);
+        addDrop(ModBlocks.RED_OMORIKA_SAPLING);
+
+        addDrop(ModBlocks.RED_OMORIKA_LEAVES, leavesDrops(ModBlocks.RED_OMORIKA_LEAVES, ModBlocks.RED_OMORIKA_SAPLING, 0.0625f));
     }
 
 

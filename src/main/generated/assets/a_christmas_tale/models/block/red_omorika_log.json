@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "a_christmas_tale:block/red_omorika_log_top",
+    "side": "a_christmas_tale:block/red_omorika_log"
+  }
+}

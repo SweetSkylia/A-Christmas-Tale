@@ -1,10 +1,7 @@
 package sweetskylia.a_christmas_tale.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.CarpetBlock;
-import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -42,6 +39,29 @@ public class ModBlocks {
     public static final Block STELLAR_HEART_ORE = registerBlock("stellar_heart_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
                     AbstractBlock.Settings.create().strength(5.5f).requiresTool()));
+
+    //WOOD
+    public static final Block RED_OMORIKA_LOG = registerBlock("red_omorika_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+
+    public static final Block RED_OMORIKA_WOOD = registerBlock("red_omorika_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)));
+
+    public static final Block STRIPPED_RED_OMORIKA_LOG = registerBlock("stripped_red_omorika_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)));
+
+    public static final Block STRIPPED_RED_OMORIKA_WOOD= registerBlock("stripped_red_omorika_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final Block RED_OMORIKA_PLANKS = registerBlock("red_omorika_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+
+    public static final Block RED_OMORIKA_LEAVES = registerBlock("red_omorika_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+
+    public static final Block RED_OMORIKA_SAPLING = registerBlock("red_omorika_sapling",
+//            new SaplingBlock(AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
 
     //INIT BLOCKS REGISTERING
     private static void registerBlockItem(String name, Block block) {

@@ -27,6 +27,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FROZEN_STELLAR_BLOCK);
                         entries.add(ModBlocks.CANDY_BLOCK);
 
+                        entries.add(ModBlocks.RED_OMORIKA_LEAVES);
+                        entries.add(ModBlocks.RED_OMORIKA_LOG);
+                        entries.add(ModBlocks.STRIPPED_RED_OMORIKA_WOOD);
+                        entries.add(ModBlocks.STRIPPED_RED_OMORIKA_LOG);
+                        entries.add(ModBlocks.RED_OMORIKA_WOOD);
+                        entries.add(ModBlocks.RED_OMORIKA_PLANKS);
+                        entries.add(ModBlocks.RED_OMORIKA_SAPLING);
+
 
                         //Items
                         entries.add(ModItems.STELLAR_HEART);
