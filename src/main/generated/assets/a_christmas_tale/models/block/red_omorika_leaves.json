@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/leaves",
   "textures": {
-    "all": "a_christmas_tale:block/red_morika_leaves"
+    "all": "a_christmas_tale:block/red_omorika_leaves"
   }
 }
