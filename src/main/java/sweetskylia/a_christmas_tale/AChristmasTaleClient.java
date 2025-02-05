@@ -6,8 +6,8 @@ import net.minecraft.client.render.RenderLayer;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
 
 public class AChristmasTaleClient implements ClientModInitializer {
-	@Override
-	public void onInitializeClient() {
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_OMORIKA_SAPLING, RenderLayer.getCutout());
-	}
+    @Override
+    public void onInitializeClient() {
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_OMORIKA_SAPLING, RenderLayer.getCutout());
+    }
 }

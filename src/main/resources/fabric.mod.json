@@ -19,18 +19,14 @@
 			"sweetskylia.a_christmas_tale.AChristmasTale"
 		],
 		"client": [
-			"sweetskylia.a_christmas_tale.AChristmasTaleMain"
+          "sweetskylia.a_christmas_tale.AChristmasTaleClient"
 		],
 		"fabric-datagen": [
 			"sweetskylia.a_christmas_tale.AChristmasTaleDataGenerator"
 		]
 	},
 	"mixins": [
-		"a-christmas-tale.mixins.json",
-		{
-			"config": "a-christmas-tale.client.mixins.json",
-			"environment": "client"
-		}
+		"a-christmas-tale.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.9",
