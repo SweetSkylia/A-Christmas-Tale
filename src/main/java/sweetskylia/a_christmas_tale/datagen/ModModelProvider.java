@@ -25,7 +25,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RED_OMORIKA_PLANKS);
         blockStateModelGenerator.registerSingleton(ModBlocks.RED_OMORIKA_LEAVES, TexturedModel.LEAVES);
-        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.RED_OMORIKA_SAPLING,BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.RED_OMORIKA_SAPLING,BlockStateModelGenerator.TintType.NOT_TINTED, TextureMap.cross(ModBlocks.RED_OMORIKA_SAPLING));
     }
 
     @Override
@@ -36,6 +36,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.HOT_CHOCOLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SNOWFLAKE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FROZEN_STELLAR_HEART, Models.GENERATED);
+//        itemModelGenerator.register(ModBlocks.RED_OMORIKA_SAPLING.asItem(), Models.GENERATED);
     }
 
 

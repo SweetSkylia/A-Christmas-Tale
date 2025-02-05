@@ -12,6 +12,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import sweetskylia.a_christmas_tale.AChristmasTale;
+import sweetskylia.a_christmas_tale.world.tree.ModSaplingGenerators;
 
 public class ModBlocks {
     //====== BLOCKS
@@ -60,8 +61,8 @@ public class ModBlocks {
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
 
     public static final Block RED_OMORIKA_SAPLING = registerBlock("red_omorika_sapling",
-//            new SaplingBlock(AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
-            new Block(AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+            new SaplingBlock(ModSaplingGenerators.RED_OMORIKA,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+//            new Block(AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
 
     //INIT BLOCKS REGISTERING
     private static void registerBlockItem(String name, Block block) {
