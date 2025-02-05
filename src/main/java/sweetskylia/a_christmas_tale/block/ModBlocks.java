@@ -41,7 +41,7 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
                     AbstractBlock.Settings.create().strength(5.5f).requiresTool()));
 
-    //WOOD
+    //RED OMORIKA ========================================================================
     public static final Block RED_OMORIKA_LOG = registerBlock("red_omorika_log",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
 
@@ -62,7 +62,30 @@ public class ModBlocks {
 
     public static final Block RED_OMORIKA_SAPLING = registerBlock("red_omorika_sapling",
             new SaplingBlock(ModSaplingGenerators.RED_OMORIKA,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
-//            new Block(AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+
+    // WHITE OMORIKA (ShiroMorika) ========================================================
+
+    public static final Block SHIROMORIKA_LOG = registerBlock("shiromorika_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+
+    public static final Block SHIROMORIKA_WOOD = registerBlock("shiromorika_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)));
+
+    public static final Block STRIPPED_SHIROMORIKA_LOG = registerBlock("stripped_shiromorika_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)));
+
+    public static final Block STRIPPED_SHIROMORIKA_WOOD= registerBlock("stripped_shiromorika_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final Block SHIROMORIKA_PLANKS = registerBlock("shiromorika_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+
+    public static final Block SHIROMORIKA_LEAVES = registerBlock("shiromorika_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+
+    public static final Block SHIROMORIKA_SAPLING = registerBlock("shiromorika_sapling",
+            new SaplingBlock(ModSaplingGenerators.SHIROMORIKA,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+
 
     //INIT BLOCKS REGISTERING
     private static void registerBlockItem(String name, Block block) {

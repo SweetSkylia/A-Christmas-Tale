@@ -27,6 +27,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FROZEN_STELLAR_BLOCK);
                         entries.add(ModBlocks.CANDY_BLOCK);
 
+                        //TREES
                         entries.add(ModBlocks.RED_OMORIKA_LEAVES);
                         entries.add(ModBlocks.RED_OMORIKA_LOG);
                         entries.add(ModBlocks.STRIPPED_RED_OMORIKA_WOOD);
@@ -34,6 +35,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RED_OMORIKA_WOOD);
                         entries.add(ModBlocks.RED_OMORIKA_PLANKS);
                         entries.add(ModBlocks.RED_OMORIKA_SAPLING);
+
+                        entries.add(ModBlocks.SHIROMORIKA_LEAVES);
+                        entries.add(ModBlocks.SHIROMORIKA_LOG);
+                        entries.add(ModBlocks.STRIPPED_SHIROMORIKA_WOOD);
+                        entries.add(ModBlocks.STRIPPED_SHIROMORIKA_LOG);
+                        entries.add(ModBlocks.SHIROMORIKA_WOOD);
+                        entries.add(ModBlocks.SHIROMORIKA_PLANKS);
+                        entries.add(ModBlocks.SHIROMORIKA_SAPLING);
 
 
                         //Items
