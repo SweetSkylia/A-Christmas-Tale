@@ -21,9 +21,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.RED_OMORIKA_LOG.asItem())
                 .add(ModBlocks.RED_OMORIKA_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_RED_OMORIKA_LOG.asItem())
-                .add(ModBlocks.STRIPPED_RED_OMORIKA_WOOD.asItem());
+                .add(ModBlocks.STRIPPED_RED_OMORIKA_WOOD.asItem())
+                .add(ModBlocks.SHIROMORIKA_LOG.asItem())
+                .add(ModBlocks.SHIROMORIKA_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_SHIROMORIKA_LOG.asItem())
+                .add(ModBlocks.STRIPPED_SHIROMORIKA_WOOD.asItem());
 
         getOrCreateTagBuilder(ItemTags.PLANKS)
-                .add(ModBlocks.RED_OMORIKA_PLANKS.asItem());
+                .add(ModBlocks.RED_OMORIKA_PLANKS.asItem())
+                .add(ModBlocks.SHIROMORIKA_PLANKS.asItem());
     }
 }

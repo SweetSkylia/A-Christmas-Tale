@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "a_christmas_tale:block/stripped_shiromorika_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "a_christmas_tale:block/stripped_shiromorika_log"
+    },
+    "axis=z": {
+      "model": "a_christmas_tale:block/stripped_shiromorika_log_horizontal",
+      "x": 90
+    }
+  }
+}

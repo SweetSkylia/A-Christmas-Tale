@@ -91,6 +91,15 @@ public class AChristmasTale implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_RED_OMORIKA_WOOD, 5,20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.RED_OMORIKA_PLANKS, 5,20);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.RED_OMORIKA_LEAVES, 30,60);
+
+        StrippableBlockRegistry.register(ModBlocks.SHIROMORIKA_LOG, ModBlocks.STRIPPED_SHIROMORIKA_LOG);
+		StrippableBlockRegistry.register(ModBlocks.SHIROMORIKA_WOOD, ModBlocks.STRIPPED_SHIROMORIKA_WOOD);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SHIROMORIKA_LOG, 5,20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SHIROMORIKA_WOOD, 5,20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_SHIROMORIKA_LOG, 5,20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_SHIROMORIKA_WOOD, 5,20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SHIROMORIKA_PLANKS, 5,20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SHIROMORIKA_LEAVES, 30,60);
     }
 
 

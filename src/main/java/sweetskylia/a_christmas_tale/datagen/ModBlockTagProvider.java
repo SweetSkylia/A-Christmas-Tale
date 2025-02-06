@@ -30,13 +30,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STELLAR_BLOCK)
                 .add(ModBlocks.FROZEN_STELLAR_BLOCK);
 
-
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.RED_OMORIKA_LOG)
                 .add(ModBlocks.RED_OMORIKA_WOOD)
                 .add(ModBlocks.STRIPPED_RED_OMORIKA_LOG)
                 .add(ModBlocks.STRIPPED_RED_OMORIKA_WOOD)
-                .add(ModBlocks.RED_OMORIKA_PLANKS);
+                .add(ModBlocks.RED_OMORIKA_PLANKS)
+                .add(ModBlocks.SHIROMORIKA_LOG)
+                .add(ModBlocks.SHIROMORIKA_WOOD)
+                .add(ModBlocks.STRIPPED_SHIROMORIKA_LOG)
+                .add(ModBlocks.STRIPPED_SHIROMORIKA_WOOD)
+                .add(ModBlocks.SHIROMORIKA_PLANKS);
 
     }
 }

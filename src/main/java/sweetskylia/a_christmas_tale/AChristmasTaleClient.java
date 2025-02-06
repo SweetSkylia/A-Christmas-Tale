@@ -9,5 +9,6 @@ public class AChristmasTaleClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_OMORIKA_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SHIROMORIKA_SAPLING, RenderLayer.getCutout());
     }
 }

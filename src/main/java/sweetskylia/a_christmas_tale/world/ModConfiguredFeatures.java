@@ -12,6 +12,7 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.SpruceFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import sweetskylia.a_christmas_tale.AChristmasTale;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
@@ -47,11 +48,11 @@ public class ModConfiguredFeatures {
 
         register(context, SHIROMORIKA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.SHIROMORIKA_LOG),
-                new StraightTrunkPlacer(12,2,1),
+                new StraightTrunkPlacer(7, 2, 1),
 
-                BlockStateProvider.of(ModBlocks.SHIROMORIKA_LEAVES),
-                new SpruceFoliagePlacer(UniformIntProvider.create(3,5),UniformIntProvider.create(1,3), UniformIntProvider.create(1,3)),
-                new TwoLayersFeatureSize(4,0,2)
+                BlockStateProvider.of(ModBlocks.SHIROMORIKA_LEAVES.getDefaultState()),
+                new SpruceFoliagePlacer(UniformIntProvider.create(2, 3), UniformIntProvider.create(0, 2), UniformIntProvider.create(1, 2)),
+                new TwoLayersFeatureSize(2, 0, 2)
         ).build());
 
     }

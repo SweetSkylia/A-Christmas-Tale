@@ -41,6 +41,16 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RED_OMORIKA_SAPLING);
 
         addDrop(ModBlocks.RED_OMORIKA_LEAVES, leavesDrops(ModBlocks.RED_OMORIKA_LEAVES, ModBlocks.RED_OMORIKA_SAPLING, 0.0625f));
+
+        addDrop(ModBlocks.SHIROMORIKA_LOG);
+        addDrop(ModBlocks.SHIROMORIKA_WOOD);
+        addDrop(ModBlocks.STRIPPED_SHIROMORIKA_LOG);
+        addDrop(ModBlocks.STRIPPED_SHIROMORIKA_WOOD);
+        addDrop(ModBlocks.SHIROMORIKA_PLANKS);
+        addDrop(ModBlocks.SHIROMORIKA_SAPLING);
+
+        addDrop(ModBlocks.SHIROMORIKA_LEAVES, leavesDrops(ModBlocks.SHIROMORIKA_LEAVES, ModBlocks.SHIROMORIKA_SAPLING, 0.0625f));
+
     }
 
 
