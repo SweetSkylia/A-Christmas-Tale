@@ -23,6 +23,9 @@
 		],
 		"fabric-datagen": [
 			"sweetskylia.a_christmas_tale.AChristmasTaleDataGenerator"
+		],
+		"terrablender": [
+			"sweetskylia.a_christmas_tale.world.biome.ModTerrablenderAPI"
 		]
 	},
 	"mixins": [

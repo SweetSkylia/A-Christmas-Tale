@@ -6,13 +6,11 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import sweetskylia.a_christmas_tale.AChristmasTale;
+import sweetskylia.a_christmas_tale.block.ModBlocks;
 
 import java.util.List;
 
@@ -20,12 +18,20 @@ public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> STELLAR_HEART_ORE_KEY = registerKey("stellar_heart_ore_placed");
 
+    public static final RegistryKey<PlacedFeature> SHIRO_TREE_PLACED_KEY = registerKey("shiro_tree_placed");
+
+
+
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context,STELLAR_HEART_ORE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STELLAR_HEART_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(8,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0),YOffset.fixed(20))));
+
+        register(context, SHIRO_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SHIROMORIKA_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(HeightRangePlacementModifier.uniform(YOffset.fixed(0),YOffset.fixed(255)),
+                        ModBlocks.SHIROMORIKA_SAPLING));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
