@@ -1,4 +1,4 @@
-// 1.21	2025-02-10T11:47:04.9233369	A Christmas Tale/Block Loot Tables
+// 1.21.1	2025-02-10T13:06:46.2518748	A Christmas Tale/Block Loot Tables
 bf5900f1d2ae52f53fdc9b6d964038554b2a4eee data\a_christmas_tale\loot_table\blocks\stripped_red_omorika_wood.json
 6263fba9ea6656520ab5bc94887c47566c624bc8 data\a_christmas_tale\loot_table\blocks\stellar_heart_ore.json
 da96f26891d1d589cc988ff8e99afa34b78d89c5 data\a_christmas_tale\loot_table\blocks\stripped_shiromorika_log.json
@@ -13,8 +13,8 @@ f4ed8d4199b6fdd9cb44583f50e1e22d127b3fc8 data\a_christmas_tale\loot_table\blocks
 acd6fbbb921ecc32d76abad9049bdb4d2a1aa0b2 data\a_christmas_tale\loot_table\blocks\frozen_stellar_block.json
 544f8e4ab1e3541ae645e93b497e4541a4bde89f data\a_christmas_tale\loot_table\blocks\shiromorika_planks.json
 2f2021a4cb69fab3783ca4855fc0c0d68339dfb0 data\a_christmas_tale\loot_table\blocks\red_omorika_sapling.json
-b77cc66ce5fe40af4107a683c62ea16c7577ae2d data\a_christmas_tale\loot_table\blocks\shiromorika_leaves.json
 e4e060288df75e56b17318af1a65788ec84a47ef data\a_christmas_tale\loot_table\blocks\shiromorika_sapling.json
+b77cc66ce5fe40af4107a683c62ea16c7577ae2d data\a_christmas_tale\loot_table\blocks\shiromorika_leaves.json
 76692b73a01d239a834f45b501f763cb0e2a0a08 data\a_christmas_tale\loot_table\blocks\christmas_carpet.json
 aa0a9eefac14b0c9fe4b42b73a0ad4cf6067bc25 data\a_christmas_tale\loot_table\blocks\red_omorika_planks.json
 ce7f851bee1e39ba891556540ff6ef347f4b1c84 data\a_christmas_tale\loot_table\blocks\red_omorika_leaves.json
