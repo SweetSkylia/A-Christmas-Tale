@@ -58,7 +58,7 @@ public class ModBiomes {
 
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_SNOWY);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, context.getRegistryLookup(RegistryKeys.PLACED_FEATURE).getOrThrow(ModPlacedFeatures.SHIRO_TREE_PLACED_KEY));
-
+//        biomeBuilder.feature(GenerationStep.Feature.TOP_LAYER_MODIFICATION,context.getRegistryLookup(RegistryKeys.PLACED_FEATURE).getOrThrow(ModPlacedFeatures.SNOW_LAYER_KEY));
         DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
 
         return new Biome.Builder()
@@ -68,12 +68,12 @@ public class ModBiomes {
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
                 .effects(new BiomeEffects.Builder()
-                        .fogColor(0xC0D8FF) // Couleur du brouillard
-                        .waterColor(0x3F76E4) // Couleur de l'eau
+                        .fogColor(0xDDE7F1) // Couleur du brouillard
+                        .waterColor(0xBAECFF) // Couleur de l'eau
                         .waterFogColor(0x50533) // Couleur du brouillard sous l'eau
                         .skyColor(0x78A7FF) // Couleur du ciel
                         .foliageColor(0x91BD59) // Couleur du feuillage (optionnel)
-                        .grassColor(0x91BD59) // Couleur de l'herbe (optionnel)
+                        .grassColor(0x90C1B8) // Couleur de l'herbe (optionnel)
                         .build())
 
                 .build();

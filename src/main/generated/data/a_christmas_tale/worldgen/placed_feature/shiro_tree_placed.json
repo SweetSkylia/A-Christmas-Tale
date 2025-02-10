@@ -2,15 +2,19 @@
   "feature": "a_christmas_tale:shiromorika",
   "placement": [
     {
-      "type": "minecraft:height_range",
-      "height": {
-        "type": "minecraft:uniform",
-        "max_inclusive": {
-          "absolute": 255
-        },
-        "min_inclusive": {
-          "absolute": 0
-        }
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 5,
+            "weight": 49
+          },
+          {
+            "data": 9,
+            "weight": 1
+          }
+        ]
       }
     },
     {

@@ -6,9 +6,9 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.YOffset;
+import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
+import net.minecraft.world.gen.placementmodifier.*;
 import sweetskylia.a_christmas_tale.AChristmasTale;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
 
@@ -20,6 +20,7 @@ public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> SHIRO_TREE_PLACED_KEY = registerKey("shiro_tree_placed");
 
+//    public static final RegistryKey<PlacedFeature> SNOW_LAYER_KEY = registerKey("snow_layer_placed");
 
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
@@ -29,9 +30,26 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(8,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0),YOffset.fixed(20))));
 
+//        register(context, SHIRO_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SHIROMORIKA_KEY),
+//                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(HeightRangePlacementModifier.uniform(YOffset.fixed(0),YOffset.fixed(255)),
+//                        ModBlocks.SHIROMORIKA_SAPLING));
         register(context, SHIRO_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SHIROMORIKA_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(HeightRangePlacementModifier.uniform(YOffset.fixed(0),YOffset.fixed(255)),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(5, 0.02F, 4),
                         ModBlocks.SHIROMORIKA_SAPLING));
+
+
+//        register(context, SNOW_LAYER_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SNOW_LAYER_KEY),
+//                List.of(
+//                        CountPlacementModifier.of(5),
+//                        RarityFilterPlacementModifier.of(5),
+//                        BiomePlacementModifier.of()
+//                ));
+//        context.register(SNOW_LAYER_KEY, new PlacedFeature(
+//                context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.SNOW_LAYER_KEY),
+//                List.of(
+//                        CountPlacementModifiers.of
+//                )
+//        ));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

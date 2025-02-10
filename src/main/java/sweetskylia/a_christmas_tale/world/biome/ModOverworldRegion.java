@@ -23,6 +23,8 @@ public class ModOverworldRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.SNOWY_TAIGA, ModBiomes.SHIRO_FOREST);
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.SNOWY_PLAINS, ModBiomes.SHIRO_FOREST);
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.SNOWY_SLOPES, ModBiomes.SHIRO_FOREST);
         });
     }
 }

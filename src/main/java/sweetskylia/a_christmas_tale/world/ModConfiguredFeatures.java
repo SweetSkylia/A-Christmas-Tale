@@ -1,5 +1,7 @@
 package sweetskylia.a_christmas_tale.world;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -7,11 +9,14 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Vec3i;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.SpruceFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.stateprovider.PredicatedStateProvider;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import sweetskylia.a_christmas_tale.AChristmasTale;
@@ -24,6 +29,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STELLAR_HEART_ORE_KEY = registerKey("stellar_heart_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> RED_OMORIKA_KEY = registerKey("red_omorika");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SHIROMORIKA_KEY = registerKey("shiromorika");
+//    public static final RegistryKey<ConfiguredFeature<?, ?>> SNOW_LAYER_KEY = registerKey("snow_layer");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES); //règle pour générer les minerais dans la stone classique
@@ -35,7 +41,17 @@ public class ModConfiguredFeatures {
 
         register(context, STELLAR_HEART_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldStellarHeartOres, 4));
 
-
+//        context.register(SNOW_LAYER_KEY, new ConfiguredFeature<>(
+//                Feature.DISK,
+//                new DiskFeatureConfig(
+//                        PredicatedStateProvider.of(Blocks.SNOW.getDefaultState().getBlock()),
+//                        BlockPredicate.allOf(// Bloc de neige
+////                                BlockPredicate.matchingBlocks(List.of(Blocks.GRASS_BLOCK, Blocks.DIRT)),
+//                                BlockPredicate.matchingBlocks(new Vec3i(1, 1, 1), Blocks.AIR)
+//                        ), // Sur quels blocs la neige peut spawn
+//                        UniformIntProvider.create(2, 5), // Rayon de la zone de neige
+//                        1 // Épaisseur de la neige
+//        )));
     //TREES ================================================================================
         register(context, RED_OMORIKA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.RED_OMORIKA_LOG),
