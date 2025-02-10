@@ -1,5 +1,9 @@
 ![banner](https://github.com/user-attachments/assets/7dcc5245-9c60-4459-a5c9-26259f0f1b33)
 
+## Dependencies
+- Fabric API
+- Terrablender
+
 ## Description
 "A Christmas Tale" is a Fabric mod themed around Christmas and all the magic that surrounds it.
 
