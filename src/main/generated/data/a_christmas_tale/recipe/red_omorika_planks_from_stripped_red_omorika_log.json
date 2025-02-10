@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "building_blocks",
+  "ingredients": [
+    {
+      "item": "a_christmas_tale:stripped_red_omorika_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "a_christmas_tale:red_omorika_planks"
+  }
+}

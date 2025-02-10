@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_shiromorika_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "a_christmas_tale:stripped_shiromorika_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "a_christmas_tale:stripped_shiromorika_wood"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stripped_shiromorika_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "a_christmas_tale:stripped_shiromorika_wood"
+    ]
+  }
+}

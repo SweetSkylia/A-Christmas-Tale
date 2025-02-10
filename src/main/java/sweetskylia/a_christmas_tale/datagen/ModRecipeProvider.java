@@ -2,6 +2,7 @@ package sweetskylia.a_christmas_tale.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Block;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
@@ -18,6 +19,7 @@ import sweetskylia.a_christmas_tale.block.ModBlocks;
 import sweetskylia.a_christmas_tale.item.ModItems;
 
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
@@ -72,6 +74,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.FROZEN_STELLAR_HEART), conditionsFromItem(ModItems.FROZEN_STELLAR_HEART))
                 .offerTo(exporter);
 
+        //WOOD RECIPES ======================================
+        registerPlankRecipes(exporter); //logs to planks
+        registerWoodRecipes(exporter); //logs to wood
+        //CANDY RECIPES ======================================
 
         //Candy / Smelting
         offerSmelting(exporter,List.of(Items.SUGAR), RecipeCategory.FOOD, ModItems.CANDY, 0.1f, 200, "candy_from_smelting");
@@ -91,5 +97,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('C', Items.COCOA_BEANS)
                 .criterion(hasItem(Items.COCOA_BEANS), conditionsFromItem(Items.COCOA_BEANS))
                 .offerTo(exporter);
+    }
+
+    private static void registerPlankRecipes(RecipeExporter exporter){
+        Map<Block,Block> logToPlanks = Map.of(
+                ModBlocks.RED_OMORIKA_LOG, ModBlocks.RED_OMORIKA_PLANKS,
+                ModBlocks.STRIPPED_RED_OMORIKA_LOG, ModBlocks.RED_OMORIKA_PLANKS,
+                ModBlocks.RED_OMORIKA_WOOD, ModBlocks.RED_OMORIKA_PLANKS,
+                ModBlocks.STRIPPED_RED_OMORIKA_WOOD, ModBlocks.RED_OMORIKA_PLANKS,
+                ModBlocks.SHIROMORIKA_LOG, ModBlocks.SHIROMORIKA_PLANKS,
+                ModBlocks.STRIPPED_SHIROMORIKA_LOG, ModBlocks.SHIROMORIKA_PLANKS,
+                ModBlocks.SHIROMORIKA_WOOD, ModBlocks.SHIROMORIKA_PLANKS,
+                ModBlocks.STRIPPED_SHIROMORIKA_WOOD, ModBlocks.SHIROMORIKA_PLANKS
+        );
+
+        logToPlanks.forEach((log, plank) ->
+                offerShapelessRecipe(exporter, plank, log, RecipeCategory.BUILDING_BLOCKS.getName(), 4)
+        );
+    }
+
+    private static void registerWoodRecipes(RecipeExporter exporter){
+        Map<Block,Block> logToWoods = Map.of(
+                ModBlocks.RED_OMORIKA_LOG, ModBlocks.RED_OMORIKA_WOOD,
+                ModBlocks.STRIPPED_RED_OMORIKA_LOG, ModBlocks.STRIPPED_RED_OMORIKA_WOOD,
+                ModBlocks.SHIROMORIKA_LOG, ModBlocks.SHIROMORIKA_WOOD,
+                ModBlocks.STRIPPED_SHIROMORIKA_LOG, ModBlocks.STRIPPED_SHIROMORIKA_WOOD
+        );
+
+        logToWoods.forEach((log, wood) ->
+                ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, wood, 3)
+                        .pattern("WW")
+                        .pattern("WW")
+                        .input('W', log)
+                        .criterion(hasItem(log), conditionsFromItem(log))
+                        .offerTo(exporter)
+                );
     }
 }
