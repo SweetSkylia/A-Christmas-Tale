@@ -3,10 +3,7 @@ package sweetskylia.a_christmas_tale.item.Custom;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsageContext;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.*;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
@@ -21,6 +18,16 @@ public class FrozenSword extends SwordItem {
 
     public ActionResult useOnBlock(ItemUsageContext context) {
         return super.useOnBlock(context);
+    }
+
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true;
+    }
+
+    @Override
+    public int getEnchantability() {
+        return ToolMaterials.IRON.getEnchantability();
     }
 
     @Override
