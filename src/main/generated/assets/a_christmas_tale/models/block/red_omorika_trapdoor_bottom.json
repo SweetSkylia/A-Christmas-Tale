@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_bottom",
+  "textures": {
+    "texture": "a_christmas_tale:block/red_omorika_trapdoor"
+  }
+}

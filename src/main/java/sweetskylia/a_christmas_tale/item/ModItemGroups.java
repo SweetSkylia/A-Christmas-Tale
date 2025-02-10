@@ -27,23 +27,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FROZEN_STELLAR_BLOCK);
                         entries.add(ModBlocks.CANDY_BLOCK);
 
-                        //TREES
-                        entries.add(ModBlocks.RED_OMORIKA_LEAVES);
-                        entries.add(ModBlocks.RED_OMORIKA_LOG);
-                        entries.add(ModBlocks.STRIPPED_RED_OMORIKA_WOOD);
-                        entries.add(ModBlocks.STRIPPED_RED_OMORIKA_LOG);
-                        entries.add(ModBlocks.RED_OMORIKA_WOOD);
-                        entries.add(ModBlocks.RED_OMORIKA_PLANKS);
-                        entries.add(ModBlocks.RED_OMORIKA_SAPLING);
-
-                        entries.add(ModBlocks.SHIROMORIKA_LEAVES);
-                        entries.add(ModBlocks.SHIROMORIKA_LOG);
-                        entries.add(ModBlocks.STRIPPED_SHIROMORIKA_WOOD);
-                        entries.add(ModBlocks.STRIPPED_SHIROMORIKA_LOG);
-                        entries.add(ModBlocks.SHIROMORIKA_WOOD);
-                        entries.add(ModBlocks.SHIROMORIKA_PLANKS);
-                        entries.add(ModBlocks.SHIROMORIKA_SAPLING);
-
 
                         //Items
                         entries.add(ModItems.STELLAR_HEART);
@@ -53,6 +36,49 @@ public class ModItemGroups {
                         entries.add(ModItems.SNOWFLAKE);
                         entries.add(ModItems.FROZEN_SWORD);
 
+
+                    }).build());
+
+
+    public static final ItemGroup A_CHRISTMAS_TALE_WOOD = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(AChristmasTale.MOD_ID, "a_christmas_tale_wood"),
+            FabricItemGroup.builder().icon(()-> new ItemStack(ModBlocks.SHIROMORIKA_PLANKS))
+                    .displayName(Text.translatable("itemgroup.a_christmas_tale.a_christmas_tale_wood"))
+                    .entries((displayContext, entries) -> {
+                        //TREES
+                        entries.add(ModBlocks.RED_OMORIKA_LEAVES);
+                        entries.add(ModBlocks.RED_OMORIKA_LOG);
+                        entries.add(ModBlocks.STRIPPED_RED_OMORIKA_WOOD);
+                        entries.add(ModBlocks.STRIPPED_RED_OMORIKA_LOG);
+                        entries.add(ModBlocks.RED_OMORIKA_WOOD);
+                        entries.add(ModBlocks.RED_OMORIKA_SAPLING);
+                        entries.add(ModBlocks.RED_OMORIKA_PLANKS);
+                        entries.add(ModBlocks.RED_OMORIKA_STAIRS);
+                        entries.add(ModBlocks.RED_OMORIKA_SLAB);
+                        entries.add(ModBlocks.RED_OMORIKA_DOOR);
+                        entries.add(ModBlocks.RED_OMORIKA_TRAPDOOR);
+                        entries.add(ModBlocks.RED_OMORIKA_FENCE);
+                        entries.add(ModBlocks.RED_OMORIKA_FENCE_GATE);
+                        entries.add(ModBlocks.RED_OMORIKA_PRESSURE_PLATE);
+                        entries.add(ModBlocks.RED_OMORIKA_BUTTON);
+
+
+
+                        entries.add(ModBlocks.SHIROMORIKA_LEAVES);
+                        entries.add(ModBlocks.SHIROMORIKA_LOG);
+                        entries.add(ModBlocks.STRIPPED_SHIROMORIKA_WOOD);
+                        entries.add(ModBlocks.STRIPPED_SHIROMORIKA_LOG);
+                        entries.add(ModBlocks.SHIROMORIKA_WOOD);
+                        entries.add(ModBlocks.SHIROMORIKA_SAPLING);
+                        entries.add(ModBlocks.SHIROMORIKA_PLANKS);
+                        entries.add(ModBlocks.SHIROMORIKA_STAIRS);
+                        entries.add(ModBlocks.SHIROMORIKA_SLAB);
+                        entries.add(ModBlocks.SHIROMORIKA_DOOR);
+                        entries.add(ModBlocks.SHIROMORIKA_TRAPDOOR);
+                        entries.add(ModBlocks.SHIROMORIKA_FENCE);
+                        entries.add(ModBlocks.SHIROMORIKA_FENCE_GATE);
+                        entries.add(ModBlocks.SHIROMORIKA_PRESSURE_PLATE);
+                        entries.add(ModBlocks.SHIROMORIKA_BUTTON);
 
                     }).build());
 

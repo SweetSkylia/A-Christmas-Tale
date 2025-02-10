@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "a_christmas_tale:block/shiromorika_planks"
+  }
+}

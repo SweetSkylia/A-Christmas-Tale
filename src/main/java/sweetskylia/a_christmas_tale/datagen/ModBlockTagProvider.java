@@ -36,11 +36,22 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_RED_OMORIKA_LOG)
                 .add(ModBlocks.STRIPPED_RED_OMORIKA_WOOD)
                 .add(ModBlocks.RED_OMORIKA_PLANKS)
+                .add(ModBlocks.RED_OMORIKA_SLAB)
+                .add(ModBlocks.RED_OMORIKA_STAIRS)
+
                 .add(ModBlocks.SHIROMORIKA_LOG)
                 .add(ModBlocks.SHIROMORIKA_WOOD)
                 .add(ModBlocks.STRIPPED_SHIROMORIKA_LOG)
                 .add(ModBlocks.STRIPPED_SHIROMORIKA_WOOD)
-                .add(ModBlocks.SHIROMORIKA_PLANKS);
+                .add(ModBlocks.SHIROMORIKA_PLANKS)
+                .add(ModBlocks.SHIROMORIKA_SLAB)
+                .add(ModBlocks.SHIROMORIKA_STAIRS);
 
+        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.RED_OMORIKA_FENCE)
+                .add(ModBlocks.SHIROMORIKA_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.RED_OMORIKA_FENCE_GATE)
+                .add(ModBlocks.SHIROMORIKA_FENCE_GATE);
     }
 }

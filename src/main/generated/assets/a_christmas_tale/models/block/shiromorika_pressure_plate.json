@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "a_christmas_tale:block/shiromorika_planks"
+  }
+}

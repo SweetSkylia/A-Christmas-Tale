@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "a_christmas_tale:block/red_omorika_slab"
+    },
+    "type=double": {
+      "model": "a_christmas_tale:block/red_omorika_planks"
+    },
+    "type=top": {
+      "model": "a_christmas_tale:block/red_omorika_slab_top"
+    }
+  }
+}

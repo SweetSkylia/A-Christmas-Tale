@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "redstone",
+  "ingredients": [
+    {
+      "item": "a_christmas_tale:shiromorika_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "a_christmas_tale:shiromorika_button"
+  }
+}

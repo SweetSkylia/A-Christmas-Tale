@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "a_christmas_tale:block/shiromorika_planks"
+  }
+}

@@ -20,17 +20,37 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.CHRISTMAS_WOOL,ModBlocks.CHRISTMAS_CARPET);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.WINTER_WOOL,ModBlocks.WINTER_CARPET);
 
+        //WOOD SET ========================================================================
         blockStateModelGenerator.registerLog(ModBlocks.RED_OMORIKA_LOG).log(ModBlocks.RED_OMORIKA_LOG).wood(ModBlocks.RED_OMORIKA_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_RED_OMORIKA_LOG).log(ModBlocks.STRIPPED_RED_OMORIKA_LOG).wood(ModBlocks.STRIPPED_RED_OMORIKA_WOOD);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RED_OMORIKA_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool redOmorikaPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RED_OMORIKA_PLANKS);
         blockStateModelGenerator.registerSingleton(ModBlocks.RED_OMORIKA_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerTintableCross(ModBlocks.RED_OMORIKA_SAPLING,BlockStateModelGenerator.TintType.NOT_TINTED, TextureMap.cross(ModBlocks.RED_OMORIKA_SAPLING));
+        redOmorikaPlanksPool.stairs(ModBlocks.RED_OMORIKA_STAIRS);
+        redOmorikaPlanksPool.slab(ModBlocks.RED_OMORIKA_SLAB);
+        redOmorikaPlanksPool.button(ModBlocks.RED_OMORIKA_BUTTON);
+        redOmorikaPlanksPool.pressurePlate(ModBlocks.RED_OMORIKA_PRESSURE_PLATE);
+        redOmorikaPlanksPool.fence(ModBlocks.RED_OMORIKA_FENCE);
+        redOmorikaPlanksPool.fenceGate(ModBlocks.RED_OMORIKA_FENCE_GATE);
+        blockStateModelGenerator.registerDoor(ModBlocks.RED_OMORIKA_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.RED_OMORIKA_TRAPDOOR);
+
+
 
         blockStateModelGenerator.registerLog(ModBlocks.SHIROMORIKA_LOG).log(ModBlocks.SHIROMORIKA_LOG).wood(ModBlocks.SHIROMORIKA_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_SHIROMORIKA_LOG).log(ModBlocks.STRIPPED_SHIROMORIKA_LOG).wood(ModBlocks.STRIPPED_SHIROMORIKA_WOOD);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SHIROMORIKA_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool shiromorikaPlanksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SHIROMORIKA_PLANKS);
         blockStateModelGenerator.registerSingleton(ModBlocks.SHIROMORIKA_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerTintableCross(ModBlocks.SHIROMORIKA_SAPLING,BlockStateModelGenerator.TintType.NOT_TINTED, TextureMap.cross(ModBlocks.SHIROMORIKA_SAPLING));
+        shiromorikaPlanksPool.stairs(ModBlocks.SHIROMORIKA_STAIRS);
+        shiromorikaPlanksPool.slab(ModBlocks.SHIROMORIKA_SLAB);
+        shiromorikaPlanksPool.button(ModBlocks.SHIROMORIKA_BUTTON);
+        shiromorikaPlanksPool.pressurePlate(ModBlocks.SHIROMORIKA_PRESSURE_PLATE);
+        shiromorikaPlanksPool.fence(ModBlocks.SHIROMORIKA_FENCE);
+        shiromorikaPlanksPool.fenceGate(ModBlocks.SHIROMORIKA_FENCE_GATE);
+        blockStateModelGenerator.registerDoor(ModBlocks.SHIROMORIKA_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.SHIROMORIKA_TRAPDOOR);
+
     }
 
     @Override

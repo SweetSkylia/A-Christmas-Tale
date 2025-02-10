@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "a_christmas_tale:block/red_omorika_pressure_plate"
+    },
+    "powered=true": {
+      "model": "a_christmas_tale:block/red_omorika_pressure_plate_down"
+    }
+  }
+}

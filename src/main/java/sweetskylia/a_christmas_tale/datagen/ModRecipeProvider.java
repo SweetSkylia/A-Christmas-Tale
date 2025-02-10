@@ -77,6 +77,44 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         //WOOD RECIPES ======================================
         registerPlankRecipes(exporter); //logs to planks
         registerWoodRecipes(exporter); //logs to wood
+
+        createDoorRecipe(ModBlocks.RED_OMORIKA_DOOR, Ingredient.ofItems(ModBlocks.RED_OMORIKA_PLANKS))
+                .criterion(hasItem(ModBlocks.RED_OMORIKA_PLANKS), conditionsFromItem(ModBlocks.RED_OMORIKA_PLANKS))
+                .offerTo(exporter);
+        createDoorRecipe(ModBlocks.SHIROMORIKA_DOOR, Ingredient.ofItems(ModBlocks.SHIROMORIKA_PLANKS))
+                .criterion(hasItem(ModBlocks.SHIROMORIKA_PLANKS), conditionsFromItem(ModBlocks.SHIROMORIKA_PLANKS))
+                .offerTo(exporter);
+
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_OMORIKA_SLAB, ModBlocks.RED_OMORIKA_PLANKS);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SHIROMORIKA_SLAB, ModBlocks.SHIROMORIKA_PLANKS);
+
+        createStairsRecipe(ModBlocks.RED_OMORIKA_STAIRS, Ingredient.ofItems(ModBlocks.RED_OMORIKA_PLANKS))
+                .criterion(hasItem(ModBlocks.RED_OMORIKA_PLANKS), conditionsFromItem(ModBlocks.RED_OMORIKA_PLANKS))
+                .offerTo(exporter);
+        createStairsRecipe(ModBlocks.SHIROMORIKA_STAIRS, Ingredient.ofItems(ModBlocks.SHIROMORIKA_PLANKS))
+                .criterion(hasItem(ModBlocks.SHIROMORIKA_PLANKS), conditionsFromItem(ModBlocks.SHIROMORIKA_PLANKS))
+                .offerTo(exporter);
+
+        offerPressurePlateRecipe(exporter, ModBlocks.RED_OMORIKA_PRESSURE_PLATE, ModBlocks.RED_OMORIKA_PLANKS);
+        offerPressurePlateRecipe(exporter, ModBlocks.SHIROMORIKA_PRESSURE_PLATE, ModBlocks.SHIROMORIKA_PLANKS);
+
+        offerShapelessRecipe(exporter, ModBlocks.RED_OMORIKA_BUTTON,ModBlocks.RED_OMORIKA_PLANKS,RecipeCategory.REDSTONE.getName(),1);
+        offerShapelessRecipe(exporter, ModBlocks.SHIROMORIKA_BUTTON,ModBlocks.SHIROMORIKA_PLANKS,RecipeCategory.REDSTONE.getName(),1);
+
+        createFenceRecipe(ModBlocks.RED_OMORIKA_FENCE, Ingredient.ofItems(ModBlocks.RED_OMORIKA_PLANKS))
+                .criterion(hasItem(ModBlocks.RED_OMORIKA_PLANKS), conditionsFromItem(ModBlocks.RED_OMORIKA_PLANKS))
+                .offerTo(exporter);
+        createFenceRecipe(ModBlocks.SHIROMORIKA_FENCE, Ingredient.ofItems(ModBlocks.SHIROMORIKA_PLANKS))
+                .criterion(hasItem(ModBlocks.SHIROMORIKA_PLANKS), conditionsFromItem(ModBlocks.SHIROMORIKA_PLANKS))
+                .offerTo(exporter);
+
+        createFenceGateRecipe(ModBlocks.RED_OMORIKA_FENCE_GATE, Ingredient.ofItems(ModBlocks.RED_OMORIKA_PLANKS))
+                .criterion(hasItem(ModBlocks.RED_OMORIKA_PLANKS), conditionsFromItem(ModBlocks.RED_OMORIKA_PLANKS))
+                .offerTo(exporter);
+        createFenceGateRecipe(ModBlocks.SHIROMORIKA_FENCE_GATE, Ingredient.ofItems(ModBlocks.SHIROMORIKA_PLANKS))
+                .criterion(hasItem(ModBlocks.SHIROMORIKA_PLANKS), conditionsFromItem(ModBlocks.SHIROMORIKA_PLANKS))
+                .offerTo(exporter);
+
         //CANDY RECIPES ======================================
 
         //Candy / Smelting

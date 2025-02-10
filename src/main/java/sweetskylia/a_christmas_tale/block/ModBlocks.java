@@ -87,6 +87,54 @@ public class ModBlocks {
             new SaplingBlock(ModSaplingGenerators.SHIROMORIKA,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
 
 
+
+
+
+    //WOOD DECORATION FEATURES ============================================
+
+    public static final Block RED_OMORIKA_STAIRS = registerBlock("red_omorika_stairs",
+            new StairsBlock(ModBlocks.RED_OMORIKA_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+    public static final Block RED_OMORIKA_SLAB = registerBlock("red_omorika_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
+
+    public static final Block RED_OMORIKA_BUTTON = registerBlock("red_omorika_button",
+            new ButtonBlock(BlockSetType.OAK,10, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON).noCollision()));
+    public static final Block RED_OMORIKA_PRESSURE_PLATE = registerBlock("red_omorika_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE).noCollision()));
+
+    public static final Block RED_OMORIKA_FENCE = registerBlock("red_omorika_fence",
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+    public static final Block RED_OMORIKA_FENCE_GATE = registerBlock("red_omorika_fence_gate",
+            new FenceGateBlock(WoodType.OAK,AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
+    public static final Block RED_OMORIKA_DOOR = registerBlock("red_omorika_door",
+            new DoorBlock(BlockSetType.OAK,AbstractBlock.Settings.copy(Blocks.OAK_SLAB).nonOpaque()));
+    public static final Block RED_OMORIKA_TRAPDOOR = registerBlock("red_omorika_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK,AbstractBlock.Settings.copy(Blocks.OAK_SLAB).nonOpaque()));
+
+
+
+    public static final Block SHIROMORIKA_STAIRS = registerBlock("shiromorika_stairs",
+            new StairsBlock(ModBlocks.RED_OMORIKA_PLANKS.getDefaultState(),
+                    AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+    public static final Block SHIROMORIKA_SLAB = registerBlock("shiromorika_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
+
+    public static final Block SHIROMORIKA_BUTTON = registerBlock("shiromorika_button",
+            new ButtonBlock(BlockSetType.OAK,10, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON).noCollision()));
+    public static final Block SHIROMORIKA_PRESSURE_PLATE = registerBlock("shiromorika_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE).noCollision()));
+
+    public static final Block SHIROMORIKA_FENCE = registerBlock("shiromorika_fence",
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+    public static final Block SHIROMORIKA_FENCE_GATE = registerBlock("shiromorika_fence_gate",
+            new FenceGateBlock(WoodType.OAK,AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
+    public static final Block SHIROMORIKA_DOOR = registerBlock("shiromorika_door",
+            new DoorBlock(BlockSetType.OAK,AbstractBlock.Settings.copy(Blocks.OAK_SLAB).nonOpaque()));
+    public static final Block SHIROMORIKA_TRAPDOOR = registerBlock("shiromorika_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK,AbstractBlock.Settings.copy(Blocks.OAK_SLAB).nonOpaque()));
+
+
     //INIT BLOCKS REGISTERING
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(AChristmasTale.MOD_ID, name),

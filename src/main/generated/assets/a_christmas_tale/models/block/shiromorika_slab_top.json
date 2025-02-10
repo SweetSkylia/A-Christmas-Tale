@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "a_christmas_tale:block/shiromorika_planks",
+    "side": "a_christmas_tale:block/shiromorika_planks",
+    "top": "a_christmas_tale:block/shiromorika_planks"
+  }
+}

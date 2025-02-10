@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "a_christmas_tale:block/red_omorika_door_bottom",
+    "top": "a_christmas_tale:block/red_omorika_door_top"
+  }
+}
