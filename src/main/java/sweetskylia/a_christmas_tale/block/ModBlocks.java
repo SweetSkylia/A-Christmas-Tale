@@ -99,7 +99,7 @@ public class ModBlocks {
             new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
 
     public static final Block RED_OMORIKA_BUTTON = registerBlock("red_omorika_button",
-            new ButtonBlock(BlockSetType.OAK,10, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON).noCollision()));
+            new ButtonBlock(BlockSetType.OAK,20, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON).noCollision()));
     public static final Block RED_OMORIKA_PRESSURE_PLATE = registerBlock("red_omorika_pressure_plate",
             new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE).noCollision()));
 
@@ -121,7 +121,7 @@ public class ModBlocks {
             new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
 
     public static final Block SHIROMORIKA_BUTTON = registerBlock("shiromorika_button",
-            new ButtonBlock(BlockSetType.OAK,10, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON).noCollision()));
+            new ButtonBlock(BlockSetType.OAK,20, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON).noCollision()));
     public static final Block SHIROMORIKA_PRESSURE_PLATE = registerBlock("shiromorika_pressure_plate",
             new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE).noCollision()));
 

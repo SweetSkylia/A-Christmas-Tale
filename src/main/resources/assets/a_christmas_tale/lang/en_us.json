@@ -1,4 +1,6 @@
 {
+  "itemgroup.a_christmas_tale.a_christmas_tale_items": "A Christmas Tale",
+  "itemgroup.a_christmas_tale.a_christmas_tale_wood": "A Christmas Tale Wood",
   "item.a_christmas_tale.candy": "Candy",
   "item.a_christmas_tale.hot_chocolate": "Hot Chocolate",
   "item.a_christmas_tale.snowflake": "Snowflake",
@@ -7,7 +9,6 @@
   "item.a_christmas_tale.stellar_heart": "Stellar Heart",
   "block.a_christmas_tale.stellar_heart_ore": "Stellar Heart Ore",
   "block.a_christmas_tale.candy_block": "Block of Candy",
-  "itemgroup.a_christmas_tale.a_christmas_tale_items": "A Christmas Tale",
   "block.a_christmas_tale.stellar_block": "Block of Stellar",
   "block.a_christmas_tale.frozen_stellar_block": "Block of Frozen Stellar",
   "block.a_christmas_tale.christmas_carpet": "Christmas Carpet",
@@ -27,7 +28,23 @@
   "block.a_christmas_tale.shiromorika_sapling": "Shiromorika Sapling",
   "block.a_christmas_tale.shiromorika_wood": "Shiromorika Wood",
   "block.a_christmas_tale.stripped_shiromorika_log": "Stripped Shiromorika Log",
-  "block.a_christmas_tale.stripped_shiromorika_wood": "Stripped Shiromorika Wood"
+  "block.a_christmas_tale.stripped_shiromorika_wood": "Stripped Shiromorika Wood",
+  "block.a_christmas_tale.red_omorika_door": "Red Omorika Door",
+  "block.a_christmas_tale.red_omorika_trapdoor": "Red Omorika Trapdoor",
+  "block.a_christmas_tale.red_omorika_fence": "Red Omorika Fence",
+  "block.a_christmas_tale.red_omorika_fence_gate": "Red Omorika Fence Gate",
+  "block.a_christmas_tale.red_omorika_pressure_plate": "Red Omorika Pressure Plate",
+  "block.a_christmas_tale.red_omorika_button": "Red Omorika Button",
+  "block.a_christmas_tale.red_omorika_slab": "Red Omorika Slab",
+  "block.a_christmas_tale.red_omorika_stairs": "Red Omorika Stairs",
+  "block.a_christmas_tale.shiromorika_door": "Shiromorika Door",
+  "block.a_christmas_tale.shiromorika_trapdoor": "Shiromorika Trapdoor",
+  "block.a_christmas_tale.shiromorika_fence": "Shiromorika Fence",
+  "block.a_christmas_tale.shiromorika_fence_gate": "Shiromorika Fence Gate",
+  "block.a_christmas_tale.shiromorika_pressure_plate": "Shiromorika Pressure Plate",
+  "block.a_christmas_tale.shiromorika_button": "Shiromorika Button",
+  "block.a_christmas_tale.shiromorika_slab": "Shiromorika Slab",
+  "block.a_christmas_tale.shiromorika_stairs": "Shiromorika Stairs"
 
 
 }

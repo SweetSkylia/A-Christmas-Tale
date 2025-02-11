@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-10T22:24:24.1365446	A Christmas Tale/Block Loot Tables
+// 1.21.1	2025-02-11T14:58:05.7013374	A Christmas Tale/Block Loot Tables
 ad1c5512807ba78a668656c81c1fc1213a145fbd data\a_christmas_tale\loot_table\blocks\shiromorika_trapdoor.json
 5007067d8e5d895ca240425a798186c452f5002d data\a_christmas_tale\loot_table\blocks\shiromorika_slab.json
 bf5900f1d2ae52f53fdc9b6d964038554b2a4eee data\a_christmas_tale\loot_table\blocks\stripped_red_omorika_wood.json
@@ -14,8 +14,8 @@ acd6fbbb921ecc32d76abad9049bdb4d2a1aa0b2 data\a_christmas_tale\loot_table\blocks
 4ec8f40f02176c59b3e8db98688029fea0cd6eff data\a_christmas_tale\loot_table\blocks\shiromorika_fence.json
 e4e060288df75e56b17318af1a65788ec84a47ef data\a_christmas_tale\loot_table\blocks\shiromorika_sapling.json
 b77cc66ce5fe40af4107a683c62ea16c7577ae2d data\a_christmas_tale\loot_table\blocks\shiromorika_leaves.json
-6344e25c2a5f2ec03ea6d3d80a96e62d7eda72c4 data\a_christmas_tale\loot_table\blocks\shiromorika_door.json
 421a9533e9e834ccfd340bba03a13fb10472082d data\a_christmas_tale\loot_table\blocks\red_omorika_stairs.json
+6344e25c2a5f2ec03ea6d3d80a96e62d7eda72c4 data\a_christmas_tale\loot_table\blocks\shiromorika_door.json
 ba1ce7d622b3edcaef437a7953e61b6e82674382 data\a_christmas_tale\loot_table\blocks\shiromorika_pressure_plate.json
 aa0a9eefac14b0c9fe4b42b73a0ad4cf6067bc25 data\a_christmas_tale\loot_table\blocks\red_omorika_planks.json
 bdce21a9fcd814ed78fa27da050062ef01d45064 data\a_christmas_tale\loot_table\blocks\red_omorika_door.json
