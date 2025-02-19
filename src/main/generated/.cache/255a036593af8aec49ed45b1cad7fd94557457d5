@@ -1,7 +1,7 @@
-// 1.21.1	2025-02-11T14:58:05.7063372	A Christmas Tale/Tags for minecraft:block
-a414868548f1931cc04d974338dfa6c71056c171 data\minecraft\tags\block\wooden_fences.json
-254f98b0f9752da333f9a1ea50752b085f1421a1 data\minecraft\tags\block\needs_iron_tool.json
-d7fc71ec61a613fb5e7599060a9edfb7e941ccfc data\minecraft\tags\block\logs_that_burn.json
-01985e8f0919cb9584b8039d3203ce91535158d7 data\minecraft\tags\block\fence_gates.json
-20e99a431da21941afa64916c9d59570b5279fd1 data\minecraft\tags\block\mineable\pickaxe.json
-80cfc3bcee02dedf4debc8e56670549298a0434c data\minecraft\tags\block\needs_diamond_tool.json
+// 1.21.1	2025-02-19T14:10:15.394252214	A Christmas Tale/Tags for minecraft:block
+254f98b0f9752da333f9a1ea50752b085f1421a1 data/minecraft/tags/block/needs_iron_tool.json
+a414868548f1931cc04d974338dfa6c71056c171 data/minecraft/tags/block/wooden_fences.json
+d7fc71ec61a613fb5e7599060a9edfb7e941ccfc data/minecraft/tags/block/logs_that_burn.json
+01985e8f0919cb9584b8039d3203ce91535158d7 data/minecraft/tags/block/fence_gates.json
+80cfc3bcee02dedf4debc8e56670549298a0434c data/minecraft/tags/block/needs_diamond_tool.json
+20e99a431da21941afa64916c9d59570b5279fd1 data/minecraft/tags/block/mineable/pickaxe.json

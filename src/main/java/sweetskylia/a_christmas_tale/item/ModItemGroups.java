@@ -26,6 +26,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STELLAR_BLOCK);
                         entries.add(ModBlocks.FROZEN_STELLAR_BLOCK);
                         entries.add(ModBlocks.CANDY_BLOCK);
+                        entries.add(ModBlocks.PRESENT_BLOCK);
 
 
                         //Items
