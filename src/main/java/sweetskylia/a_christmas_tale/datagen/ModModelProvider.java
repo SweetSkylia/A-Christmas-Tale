@@ -62,6 +62,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.HOT_CHOCOLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SNOWFLAKE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FROZEN_STELLAR_HEART, Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.PRESENT_BLOCK.asItem(), Models.GENERATED);
+
     }
 
 
