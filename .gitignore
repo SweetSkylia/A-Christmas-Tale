@@ -40,4 +40,5 @@ replay_*.log
 *.jfr
 src/main/java/sweetskylia/a_christmas_tale/datagen/logs
 src/main/java/sweetskylia/a_christmas_tale/datagen/logs/
-/src/main/generated/.cache/
+src/main/generated/.cache
+src/main/generated/.cache/
