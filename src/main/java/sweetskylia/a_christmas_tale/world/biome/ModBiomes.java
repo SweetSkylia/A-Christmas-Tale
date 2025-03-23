@@ -21,9 +21,12 @@ import sweetskylia.a_christmas_tale.world.ModPlacedFeatures;
 public class ModBiomes {
     public static final RegistryKey<Biome> SHIRO_FOREST = RegistryKey.of(RegistryKeys.BIOME,
             Identifier.of(AChristmasTale.MOD_ID, "shiro_forest"));
+    public static final RegistryKey<Biome> RED_FOREST = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(AChristmasTale.MOD_ID, "red_forest"));
 
     public static void bootstrap(Registerable<Biome> context) {
         context.register(SHIRO_FOREST, shiroForest(context));
+        context.register(RED_FOREST, redForest(context));
     }
 
     public static void globalOverworldGeneration(GenerationSettings.LookupBackedBuilder builder){
@@ -33,6 +36,43 @@ public class ModBiomes {
         DefaultBiomeFeatures.addMineables(builder);
         DefaultBiomeFeatures.addFrozenTopLayer(builder);
         DefaultBiomeFeatures.addSprings(builder);
+    }
+
+    public static Biome redForest(Registerable<Biome> context) {
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.FOX, 3, 2, 4));
+        DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
+        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+        globalOverworldGeneration(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+        DefaultBiomeFeatures.addEmeraldOre(biomeBuilder);
+
+
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_SNOWY);
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, context.getRegistryLookup(RegistryKeys.PLACED_FEATURE).getOrThrow(ModPlacedFeatures.RED_TREE_PLACED_KEY));
+        DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
+        DefaultBiomeFeatures.addFrozenLavaSpring(biomeBuilder);
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.1f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects(new BiomeEffects.Builder()
+                        .fogColor(0xF1E1DD)
+                        .waterColor(0xBAFFF6)
+                        .waterFogColor(0xFFDEBA)
+                        .skyColor(0x78A7FF)
+                        .foliageColor(0x91BD59)
+                        .grassColor(0xBF7462)
+                        .build())
+
+                .build();
     }
 
     public static Biome shiroForest(Registerable<Biome> context) {

@@ -19,6 +19,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> STELLAR_HEART_ORE_KEY = registerKey("stellar_heart_ore_placed");
 
     public static final RegistryKey<PlacedFeature> SHIRO_TREE_PLACED_KEY = registerKey("shiro_tree_placed");
+    public static final RegistryKey<PlacedFeature> RED_TREE_PLACED_KEY = registerKey("red_tree_placed");
 
 //    public static final RegistryKey<PlacedFeature> SNOW_LAYER_KEY = registerKey("snow_layer_placed");
 
@@ -30,26 +31,12 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(8,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0),YOffset.fixed(20))));
 
-//        register(context, SHIRO_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SHIROMORIKA_KEY),
-//                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(HeightRangePlacementModifier.uniform(YOffset.fixed(0),YOffset.fixed(255)),
-//                        ModBlocks.SHIROMORIKA_SAPLING));
         register(context, SHIRO_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SHIROMORIKA_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(5, 0.02F, 4),
                         ModBlocks.SHIROMORIKA_SAPLING));
-
-
-//        register(context, SNOW_LAYER_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SNOW_LAYER_KEY),
-//                List.of(
-//                        CountPlacementModifier.of(5),
-//                        RarityFilterPlacementModifier.of(5),
-//                        BiomePlacementModifier.of()
-//                ));
-//        context.register(SNOW_LAYER_KEY, new PlacedFeature(
-//                context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE).getOrThrow(ModConfiguredFeatures.SNOW_LAYER_KEY),
-//                List.of(
-//                        CountPlacementModifiers.of
-//                )
-//        ));
+        register(context, RED_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_OMORIKA_KEY),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(5, 0.02F, 4),
+                        ModBlocks.RED_OMORIKA_SAPLING));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
