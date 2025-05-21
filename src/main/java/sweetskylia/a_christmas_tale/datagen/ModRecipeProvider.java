@@ -74,6 +74,47 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.FROZEN_STELLAR_HEART), conditionsFromItem(ModItems.FROZEN_STELLAR_HEART))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STELLAR_CANDY_PICKAXE, 1)
+                .pattern("CCC")
+                .pattern(" F ")
+                .pattern(" | ")
+                .input('|', Items.STICK)
+                .input('F', ModItems.FROZEN_STELLAR_HEART)
+                .input('C', ModItems.CANDY)
+                .criterion(hasItem(ModItems.CANDY), conditionsFromItem(ModItems.CANDY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STELLAR_CANDY_AXE, 1)
+                .pattern("CC")
+                .pattern("FC")
+                .pattern("| ")
+                .input('|', Items.STICK)
+                .input('F', ModItems.FROZEN_STELLAR_HEART)
+                .input('C', ModItems.CANDY)
+                .criterion(hasItem(ModItems.CANDY), conditionsFromItem(ModItems.CANDY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STELLAR_CANDY_SHOVEL, 1)
+                .pattern("C")
+                .pattern("F")
+                .pattern("|")
+                .input('|', Items.STICK)
+                .input('F', ModItems.FROZEN_STELLAR_HEART)
+                .input('C', ModItems.CANDY)
+                .criterion(hasItem(ModItems.CANDY), conditionsFromItem(ModItems.CANDY))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STELLAR_CANDY_HOE, 1)
+                .pattern("CC")
+                .pattern(" F")
+                .pattern(" |")
+                .input('|', Items.STICK)
+                .input('F', ModItems.FROZEN_STELLAR_HEART)
+                .input('C', ModItems.CANDY)
+                .criterion(hasItem(ModItems.CANDY), conditionsFromItem(ModItems.CANDY))
+                .offerTo(exporter);
+
+
         //WOOD RECIPES ======================================
         registerPlankRecipes(exporter); //logs to planks
         registerWoodRecipes(exporter); //logs to wood

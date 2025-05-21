@@ -6,9 +6,13 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.TagKey;
+import sweetskylia.a_christmas_tale.util.ModTags;
 
 public enum ModToolMaterials implements ToolMaterial {
-    ;
+
+
+    STELLAR_CANDY(ModTags.Blocks.INCORRECT_FOR_STELLAR_CANDY_TOOL,
+            512, 7.0F, 2.5F, 22, () -> Ingredient.ofItems(ModItems.FROZEN_STELLAR_HEART));
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
     private final float miningSpeed;

@@ -15,14 +15,4 @@ public class HotChocolate extends Item {
         return UseAction.DRINK;
     }
 
-//    @Override
-//    public SoundEvent getDrinkSound() {
-//        return super.getDrinkSound();
-//    }
-
-//    public SoundEvent getEatSound() {
-//        return super.;
-//    }
-
-
 }

@@ -63,6 +63,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SNOWFLAKE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FROZEN_STELLAR_HEART, Models.GENERATED);
         itemModelGenerator.register(ModBlocks.PRESENT_BLOCK.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModItems.FROZEN_FRUIT, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.STELLAR_CANDY_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STELLAR_CANDY_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STELLAR_CANDY_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STELLAR_CANDY_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STELLAR_CANDY_HOE, Models.HANDHELD);
 
     }
 

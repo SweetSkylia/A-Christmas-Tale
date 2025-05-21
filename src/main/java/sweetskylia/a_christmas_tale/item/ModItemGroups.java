@@ -34,8 +34,14 @@ public class ModItemGroups {
                         entries.add(ModItems.FROZEN_STELLAR_HEART);
                         entries.add(ModItems.CANDY);
                         entries.add(ModItems.HOT_CHOCOLATE);
+                        entries.add(ModItems.FROZEN_FRUIT);
                         entries.add(ModItems.SNOWFLAKE);
                         entries.add(ModItems.FROZEN_SWORD);
+                        entries.add(ModItems.STELLAR_CANDY_SWORD);
+                        entries.add(ModItems.STELLAR_CANDY_PICKAXE);
+                        entries.add(ModItems.STELLAR_CANDY_AXE);
+                        entries.add(ModItems.STELLAR_CANDY_SHOVEL);
+                        entries.add(ModItems.STELLAR_CANDY_HOE);
 
 
                     }).build());
@@ -84,6 +90,6 @@ public class ModItemGroups {
                     }).build());
 
     public static void registerItemGroups() {
-        AChristmasTale.LOGGER.info("[" + AChristmasTale.MOD_ID + "] Registering Item Groups");
+        AChristmasTale.LOGGER.info("[" + AChristmasTale.MOD_ID + "] Adding items to custom groups");
     }
 }

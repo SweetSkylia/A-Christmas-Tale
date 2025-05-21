@@ -10,8 +10,8 @@ import net.minecraft.util.Identifier;
 
 public class ModTags {
     public static class Blocks {
-        public static final TagKey<Block> NEEDS_PINK_GARNET_TOOL = createTag("needs_pink_garnet_tool");
-        public static final TagKey<Block> INCORRECT_FOR_PINK_GARNET_TOOL = createTag("incorrect_for_pink_garnet_tool");
+        public static final TagKey<Block> NEEDS_STELLAR_CANDY_TOOL = createTag("needs_stellar_candy_tool");
+        public static final TagKey<Block> INCORRECT_FOR_STELLAR_CANDY_TOOL = createTag("incorrect_for_stellar_candy_tool");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(AChristmasTale.MOD_ID, name));

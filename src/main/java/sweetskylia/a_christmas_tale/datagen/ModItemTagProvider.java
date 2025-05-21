@@ -6,6 +6,7 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
+import sweetskylia.a_christmas_tale.item.ModItemGroups;
 import sweetskylia.a_christmas_tale.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -33,6 +34,19 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.SHIROMORIKA_PLANKS.asItem());
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
-                .add(ModItems.FROZEN_SWORD);
+                .add(ModItems.FROZEN_SWORD)
+                .add(ModItems.STELLAR_CANDY_SWORD);
+
+        getOrCreateTagBuilder(ItemTags.AXES)
+                .add(ModItems.STELLAR_CANDY_AXE);
+
+        getOrCreateTagBuilder(ItemTags.PICKAXES)
+                .add(ModItems.STELLAR_CANDY_PICKAXE);
+
+        getOrCreateTagBuilder(ItemTags.SHOVELS)
+                .add(ModItems.STELLAR_CANDY_SHOVEL);
+
+        getOrCreateTagBuilder(ItemTags.HOES)
+                .add(ModItems.STELLAR_CANDY_HOE);
     }
 }

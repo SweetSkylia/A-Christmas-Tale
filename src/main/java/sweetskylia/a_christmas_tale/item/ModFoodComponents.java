@@ -10,4 +10,11 @@ public class ModFoodComponents {
 
     public static final FoodComponent HOT_CHOCOLATE = new FoodComponent.Builder().alwaysEdible().nutrition(3)
             .saturationModifier(0.25f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 3 * 20, 1), 100.0f).build();
+
+    public static final FoodComponent FROZEN_FRUIT = new FoodComponent.Builder()
+            .alwaysEdible()
+            .nutrition(3)
+            .snack()
+            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 5 * 20, 0), 100.0f)
+            .saturationModifier(0.50f).build();
 }
