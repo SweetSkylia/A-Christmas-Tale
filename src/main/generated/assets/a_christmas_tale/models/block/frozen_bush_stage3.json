@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "a_christmas_tale:block/frozen_bush_stage3"
+  }
+}

@@ -2,8 +2,13 @@ package sweetskylia.a_christmas_tale.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.data.client.*;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.Properties;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
+import sweetskylia.a_christmas_tale.block.custom.FrozenBushBlock;
 import sweetskylia.a_christmas_tale.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -51,6 +56,7 @@ public class ModModelProvider extends FabricModelProvider {
         shiromorikaPlanksPool.fenceGate(ModBlocks.SHIROMORIKA_FENCE_GATE);
         blockStateModelGenerator.registerDoor(ModBlocks.SHIROMORIKA_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.SHIROMORIKA_TRAPDOOR);
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.FROZEN_BUSH, BlockStateModelGenerator.TintType.NOT_TINTED, FrozenBushBlock.AGE, 0,1,2,3 );
 
     }
 
@@ -72,6 +78,4 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STELLAR_CANDY_HOE, Models.HANDHELD);
 
     }
-
-
 }

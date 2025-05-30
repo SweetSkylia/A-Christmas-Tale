@@ -20,7 +20,8 @@ public class AChristmasTaleClient implements ClientModInitializer {
                 ModBlocks.RED_OMORIKA_SAPLING,
                 ModBlocks.RED_OMORIKA_DOOR,
                 ModBlocks.RED_OMORIKA_TRAPDOOR,
-                ModBlocks.PRESENT_BLOCK
+                ModBlocks.PRESENT_BLOCK,
+                ModBlocks.FROZEN_BUSH
         );
 
         transparentBlocks.forEach((block) ->{

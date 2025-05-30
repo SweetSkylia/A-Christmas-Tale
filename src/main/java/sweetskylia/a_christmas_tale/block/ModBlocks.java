@@ -3,6 +3,7 @@ package sweetskylia.a_christmas_tale.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -12,6 +13,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import sweetskylia.a_christmas_tale.AChristmasTale;
+import sweetskylia.a_christmas_tale.block.custom.FrozenBushBlock;
 import sweetskylia.a_christmas_tale.block.custom.PresentBlock;
 import sweetskylia.a_christmas_tale.world.tree.ModSaplingGenerators;
 
@@ -137,6 +139,15 @@ public class ModBlocks {
     public static final Block SHIROMORIKA_TRAPDOOR = registerBlock("shiromorika_trapdoor",
             new TrapdoorBlock(BlockSetType.OAK,AbstractBlock.Settings.copy(Blocks.OAK_SLAB).nonOpaque()));
 
+
+    public static final Block FROZEN_BUSH = registerBlock("frozen_bush",
+            new FrozenBushBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .ticksRandomly()
+                    .noCollision()
+                    .sounds(BlockSoundGroup.SWEET_BERRY_BUSH)
+                    .pistonBehavior(PistonBehavior.DESTROY))
+            );
 
     //INIT BLOCKS REGISTERING
     private static void registerBlockItem(String name, Block block) {
