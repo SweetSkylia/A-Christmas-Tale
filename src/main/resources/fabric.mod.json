@@ -12,7 +12,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/a_christmas_tale/icon.png",
+	"icon": "icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -29,7 +29,7 @@
 		]
 	},
 	"mixins": [
-		"a-christmas-tale.mixins.json"
+		"a_christmas_tale.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.9",
