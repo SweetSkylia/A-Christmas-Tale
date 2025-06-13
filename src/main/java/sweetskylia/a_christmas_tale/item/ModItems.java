@@ -24,14 +24,13 @@ public class ModItems {
 
     public static final Item STELLAR_CANDY_SWORD = registerItem("stellar_candy_sword", new SwordItem(ModToolMaterials.STELLAR_CANDY, new Item.Settings()
             .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STELLAR_CANDY, 3, -2.4F))));
-    public static final Item STELLAR_CANDY_PICKAXE = registerItem("stellar_candy_pickaxe", new ToolItem(ModToolMaterials.STELLAR_CANDY, new Item.Settings()
+    public static final Item STELLAR_CANDY_PICKAXE = registerItem("stellar_candy_pickaxe", new PickaxeItem(ModToolMaterials.STELLAR_CANDY, new Item.Settings()
             .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.STELLAR_CANDY, 1.0F, -2.8F))));
-
-    public static final Item STELLAR_CANDY_AXE = registerItem("stellar_candy_axe", new ToolItem(ModToolMaterials.STELLAR_CANDY, new Item.Settings()
+    public static final Item STELLAR_CANDY_AXE = registerItem("stellar_candy_axe", new AxeItem(ModToolMaterials.STELLAR_CANDY, new Item.Settings()
             .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.STELLAR_CANDY, 6.0F, -3.1F))));
-    public static final Item STELLAR_CANDY_SHOVEL = registerItem("stellar_candy_shovel", new ToolItem(ModToolMaterials.STELLAR_CANDY, new Item.Settings()
+    public static final Item STELLAR_CANDY_SHOVEL = registerItem("stellar_candy_shovel", new ShovelItem(ModToolMaterials.STELLAR_CANDY, new Item.Settings()
             .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.STELLAR_CANDY, 1.5F, -3.0F))));
-    public static final Item STELLAR_CANDY_HOE = registerItem("stellar_candy_hoe", new ToolItem(ModToolMaterials.STELLAR_CANDY, new Item.Settings()
+    public static final Item STELLAR_CANDY_HOE = registerItem("stellar_candy_hoe", new HoeItem(ModToolMaterials.STELLAR_CANDY, new Item.Settings()
             .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.STELLAR_CANDY, 0, -1.0F))));
 
     public static final Item FROZEN_FRUIT = registerItem("frozen_fruit", new AliasedBlockItem(ModBlocks.FROZEN_BUSH,new Item.Settings().food(ModFoodComponents.FROZEN_FRUIT)));

@@ -31,31 +31,31 @@ public enum ModToolMaterials implements ToolMaterial {
     }
     @Override
     public int getDurability() {
-        return 0;
+        return itemDurability;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 0;
+        return miningSpeed;
     }
 
     @Override
     public float getAttackDamage() {
-        return 0;
+        return attackDamage;
     }
 
     @Override
     public TagKey<Block> getInverseTag() {
-        return null;
+        return inverseTag;
     }
 
     @Override
     public int getEnchantability() {
-        return 0;
+        return enchantability;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return null;
+        return repairIngredient.get();
     }
 }
