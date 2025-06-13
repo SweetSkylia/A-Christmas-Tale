@@ -15,6 +15,7 @@ import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import sweetskylia.a_christmas_tale.AChristmasTale;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
+import sweetskylia.a_christmas_tale.block.custom.FrozenBushBlock;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STELLAR_HEART_ORE_KEY = registerKey("stellar_heart_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> RED_OMORIKA_KEY = registerKey("red_omorika");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SHIROMORIKA_KEY = registerKey("shiromorika");
+    public static final RegistryKey<ConfiguredFeature<?,?>> FROZEN_BUSH_PATCH_KEY = registerKey("frozen_bush_patch");
 //    public static final RegistryKey<ConfiguredFeature<?, ?>> SNOW_LAYER_KEY = registerKey("snow_layer");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
@@ -55,6 +57,11 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(2, 0, 2)
         ).build());
 
+        register(context, FROZEN_BUSH_PATCH_KEY, Feature.RANDOM_PATCH,
+            new RandomPatchFeatureConfig(32,7,3, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(
+                                BlockStateProvider.of(ModBlocks.FROZEN_BUSH.getDefaultState().with(FrozenBushBlock.AGE, Integer.valueOf(3)))
+                        ))));
     }
 
     //=======================================================================================

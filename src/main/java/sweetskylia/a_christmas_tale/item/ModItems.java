@@ -6,6 +6,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import sweetskylia.a_christmas_tale.AChristmasTale;
+import sweetskylia.a_christmas_tale.block.ModBlocks;
 import sweetskylia.a_christmas_tale.item.Custom.FrozenSword;
 import sweetskylia.a_christmas_tale.item.Custom.HotChocolate;
 import sweetskylia.a_christmas_tale.item.Custom.SnowCannon;
@@ -33,7 +34,8 @@ public class ModItems {
     public static final Item STELLAR_CANDY_HOE = registerItem("stellar_candy_hoe", new ToolItem(ModToolMaterials.STELLAR_CANDY, new Item.Settings()
             .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.STELLAR_CANDY, 0, -1.0F))));
 
-    public static final Item FROZEN_FRUIT = registerItem("frozen_fruit", new Item(new Item.Settings().food(ModFoodComponents.FROZEN_FRUIT)));
+    public static final Item FROZEN_FRUIT = registerItem("frozen_fruit", new AliasedBlockItem(ModBlocks.FROZEN_BUSH,new Item.Settings().food(ModFoodComponents.FROZEN_FRUIT)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(AChristmasTale.MOD_ID, name), item);
     }

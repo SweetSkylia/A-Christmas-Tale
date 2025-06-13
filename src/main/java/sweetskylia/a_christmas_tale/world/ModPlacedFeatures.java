@@ -5,8 +5,8 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.*;
 import sweetskylia.a_christmas_tale.AChristmasTale;
@@ -20,8 +20,8 @@ public class ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> SHIRO_TREE_PLACED_KEY = registerKey("shiro_tree_placed");
     public static final RegistryKey<PlacedFeature> RED_TREE_PLACED_KEY = registerKey("red_tree_placed");
+    public static final RegistryKey<PlacedFeature> FROZEN_BUSH_PATCH_PLACED_KEY = registerKey("frozen_bush_patch_placed");
 
-//    public static final RegistryKey<PlacedFeature> SNOW_LAYER_KEY = registerKey("snow_layer_placed");
 
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
@@ -37,6 +37,13 @@ public class ModPlacedFeatures {
         register(context, RED_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_OMORIKA_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(5, 0.02F, 4),
                         ModBlocks.RED_OMORIKA_SAPLING));
+        register(context, FROZEN_BUSH_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_BUSH_PATCH_KEY),
+                List.of(
+                        RarityFilterPlacementModifier.of(32),
+                        SquarePlacementModifier.of(),
+                        HeightmapPlacementModifier.of(Heightmap.Type.WORLD_SURFACE_WG),
+                        BiomePlacementModifier.of()
+                ));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

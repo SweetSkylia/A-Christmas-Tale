@@ -147,17 +147,24 @@ public class ModBlocks {
                     .noCollision()
                     .sounds(BlockSoundGroup.SWEET_BERRY_BUSH)
                     .pistonBehavior(PistonBehavior.DESTROY))
-            );
+            , false);
 
-    //INIT BLOCKS REGISTERING
+    private static Block registerBlock(String name, Block block) {
+        return registerBlock(name, block, true);
+    }
+
+    //Register item without appearing when /give
+    private static Block registerBlock(String name, Block block, boolean hasItem) {
+        if (hasItem) {
+            registerBlockItem(name, block);
+        }
+        return Registry.register(Registries.BLOCK, Identifier.of(AChristmasTale.MOD_ID, name), block);
+    }
+
+    //Register item for block
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(AChristmasTale.MOD_ID, name),
                 new BlockItem(block, new Item.Settings()));
-    }
-
-    private static Block registerBlock(String name, Block block) {
-        registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(AChristmasTale.MOD_ID, name), block);
     }
 
     public static void registerModBlocks() {
