@@ -15,6 +15,7 @@ import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
+import sweetskylia.a_christmas_tale.block.custom.PresentBlock;
 import sweetskylia.a_christmas_tale.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -65,7 +66,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SHIROMORIKA_PRESSURE_PLATE);
         addDrop(ModBlocks.SHIROMORIKA_TRAPDOOR);
         addDrop(ModBlocks.SHIROMORIKA_DOOR, doorDrops(ModBlocks.SHIROMORIKA_DOOR));
-        addDrop(ModBlocks.PRESENT_BLOCK);
+//        addDrop(ModBlocks.PRESENT_BLOCK, multipleDrops(ModBlocks.PRESENT_BLOCK, PresentBlock.STATE));
     }
 
 

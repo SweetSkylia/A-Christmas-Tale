@@ -9,11 +9,14 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -22,12 +25,14 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
+import sweetskylia.a_christmas_tale.block.ModBlocks;
 
 public class PresentBlock extends HorizontalFacingBlock {
     public static final MapCodec<PresentBlock> CODEC = createCodec(PresentBlock::new);
     private static final VoxelShape SHAPE = Block.createCuboidShape(0,0,0,16,8,16);
     public static final IntProperty STATE = IntProperty.of("state", 0, 4);
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
+    public static final int MAX_STATE = 4;
 
     public PresentBlock(Settings settings) {
         super(settings);
@@ -82,14 +87,28 @@ public class PresentBlock extends HorizontalFacingBlock {
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-//        if (!world.isClient) {
-//            int currentState = state.get(STATE);
-//            if (currentState < 4){
-//                int newState = currentState + 1;
-//                world.setBlockState(pos, state.with(STATE, newState), Block.NOTIFY_ALL);
-//            }
-//        }
-
         return super.onUse(state, world, pos, player, hit);
+    }
+
+    @Override
+    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        int i = (Integer) state.get(STATE);
+        ItemStack itemStack = player.getStackInHand(hand);
+        if ((i < 4) && (itemStack.isOf(ModBlocks.PRESENT_BLOCK.asItem())) ){
+            i++;
+            world.setBlockState(pos, state.with(STATE, Integer.valueOf(i)), Block.NOTIFY_LISTENERS);
+            if (!player.isCreative()){
+                itemStack.decrement(1);
+            }
+            return ItemActionResult.SUCCESS;
+        }
+        return ItemActionResult.FAIL;
+    }
+
+    @Override
+    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+        int i = (Integer) state.get(STATE) + 1;
+        dropStack(world, pos, new ItemStack(ModBlocks.PRESENT_BLOCK,i));
+        return super.onBreak(world, pos, state, player);
     }
 }

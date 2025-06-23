@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "state=0,facing=north": { "model": "a_christmas_tale:block/present_block_state0", "y": 0 },
+    "state=0,facing=east":  { "model": "a_christmas_tale:block/present_block_state0", "y": 90 },
+    "state=0,facing=south": { "model": "a_christmas_tale:block/present_block_state0", "y": 180 },
+    "state=0,facing=west":  { "model": "a_christmas_tale:block/present_block_state0", "y": 270 },
+
+    "state=1,facing=north": { "model": "a_christmas_tale:block/present_block_state1", "y": 0 },
+    "state=1,facing=east":  { "model": "a_christmas_tale:block/present_block_state1", "y": 90 },
+    "state=1,facing=south": { "model": "a_christmas_tale:block/present_block_state1", "y": 180 },
+    "state=1,facing=west":  { "model": "a_christmas_tale:block/present_block_state1", "y": 270 },
+
+    "state=2,facing=north": { "model": "a_christmas_tale:block/present_block_state2", "y": 0 },
+    "state=2,facing=east":  { "model": "a_christmas_tale:block/present_block_state2", "y": 90 },
+    "state=2,facing=south": { "model": "a_christmas_tale:block/present_block_state2", "y": 180 },
+    "state=2,facing=west":  { "model": "a_christmas_tale:block/present_block_state2", "y": 270 },
+
+    "state=3,facing=north": { "model": "a_christmas_tale:block/present_block_state3", "y": 0 },
+    "state=3,facing=east":  { "model": "a_christmas_tale:block/present_block_state3", "y": 90 },
+    "state=3,facing=south": { "model": "a_christmas_tale:block/present_block_state3", "y": 180 },
+    "state=3,facing=west":  { "model": "a_christmas_tale:block/present_block_state3", "y": 270 },
+
+    "state=4,facing=north": { "model": "a_christmas_tale:block/present_block_state4", "y": 0 },
+    "state=4,facing=east":  { "model": "a_christmas_tale:block/present_block_state4", "y": 90 },
+    "state=4,facing=south": { "model": "a_christmas_tale:block/present_block_state4", "y": 180 },
+    "state=4,facing=west":  { "model": "a_christmas_tale:block/present_block_state4", "y": 270 }
+  }
+}

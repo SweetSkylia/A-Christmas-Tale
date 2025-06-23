@@ -24,7 +24,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FROZEN_STELLAR_BLOCK);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.CHRISTMAS_WOOL,ModBlocks.CHRISTMAS_CARPET);
         blockStateModelGenerator.registerWoolAndCarpet(ModBlocks.WINTER_WOOL,ModBlocks.WINTER_CARPET);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.PRESENT_BLOCK);
 
         //WOOD SET ========================================================================
         blockStateModelGenerator.registerLog(ModBlocks.RED_OMORIKA_LOG).log(ModBlocks.RED_OMORIKA_LOG).wood(ModBlocks.RED_OMORIKA_WOOD);
