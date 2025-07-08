@@ -1,0 +1,6 @@
+{
+	"parent": "a_christmas_tale:block/template_ornament",
+	"textures": {
+		"ornament": "a_christmas_tale:block/purple_ornament"
+	}
+}

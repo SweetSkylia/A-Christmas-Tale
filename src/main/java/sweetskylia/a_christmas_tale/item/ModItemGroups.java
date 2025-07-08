@@ -28,6 +28,24 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CANDY_BLOCK);
                         entries.add(ModBlocks.PRESENT_BLOCK);
 
+                        //Ornaments
+                        entries.add(ModBlocks.WHITE_ORNAMENT);
+                        entries.add(ModBlocks.ORANGE_ORNAMENT);
+                        entries.add(ModBlocks.MAGENTA_ORNAMENT);
+                        entries.add(ModBlocks.LIGHT_BLUE_ORNAMENT);
+                        entries.add(ModBlocks.YELLOW_ORNAMENT);
+                        entries.add(ModBlocks.LIME_ORNAMENT);
+                        entries.add(ModBlocks.PINK_ORNAMENT);
+                        entries.add(ModBlocks.GRAY_ORNAMENT);
+                        entries.add(ModBlocks.LIGHT_GRAY_ORNAMENT);
+                        entries.add(ModBlocks.CYAN_ORNAMENT);
+                        entries.add(ModBlocks.PURPLE_ORNAMENT);
+                        entries.add(ModBlocks.BLUE_ORNAMENT);
+                        entries.add(ModBlocks.BROWN_ORNAMENT);
+                        entries.add(ModBlocks.GREEN_ORNAMENT);
+                        entries.add(ModBlocks.RED_ORNAMENT);
+                        entries.add(ModBlocks.BLACK_ORNAMENT);
+
 
                         //Items
                         entries.add(ModItems.STELLAR_HEART);

@@ -10,10 +10,12 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import sweetskylia.a_christmas_tale.AChristmasTale;
 import sweetskylia.a_christmas_tale.block.custom.FrozenBushBlock;
+import sweetskylia.a_christmas_tale.block.custom.OrnamentBlock;
 import sweetskylia.a_christmas_tale.block.custom.PresentBlock;
 import sweetskylia.a_christmas_tale.world.tree.ModSaplingGenerators;
 
@@ -149,6 +151,23 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY))
             , false);
 
+    public static final Block WHITE_ORNAMENT = registerBlock("white_ornament",createOrnamentBlock(DyeColor.WHITE));
+    public static final Block ORANGE_ORNAMENT = registerBlock("orange_ornament",createOrnamentBlock(DyeColor.ORANGE));
+    public static final Block MAGENTA_ORNAMENT = registerBlock("magenta_ornament",createOrnamentBlock(DyeColor.MAGENTA));
+    public static final Block LIGHT_BLUE_ORNAMENT = registerBlock("light_blue_ornament",createOrnamentBlock(DyeColor.LIGHT_BLUE));
+    public static final Block YELLOW_ORNAMENT = registerBlock("yellow_ornament",createOrnamentBlock(DyeColor.YELLOW));
+    public static final Block LIME_ORNAMENT = registerBlock("lime_ornament",createOrnamentBlock(DyeColor.LIME));
+    public static final Block PINK_ORNAMENT = registerBlock("pink_ornament",createOrnamentBlock(DyeColor.PINK));
+    public static final Block GRAY_ORNAMENT = registerBlock("gray_ornament",createOrnamentBlock(DyeColor.GRAY));
+    public static final Block LIGHT_GRAY_ORNAMENT = registerBlock("light_gray_ornament",createOrnamentBlock(DyeColor.LIGHT_GRAY));
+    public static final Block CYAN_ORNAMENT = registerBlock("cyan_ornament",createOrnamentBlock(DyeColor.CYAN));
+    public static final Block PURPLE_ORNAMENT = registerBlock("purple_ornament",createOrnamentBlock(DyeColor.PURPLE));
+    public static final Block BLUE_ORNAMENT = registerBlock("blue_ornament",createOrnamentBlock(DyeColor.BLUE));
+    public static final Block BROWN_ORNAMENT = registerBlock("brown_ornament",createOrnamentBlock(DyeColor.BROWN));
+    public static final Block GREEN_ORNAMENT = registerBlock("green_ornament",createOrnamentBlock(DyeColor.GREEN));
+    public static final Block RED_ORNAMENT = registerBlock("red_ornament",createOrnamentBlock(DyeColor.RED));
+    public static final Block BLACK_ORNAMENT = registerBlock("black_ornament",createOrnamentBlock(DyeColor.BLACK));
+    public static final Block TEMPLATE_ORNAMENT = registerBlock("template_ornament", createOrnamentBlock(DyeColor.ORANGE));
     private static Block registerBlock(String name, Block block) {
         return registerBlock(name, block, true);
     }
@@ -182,5 +201,22 @@ public class ModBlocks {
             entries.add(WINTER_WOOL);
             entries.add(WINTER_CARPET);
         });
+    }
+
+    private static Block createOrnamentBlock(DyeColor color){
+        return new OrnamentBlock(color,
+                AbstractBlock.Settings.create()
+                        .mapColor(color)
+                        .instrument(NoteBlockInstrument.HAT)
+                        .strength(0.3F)
+                        .sounds(BlockSoundGroup.GLASS)
+                        .allowsSpawning(Blocks::never)
+                        .solidBlock(Blocks::never)
+                        .suffocates(Blocks::never)
+                        .luminance( state -> 10)
+                        .blockVision(Blocks::never)
+                        .nonOpaque()
+
+        );
     }
 }
