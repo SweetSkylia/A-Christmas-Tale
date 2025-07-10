@@ -69,6 +69,23 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FROZEN_STELLAR_HEART, Models.GENERATED);
         itemModelGenerator.register(ModBlocks.PRESENT_BLOCK.asItem(), Models.GENERATED);
 
+        itemModelGenerator.register(ModBlocks.WHITE_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.ORANGE_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.MAGENTA_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.LIGHT_BLUE_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.YELLOW_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.LIME_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.PINK_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.GRAY_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.LIGHT_GRAY_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.CYAN_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.PURPLE_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.BLUE_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.BROWN_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.GREEN_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.RED_ORNAMENT.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.BLACK_ORNAMENT.asItem(), Models.GENERATED);
+
         itemModelGenerator.register(ModItems.STELLAR_CANDY_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STELLAR_CANDY_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STELLAR_CANDY_AXE, Models.HANDHELD);
