@@ -51,7 +51,23 @@
   "block.a_christmas_tale.shiromorika_button": "Bouton en shiromorika",
   "block.a_christmas_tale.shiromorika_slab": "Dalle en shiromorika",
   "block.a_christmas_tale.shiromorika_stairs": "Escalier en shiromorika",
-  "block.a_christmas_tale.present_block": "Cadeau"
+  "block.a_christmas_tale.present_block": "Cadeau",
+  "block.a_christmas_tale.white_ornament": "Boule blanche",
+  "block.a_christmas_tale.orange_ornament": "Boule orange",
+  "block.a_christmas_tale.magenta_ornament": "Boule magenta",
+  "block.a_christmas_tale.light_blue_ornament": "Boule bleue ciel",
+  "block.a_christmas_tale.yellow_ornament": "Boule jaune",
+  "block.a_christmas_tale.lime_ornament": "Boule verte clair",
+  "block.a_christmas_tale.pink_ornament": "Boule rose",
+  "block.a_christmas_tale.gray_ornament": "Boule grise",
+  "block.a_christmas_tale.light_gray_ornament": "Boule grise clair",
+  "block.a_christmas_tale.cyan_ornament": "Boule cyan",
+  "block.a_christmas_tale.purple_ornament": "Boule violette",
+  "block.a_christmas_tale.blue_ornament": "Boule bleue",
+  "block.a_christmas_tale.brown_ornament": "Boule brune",
+  "block.a_christmas_tale.green_ornament": "Boule verte",
+  "block.a_christmas_tale.red_ornament": "Boule rouge",
+  "block.a_christmas_tale.black_ornament": "Boule noire"
 
 
 }

@@ -20,7 +20,24 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CANDY_BLOCK)
                 .add(ModBlocks.STELLAR_HEART_ORE)
                 .add(ModBlocks.STELLAR_BLOCK)
-                .add(ModBlocks.FROZEN_STELLAR_BLOCK);
+                .add(ModBlocks.FROZEN_STELLAR_BLOCK)
+
+                .add(ModBlocks.WHITE_ORNAMENT)
+                .add(ModBlocks.ORANGE_ORNAMENT)
+                .add(ModBlocks.MAGENTA_ORNAMENT)
+                .add(ModBlocks.LIGHT_BLUE_ORNAMENT)
+                .add(ModBlocks.YELLOW_ORNAMENT)
+                .add(ModBlocks.LIME_ORNAMENT)
+                .add(ModBlocks.PINK_ORNAMENT)
+                .add(ModBlocks.GRAY_ORNAMENT)
+                .add(ModBlocks.LIGHT_GRAY_ORNAMENT)
+                .add(ModBlocks.CYAN_ORNAMENT)
+                .add(ModBlocks.PURPLE_ORNAMENT)
+                .add(ModBlocks.BLUE_ORNAMENT)
+                .add(ModBlocks.BROWN_ORNAMENT)
+                .add(ModBlocks.GREEN_ORNAMENT)
+                .add(ModBlocks.RED_ORNAMENT)
+                .add(ModBlocks.BLACK_ORNAMENT);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.CANDY_BLOCK);
