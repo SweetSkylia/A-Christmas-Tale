@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "a_christmas_tale:yellow_ornament"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_ornament": {
+      "conditions": {
+        "items": [
+          {
+            "items": "a_christmas_tale:yellow_ornament"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yellow_ornament"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "a_christmas_tale:yellow_ornament"
+    ]
+  }
+}

@@ -3,10 +3,12 @@ package sweetskylia.a_christmas_tale.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -211,5 +213,42 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(log), conditionsFromItem(log))
                         .offerTo(exporter)
                 );
+
+        registerOrnaments(exporter);
+    }
+
+
+    private static void registerOrnaments(RecipeExporter exporter){
+        Map<Item, Block> ornamentsCraft = Map.ofEntries(
+                Map.entry(Items.WHITE_DYE, ModBlocks.WHITE_ORNAMENT),
+                Map.entry(Items.ORANGE_DYE, ModBlocks.ORANGE_ORNAMENT),
+                Map.entry(Items.MAGENTA_DYE, ModBlocks.MAGENTA_ORNAMENT),
+                Map.entry(Items.LIGHT_BLUE_DYE, ModBlocks.LIGHT_BLUE_ORNAMENT),
+                Map.entry(Items.YELLOW_DYE, ModBlocks.YELLOW_ORNAMENT),
+                Map.entry(Items.LIME_DYE, ModBlocks.LIME_ORNAMENT),
+                Map.entry(Items.PINK_DYE, ModBlocks.PINK_ORNAMENT),
+                Map.entry(Items.GRAY_DYE, ModBlocks.GRAY_ORNAMENT),
+                Map.entry(Items.LIGHT_GRAY_DYE, ModBlocks.LIGHT_GRAY_ORNAMENT),
+                Map.entry(Items.CYAN_DYE, ModBlocks.CYAN_ORNAMENT),
+                Map.entry(Items.PURPLE_DYE, ModBlocks.PURPLE_ORNAMENT),
+                Map.entry(Items.BLUE_DYE, ModBlocks.BLUE_ORNAMENT),
+                Map.entry(Items.BROWN_DYE, ModBlocks.BROWN_ORNAMENT),
+                Map.entry(Items.GREEN_DYE, ModBlocks.GREEN_ORNAMENT),
+                Map.entry(Items.RED_DYE, ModBlocks.RED_ORNAMENT),
+                Map.entry(Items.BLACK_DYE, ModBlocks.BLACK_ORNAMENT)
+        );
+
+        ornamentsCraft.forEach(( dye, ornament) ->
+
+                ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ornament, 6)
+                        .pattern("GSG")
+                        .pattern("GDG")
+                        .pattern("GGG")
+                        .input('G', Blocks.GLASS)
+                        .input('S', ModItems.STELLAR_HEART)
+                        .input('D', dye)
+                        .criterion(hasItem(ornament), conditionsFromItem(ornament))
+                        .offerTo(exporter)
+        );
     }
 }
