@@ -66,7 +66,24 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SHIROMORIKA_PRESSURE_PLATE);
         addDrop(ModBlocks.SHIROMORIKA_TRAPDOOR);
         addDrop(ModBlocks.SHIROMORIKA_DOOR, doorDrops(ModBlocks.SHIROMORIKA_DOOR));
-//        addDrop(ModBlocks.PRESENT_BLOCK, multipleDrops(ModBlocks.PRESENT_BLOCK, PresentBlock.STATE));
+//
+        addDrop(ModBlocks.WHITE_ORNAMENT);
+        addDrop(ModBlocks.ORANGE_ORNAMENT);
+        addDrop(ModBlocks.MAGENTA_ORNAMENT);
+        addDrop(ModBlocks.LIGHT_BLUE_ORNAMENT);
+        addDrop(ModBlocks.YELLOW_ORNAMENT);
+        addDrop(ModBlocks.LIME_ORNAMENT);
+        addDrop(ModBlocks.PINK_ORNAMENT);
+        addDrop(ModBlocks.GRAY_ORNAMENT);
+        addDrop(ModBlocks.LIGHT_GRAY_ORNAMENT);
+        addDrop(ModBlocks.CYAN_ORNAMENT);
+        addDrop(ModBlocks.PURPLE_ORNAMENT);
+        addDrop(ModBlocks.BLUE_ORNAMENT);
+        addDrop(ModBlocks.BROWN_ORNAMENT);
+        addDrop(ModBlocks.GREEN_ORNAMENT);
+        addDrop(ModBlocks.RED_ORNAMENT);
+        addDrop(ModBlocks.BLACK_ORNAMENT);
+
     }
 
 
