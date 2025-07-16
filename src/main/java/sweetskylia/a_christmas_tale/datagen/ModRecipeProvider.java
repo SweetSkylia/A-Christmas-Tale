@@ -116,6 +116,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.CANDY), conditionsFromItem(ModItems.CANDY))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STELLAR_CANDY_SWORD, 1)
+                .pattern(" C")
+                .pattern(" F")
+                .pattern(" |")
+                .input('|', Items.STICK)
+                .input('F', ModItems.FROZEN_STELLAR_HEART)
+                .input('C', ModItems.CANDY)
+                .criterion(hasItem(ModItems.CANDY), conditionsFromItem(ModItems.CANDY))
+                .offerTo(exporter);
+
 
         //WOOD RECIPES ======================================
         registerPlankRecipes(exporter); //logs to planks
@@ -247,7 +257,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('G', Blocks.GLASS)
                         .input('S', ModItems.STELLAR_HEART)
                         .input('D', dye)
-                        .criterion(hasItem(ornament), conditionsFromItem(ornament))
+                        .criterion(hasItem(ModItems.STELLAR_HEART), conditionsFromItem(ModItems.STELLAR_HEART))
                         .offerTo(exporter)
         );
     }

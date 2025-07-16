@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_light_gray_ornament": {
+    "has_stellar_heart": {
       "conditions": {
         "items": [
           {
-            "items": "a_christmas_tale:light_gray_ornament"
+            "items": "a_christmas_tale:stellar_heart"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_light_gray_ornament"
+      "has_stellar_heart"
     ]
   ],
   "rewards": {
