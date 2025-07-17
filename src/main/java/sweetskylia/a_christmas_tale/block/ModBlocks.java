@@ -167,7 +167,7 @@ public class ModBlocks {
     public static final Block GREEN_ORNAMENT = registerBlock("green_ornament",createOrnamentBlock(DyeColor.GREEN));
     public static final Block RED_ORNAMENT = registerBlock("red_ornament",createOrnamentBlock(DyeColor.RED));
     public static final Block BLACK_ORNAMENT = registerBlock("black_ornament",createOrnamentBlock(DyeColor.BLACK));
-    public static final Block TEMPLATE_ORNAMENT = registerBlock("template_ornament", createOrnamentBlock(DyeColor.ORANGE));
+
     private static Block registerBlock(String name, Block block) {
         return registerBlock(name, block, true);
     }
