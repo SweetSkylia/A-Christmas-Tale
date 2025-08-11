@@ -15,6 +15,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import sweetskylia.a_christmas_tale.AChristmasTale;
 import sweetskylia.a_christmas_tale.block.custom.FrozenBushBlock;
+import sweetskylia.a_christmas_tale.block.custom.ModSaplingBlock;
 import sweetskylia.a_christmas_tale.block.custom.OrnamentBlock;
 import sweetskylia.a_christmas_tale.block.custom.PresentBlock;
 import sweetskylia.a_christmas_tale.world.tree.ModSaplingGenerators;
@@ -89,7 +90,7 @@ public class ModBlocks {
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
 
     public static final Block SHIROMORIKA_SAPLING = registerBlock("shiromorika_sapling",
-            new SaplingBlock(ModSaplingGenerators.SHIROMORIKA,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+            new ModSaplingBlock(ModSaplingGenerators.SHIROMORIKA,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
 
     public static final Block PRESENT_BLOCK = registerBlock("present_block",
             new PresentBlock(AbstractBlock.Settings.create().nonOpaque().strength(0.6f)));

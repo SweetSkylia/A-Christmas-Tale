@@ -22,6 +22,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.item.ItemStack;
 import sweetskylia.a_christmas_tale.world.gen.ModWorldGeneration;
+import sweetskylia.a_christmas_tale.world.tree.ModTrunkPlacerTypes;
 
 import java.util.UUID;
 
@@ -72,7 +73,7 @@ public class AChristmasTale implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModWorldGeneration.generateModWorldGen();
-
+        ModTrunkPlacerTypes.register();
 
         //STELLAR HEART TO FROZEN STELLAR HEART EVENT
         ServerTickEvents.START_WORLD_TICK.register(world -> {
