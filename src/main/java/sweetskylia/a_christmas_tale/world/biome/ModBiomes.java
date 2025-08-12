@@ -34,7 +34,7 @@ public class ModBiomes {
         DefaultBiomeFeatures.addAmethystGeodes(builder);
         DefaultBiomeFeatures.addDungeons(builder);
         DefaultBiomeFeatures.addMineables(builder);
-        DefaultBiomeFeatures.addFrozenTopLayer(builder);
+//        DefaultBiomeFeatures.addFrozenTopLayer(builder);
         DefaultBiomeFeatures.addSprings(builder);
     }
 
@@ -98,7 +98,6 @@ public class ModBiomes {
 
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_SNOWY);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, context.getRegistryLookup(RegistryKeys.PLACED_FEATURE).getOrThrow(ModPlacedFeatures.SHIRO_TREE_PLACED_KEY));
-//        biomeBuilder.feature(GenerationStep.Feature.TOP_LAYER_MODIFICATION,context.getRegistryLookup(RegistryKeys.PLACED_FEATURE).getOrThrow(ModPlacedFeatures.SNOW_LAYER_KEY));
         DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
 
         return new Biome.Builder()

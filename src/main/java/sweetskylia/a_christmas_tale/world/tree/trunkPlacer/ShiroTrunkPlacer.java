@@ -26,12 +26,11 @@ public class ShiroTrunkPlacer extends TrunkPlacer {
     public static final MapCodec<ShiroTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(
             instance -> fillTrunkPlacerFields(instance).and(
                     instance.group(
-                            IntProvider.createValidatingCodec(3, 8).fieldOf("branch_count").forGetter(p -> p.branchCount),
+                            IntProvider.createValidatingCodec(3, 15).fieldOf("branch_count").forGetter(p -> p.branchCount),
                             IntProvider.createValidatingCodec(2, 4).fieldOf("branch_length").forGetter(p -> p.branchLength),
                             IntProvider.createValidatingCodec(2, 6).fieldOf("branch_start_offset_range").forGetter(p -> p.branchStartOffsetRange)
                     )
-            ).apply(instance, (baseHeight, heightRandA, heightRandB, branchCount, branchLength, branchStartOffsetRange) ->
-                    new ShiroTrunkPlacer(baseHeight, heightRandA, heightRandB, branchCount, branchLength, branchStartOffsetRange)
+            ).apply(instance, ShiroTrunkPlacer::new
             )
     );
 

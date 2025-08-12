@@ -71,9 +71,6 @@
       "a_christmas_tale:shiro_tree_placed",
       "minecraft:patch_sugar_cane",
       "minecraft:patch_pumpkin"
-    ],
-    [
-      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,
@@ -182,5 +179,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.1
+  "temperature": -3.0
 }

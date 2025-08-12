@@ -11,7 +11,7 @@ import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
 import net.minecraft.world.gen.foliage.SpruceFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
@@ -27,8 +27,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> STELLAR_HEART_ORE_KEY = registerKey("stellar_heart_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> RED_OMORIKA_KEY = registerKey("red_omorika");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SHIROMORIKA_KEY = registerKey("shiromorika");
-    public static final RegistryKey<ConfiguredFeature<?,?>> FROZEN_BUSH_PATCH_KEY = registerKey("frozen_bush_patch");
-//    public static final RegistryKey<ConfiguredFeature<?, ?>> SNOW_LAYER_KEY = registerKey("snow_layer");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> FROZEN_BUSH_PATCH_KEY = registerKey("frozen_bush_patch");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES); //règle pour générer les minerais dans la stone classique
@@ -41,7 +40,7 @@ public class ModConfiguredFeatures {
         register(context, STELLAR_HEART_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldStellarHeartOres, 4));
 
 
-    //TREES ================================================================================
+        //TREES ================================================================================
         register(context, RED_OMORIKA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.RED_OMORIKA_LOG),
                 new StraightTrunkPlacer(7, 2, 1), //Trunk of the tree
@@ -53,18 +52,18 @@ public class ModConfiguredFeatures {
 
         register(context, SHIROMORIKA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.SHIROMORIKA_LOG),
-                new ShiroTrunkPlacer(10,3,5,
-                        UniformIntProvider.create(3,5),
+                new ShiroTrunkPlacer(10, 3, 5,
+                        UniformIntProvider.create(3, 10),
                         ConstantIntProvider.create(2),
-                        UniformIntProvider.create(2,6)
+                        UniformIntProvider.create(2, 6)
                 ),
                 BlockStateProvider.of(ModBlocks.SHIROMORIKA_LEAVES.getDefaultState()),
-                new BlobFoliagePlacer(UniformIntProvider.create(2, 3), UniformIntProvider.create(0, 2), 2),
+                new LargeOakFoliagePlacer(UniformIntProvider.create(2, 3), UniformIntProvider.create(0, 2), 2),
                 new TwoLayersFeatureSize(2, 0, 2)
         ).build());
 
         register(context, FROZEN_BUSH_PATCH_KEY, Feature.RANDOM_PATCH,
-            new RandomPatchFeatureConfig(32,7,3, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                new RandomPatchFeatureConfig(32, 7, 3, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                         new SimpleBlockFeatureConfig(
                                 BlockStateProvider.of(ModBlocks.FROZEN_BUSH.getDefaultState().with(FrozenBushBlock.AGE, Integer.valueOf(3)))
                         ))));
