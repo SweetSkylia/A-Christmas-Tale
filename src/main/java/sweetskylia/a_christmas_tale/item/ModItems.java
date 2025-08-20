@@ -9,6 +9,7 @@ import sweetskylia.a_christmas_tale.AChristmasTale;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
 import sweetskylia.a_christmas_tale.item.Custom.FrozenSword;
 import sweetskylia.a_christmas_tale.item.Custom.HotChocolate;
+import sweetskylia.a_christmas_tale.item.Custom.ModWearableItems;
 import sweetskylia.a_christmas_tale.item.Custom.SnowCannon;
 
 public class ModItems {
@@ -34,6 +35,8 @@ public class ModItems {
             .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.STELLAR_CANDY, 0, -1.0F))));
 
     public static final Item FROZEN_FRUIT = registerItem("frozen_fruit", new AliasedBlockItem(ModBlocks.FROZEN_BUSH,new Item.Settings().food(ModFoodComponents.FROZEN_FRUIT)));
+
+    public static final Item CHRISTMAS_HAT = registerItem("christmas_hat", new ModWearableItems(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(AChristmasTale.MOD_ID, name), item);

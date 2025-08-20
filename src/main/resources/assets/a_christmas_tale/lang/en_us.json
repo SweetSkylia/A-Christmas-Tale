@@ -13,6 +13,7 @@
   "item.a_christmas_tale.stellar_candy_shovel": "Stellar Candy Shovel",
   "item.a_christmas_tale.stellar_candy_axe": "Stellar Candy Axe",
   "item.a_christmas_tale.stellar_candy_hoe": "Stellar Candy Hoe",
+  "item.a_christmas_tale.christmas_hat": "Christmas Hat",
   "block.a_christmas_tale.stellar_heart_ore": "Stellar Heart Ore",
   "block.a_christmas_tale.candy_block": "Block of Candy",
   "block.a_christmas_tale.stellar_block": "Block of Stellar",
@@ -68,6 +69,5 @@
   "block.a_christmas_tale.green_ornament": "Green Ornament",
   "block.a_christmas_tale.red_ornament": "Red Ornament",
   "block.a_christmas_tale.black_ornament": "Black Ornament"
-
 
 }

@@ -60,6 +60,7 @@ public class ModItemGroups {
                         entries.add(ModItems.STELLAR_CANDY_AXE);
                         entries.add(ModItems.STELLAR_CANDY_SHOVEL);
                         entries.add(ModItems.STELLAR_CANDY_HOE);
+                        entries.add(ModItems.CHRISTMAS_HAT);
 
 
                     }).build());

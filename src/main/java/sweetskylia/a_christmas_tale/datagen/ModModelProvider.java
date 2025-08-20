@@ -92,5 +92,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STELLAR_CANDY_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STELLAR_CANDY_HOE, Models.HANDHELD);
 
+        itemModelGenerator.register(ModItems.CHRISTMAS_HAT.asItem(), Models.GENERATED);
     }
 }
