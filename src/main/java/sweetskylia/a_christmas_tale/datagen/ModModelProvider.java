@@ -57,6 +57,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.SHIROMORIKA_TRAPDOOR);
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.FROZEN_BUSH, BlockStateModelGenerator.TintType.NOT_TINTED, FrozenBushBlock.AGE, 0,1,2,3 );
 
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STELLAR_ICE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RED_CRYSTAL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLUE_CRYSTAL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PURPLE_CRYSTAL);
     }
 
     @Override

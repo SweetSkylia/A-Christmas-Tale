@@ -45,6 +45,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.GREEN_ORNAMENT);
                         entries.add(ModBlocks.RED_ORNAMENT);
                         entries.add(ModBlocks.BLACK_ORNAMENT);
+                        entries.add(ModBlocks.STELLAR_ICE);
+                        entries.add(ModBlocks.RED_CRYSTAL);
+                        entries.add(ModBlocks.BLUE_CRYSTAL);
+                        entries.add(ModBlocks.PURPLE_CRYSTAL);
 
 
                         //Items

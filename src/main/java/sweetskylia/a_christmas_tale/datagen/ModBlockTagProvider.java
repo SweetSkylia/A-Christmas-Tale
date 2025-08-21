@@ -21,6 +21,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STELLAR_HEART_ORE)
                 .add(ModBlocks.STELLAR_BLOCK)
                 .add(ModBlocks.FROZEN_STELLAR_BLOCK)
+                .add(ModBlocks.STELLAR_ICE)
 
                 .add(ModBlocks.WHITE_ORNAMENT)
                 .add(ModBlocks.ORANGE_ORNAMENT)

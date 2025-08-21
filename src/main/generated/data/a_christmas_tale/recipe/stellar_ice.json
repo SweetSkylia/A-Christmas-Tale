@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "F": {
+      "item": "a_christmas_tale:frozen_stellar_heart"
+    },
+    "I": {
+      "item": "minecraft:packed_ice"
+    }
+  },
+  "pattern": [
+    " IF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "a_christmas_tale:stellar_ice"
+  }
+}

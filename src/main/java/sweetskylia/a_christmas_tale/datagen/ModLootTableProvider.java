@@ -84,6 +84,11 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RED_ORNAMENT);
         addDrop(ModBlocks.BLACK_ORNAMENT);
 
+        addDrop(ModBlocks.STELLAR_ICE);
+        addDrop(ModBlocks.RED_CRYSTAL, dropsWithSilkTouch(ModBlocks.RED_CRYSTAL));
+        addDrop(ModBlocks.BLUE_CRYSTAL, dropsWithSilkTouch(ModBlocks.BLUE_CRYSTAL));
+        addDrop(ModBlocks.PURPLE_CRYSTAL, dropsWithSilkTouch(ModBlocks.PURPLE_CRYSTAL));
+
     }
 
 

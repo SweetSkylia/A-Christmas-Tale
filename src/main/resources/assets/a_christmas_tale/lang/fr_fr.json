@@ -68,7 +68,11 @@
   "block.a_christmas_tale.brown_ornament": "Boule brune",
   "block.a_christmas_tale.green_ornament": "Boule verte",
   "block.a_christmas_tale.red_ornament": "Boule rouge",
-  "block.a_christmas_tale.black_ornament": "Boule noire"
+  "block.a_christmas_tale.black_ornament": "Boule noire",
+  "block.a_christmas_tale.stellar_ice": "Glace stellaire",
+  "block.a_christmas_tale.red_crystal": "Cristal rouge",
+  "block.a_christmas_tale.blue_crystal": "Cristal bleu",
+  "block.a_christmas_tale.purple_crystal": "Cristal violet"
 
 
 }

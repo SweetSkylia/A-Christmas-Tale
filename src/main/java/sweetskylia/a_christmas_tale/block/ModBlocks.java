@@ -152,6 +152,35 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY))
             , false);
 
+
+    public static final Block STELLAR_ICE = registerBlock("stellar_ice",
+            new Block(AbstractBlock.Settings.copy(Blocks.PACKED_ICE).requiresTool().strength(0.5F)));
+
+    public static final Block RED_CRYSTAL = registerBlock("red_crystal", new TransparentBlock(AbstractBlock.Settings.create()
+            .nonOpaque()
+            .strength(0.3F)
+            .sounds(BlockSoundGroup.GLASS)
+            .blockVision(Blocks::never)
+            .allowsSpawning(Blocks::never)
+            .solidBlock(Blocks::never)
+            .suffocates(Blocks::never)));
+    public static final Block BLUE_CRYSTAL = registerBlock("blue_crystal", new TransparentBlock(AbstractBlock.Settings.create()
+            .nonOpaque()
+            .strength(0.3F)
+            .sounds(BlockSoundGroup.GLASS)
+            .blockVision(Blocks::never)
+            .allowsSpawning(Blocks::never)
+            .solidBlock(Blocks::never)
+            .suffocates(Blocks::never)));
+    public static final Block PURPLE_CRYSTAL = registerBlock("purple_crystal", new TransparentBlock(AbstractBlock.Settings.create()
+            .nonOpaque()
+            .strength(0.3F)
+            .sounds(BlockSoundGroup.GLASS)
+            .blockVision(Blocks::never)
+            .allowsSpawning(Blocks::never)
+            .solidBlock(Blocks::never)
+            .suffocates(Blocks::never)));
+
     public static final Block WHITE_ORNAMENT = registerBlock("white_ornament",createOrnamentBlock(DyeColor.WHITE));
     public static final Block ORANGE_ORNAMENT = registerBlock("orange_ornament",createOrnamentBlock(DyeColor.ORANGE));
     public static final Block MAGENTA_ORNAMENT = registerBlock("magenta_ornament",createOrnamentBlock(DyeColor.MAGENTA));

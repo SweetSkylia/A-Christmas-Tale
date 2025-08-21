@@ -127,6 +127,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
 
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STELLAR_ICE, 1)
+                .pattern(" IF")
+                .input('F', ModItems.FROZEN_STELLAR_HEART).input('I', Blocks.PACKED_ICE).
+                criterion(hasItem(ModItems.FROZEN_STELLAR_HEART), conditionsFromItem(ModItems.FROZEN_STELLAR_HEART))
+                .offerTo(exporter);
+
         //WOOD RECIPES ======================================
         registerPlankRecipes(exporter); //logs to planks
         registerWoodRecipes(exporter); //logs to wood
