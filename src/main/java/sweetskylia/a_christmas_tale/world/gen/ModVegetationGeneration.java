@@ -17,6 +17,8 @@ public class ModVegetationGeneration {
                         && context.getBiome().getTemperature() <= 0.2f;
 
         generateFrozenBush(coldOverworldBiomes);
+        generatePurpleCrystalRock(coldOverworldBiomes);
+
     }
 
     private static void generateFrozenBush(Predicate<BiomeSelectionContext> biomeFilter){
@@ -24,6 +26,14 @@ public class ModVegetationGeneration {
                 biomeFilter,
                 GenerationStep.Feature.VEGETAL_DECORATION,
                 ModPlacedFeatures.FROZEN_BUSH_PATCH_PLACED_KEY
+        );
+    }
+
+    private static void generatePurpleCrystalRock(Predicate<BiomeSelectionContext> biomeFilter){
+        BiomeModifications.addFeature(
+                biomeFilter,
+                GenerationStep.Feature.LOCAL_MODIFICATIONS,
+                ModPlacedFeatures.PURPLE_CRYSTAL_ROCK_PLACED_KEY
         );
     }
 }

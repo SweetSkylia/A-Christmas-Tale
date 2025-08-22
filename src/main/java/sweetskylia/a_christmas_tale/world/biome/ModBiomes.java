@@ -54,6 +54,8 @@ public class ModBiomes {
 
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_SNOWY);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, context.getRegistryLookup(RegistryKeys.PLACED_FEATURE).getOrThrow(ModPlacedFeatures.RED_TREE_PLACED_KEY));
+        biomeBuilder.feature(GenerationStep.Feature.LOCAL_MODIFICATIONS, ModPlacedFeatures.RED_CRYSTAL_ROCK_PLACED_KEY);
+//        biomeBuilder.feature(GenerationStep.Feature.LOCAL_MODIFICATIONS, ModPlacedFeatures.BLUE_CRYSTAL_ROCK_PLACED_KEY);
         DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
         DefaultBiomeFeatures.addFrozenLavaSpring(biomeBuilder);
 
@@ -91,13 +93,14 @@ public class ModBiomes {
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
         globalOverworldGeneration(biomeBuilder);
-        DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
         DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
         DefaultBiomeFeatures.addEmeraldOre(biomeBuilder);
 
 
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_SNOWY);
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, context.getRegistryLookup(RegistryKeys.PLACED_FEATURE).getOrThrow(ModPlacedFeatures.SHIRO_TREE_PLACED_KEY));
+        biomeBuilder.feature(GenerationStep.Feature.LOCAL_MODIFICATIONS, ModPlacedFeatures.BLUE_CRYSTAL_ROCK_PLACED_KEY);
+//        biomeBuilder.feature(GenerationStep.Feature.LOCAL_MODIFICATIONS, ModPlacedFeatures.RED_CRYSTAL_ROCK_PLACED_KEY);
         DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
 
         return new Biome.Builder()

@@ -28,6 +28,9 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> RED_OMORIKA_KEY = registerKey("red_omorika");
     public static final RegistryKey<ConfiguredFeature<?, ?>> SHIROMORIKA_KEY = registerKey("shiromorika");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FROZEN_BUSH_PATCH_KEY = registerKey("frozen_bush_patch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> RED_CRYSTAL_ROCK_KEY = registerKey("red_crystal_rock");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BLUE_CRYSTAL_ROCK_KEY = registerKey("blue_crystal_rock");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PURPLE_CRYSTAL_ROCK_KEY = registerKey("purple_crystal_rock");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES); //règle pour générer les minerais dans la stone classique
@@ -67,6 +70,30 @@ public class ModConfiguredFeatures {
                         new SimpleBlockFeatureConfig(
                                 BlockStateProvider.of(ModBlocks.FROZEN_BUSH.getDefaultState().with(FrozenBushBlock.AGE, Integer.valueOf(3)))
                         ))));
+
+        register(context,
+                RED_CRYSTAL_ROCK_KEY,
+                Feature.FOREST_ROCK,
+                new SingleStateFeatureConfig(ModBlocks.RED_CRYSTAL.getDefaultState())
+        );
+
+// Blue
+        register(context,
+                BLUE_CRYSTAL_ROCK_KEY,
+                Feature.FOREST_ROCK,
+                new SingleStateFeatureConfig(ModBlocks.BLUE_CRYSTAL.getDefaultState())
+        );
+
+// Purple
+        register(context,
+                PURPLE_CRYSTAL_ROCK_KEY,
+                Feature.FOREST_ROCK,
+                new SingleStateFeatureConfig(ModBlocks.PURPLE_CRYSTAL.getDefaultState())
+        );
+
+
+
+
     }
 
     //=======================================================================================

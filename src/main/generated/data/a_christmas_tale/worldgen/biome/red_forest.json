@@ -22,7 +22,8 @@
       "minecraft:lake_lava_surface"
     ],
     [
-      "minecraft:amethyst_geode"
+      "minecraft:amethyst_geode",
+      "a_christmas_tale:red_crystal_rock_placed"
     ],
     [
       "minecraft:monster_room",

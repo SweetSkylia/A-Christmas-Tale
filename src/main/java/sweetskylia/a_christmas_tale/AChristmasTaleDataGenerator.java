@@ -24,8 +24,8 @@ public class AChristmasTaleDataGenerator implements DataGeneratorEntrypoint {
 	}
 
 	public void buildRegistry(RegistryBuilder registryBuilder){
-		 registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 		 registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
-		 registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
 	}
 }
