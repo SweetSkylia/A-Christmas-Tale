@@ -194,6 +194,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('C', Items.COCOA_BEANS)
                 .criterion(hasItem(Items.COCOA_BEANS), conditionsFromItem(Items.COCOA_BEANS))
                 .offerTo(exporter);
+
+        //SnowFlake
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SNOWFLAKE, 4)
+                .pattern(" S ")
+                .pattern("SFS")
+                .pattern(" S ")
+                .input('S', Items.SNOWBALL)
+                .input('F', ModItems.FROZEN_STELLAR_HEART)
+                .criterion(hasItem(ModItems.FROZEN_STELLAR_HEART), conditionsFromItem(ModItems.FROZEN_STELLAR_HEART))
+                .offerTo(exporter);
+
     }
 
     private static void registerPlankRecipes(RecipeExporter exporter){

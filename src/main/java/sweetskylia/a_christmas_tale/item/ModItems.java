@@ -7,14 +7,11 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import sweetskylia.a_christmas_tale.AChristmasTale;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
-import sweetskylia.a_christmas_tale.item.Custom.FrozenSword;
-import sweetskylia.a_christmas_tale.item.Custom.HotChocolate;
-import sweetskylia.a_christmas_tale.item.Custom.ModWearableItems;
-import sweetskylia.a_christmas_tale.item.Custom.SnowCannon;
+import sweetskylia.a_christmas_tale.item.Custom.*;
 
 public class ModItems {
     public static final Item CANDY = registerItem("candy", new Item(new Item.Settings().food(ModFoodComponents.CANDY)));
-    public static final Item SNOWFLAKE = registerItem("snowflake", new Item(new Item.Settings()));
+    public static final Item SNOWFLAKE = registerItem("snowflake", new SnowFlakeItem(new Item.Settings()));
     public static final Item STELLAR_HEART = registerItem("stellar_heart", new Item(new Item.Settings()));
     public static final Item FROZEN_STELLAR_HEART = registerItem("frozen_stellar_heart", new Item(new Item.Settings()));
     public static final Item HOT_CHOCOLATE = registerItem("hot_chocolate", new HotChocolate(new HotChocolate.Settings().food(ModFoodComponents.HOT_CHOCOLATE)));
