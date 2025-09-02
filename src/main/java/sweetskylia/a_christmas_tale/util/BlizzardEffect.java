@@ -6,6 +6,8 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
@@ -52,5 +54,7 @@ public class BlizzardEffect {
         for (LivingEntity entity : entities) {
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, duration, 1));
         }
+        world.playSound(null, center, SoundEvents.ENTITY_BREEZE_IDLE_AIR, SoundCategory.WEATHER, 1F, 0.1F);
+
     }
 }
