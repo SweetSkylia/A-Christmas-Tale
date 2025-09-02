@@ -30,6 +30,7 @@ public class ModChristmasHatInitEquipment {
             if (random.nextFloat() < 0.15F) {
                 ItemStack christmasHat = new ItemStack(ModItems.CHRISTMAS_HAT);
                 mobEntity.equipStack(EquipmentSlot.HEAD, christmasHat);
+                mobEntity.setEquipmentDropChance(EquipmentSlot.HEAD, 0.2F);
             }
         }
     }
