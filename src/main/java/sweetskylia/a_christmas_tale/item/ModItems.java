@@ -18,7 +18,7 @@ public class ModItems {
 
     public static final Item SNOW_CANNON = registerItem("snow_cannon", new SnowCannon(new Item.Settings()));
     public static final Item FROZEN_SWORD = registerItem("frozen_sword", new FrozenSword(ToolMaterials.IRON, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON, 3, 5f))));
-
+    public static final Item FROZEN_FRUIT_PIE = registerItem("frozen_fruit_pie", new Item(new Item.Settings().food(ModFoodComponents.FROZEN_FRUIT_PIE)));
 
     public static final Item STELLAR_CANDY_SWORD = registerItem("stellar_candy_sword", new SwordItem(ModToolMaterials.STELLAR_CANDY, new Item.Settings()
             .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STELLAR_CANDY, 3, -2.4F))));

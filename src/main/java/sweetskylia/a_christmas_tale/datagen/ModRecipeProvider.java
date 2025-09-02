@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -205,6 +206,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.FROZEN_STELLAR_HEART), conditionsFromItem(ModItems.FROZEN_STELLAR_HEART))
                 .offerTo(exporter);
 
+        //Frozen Fruit Pie
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.FROZEN_FRUIT_PIE, 2)
+                .input(Items.SUGAR)
+                .input(Items.EGG)
+                .input(ModItems.FROZEN_FRUIT)
+                .criterion(hasItem(ModItems.FROZEN_FRUIT), conditionsFromItem(ModItems.FROZEN_FRUIT))
+                .offerTo(exporter);
     }
 
     private static void registerPlankRecipes(RecipeExporter exporter){

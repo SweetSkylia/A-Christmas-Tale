@@ -10,6 +10,7 @@ import net.minecraft.block.FireBlock;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
@@ -80,6 +81,14 @@ public class AChristmasTale implements ModInitializer {
             if (++tickWorldCounter >= CHECK_ITEM_INTERVAL) {
                 tickWorldCounter = 0;
                 checkEntitiesInWorld(world);
+            }
+        });
+
+        ServerMessageEvents.CHAT_MESSAGE.register( (message, sender, params) ->{
+            String rawText = message.getContent().getString();
+            if (rawText.toLowerCase().contains("omorika")) {
+                sender.sendMessage(Text.literal("En mémoire de Mattéo").withColor(2262471));
+                sender.sendMessage(Text.literal("Merci pour tout.").withColor(2262471));
             }
         });
 

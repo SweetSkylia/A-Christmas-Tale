@@ -15,6 +15,11 @@ public class ModFoodComponents {
             .alwaysEdible()
             .nutrition(3)
             .snack()
-            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 5 * 20, 0), 100.0f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 5 * 20, 0), 60.0f)
             .saturationModifier(0.50f).build();
+
+    public static final FoodComponent FROZEN_FRUIT_PIE = new FoodComponent.Builder()
+            .nutrition(6)
+            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 180 * 20, 0), 100.0f)
+            .build();
 }

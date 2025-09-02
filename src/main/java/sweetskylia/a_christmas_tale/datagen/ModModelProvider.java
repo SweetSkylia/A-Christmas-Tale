@@ -96,5 +96,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STELLAR_CANDY_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STELLAR_CANDY_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STELLAR_CANDY_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FROZEN_FRUIT_PIE, Models.GENERATED);
     }
 }
