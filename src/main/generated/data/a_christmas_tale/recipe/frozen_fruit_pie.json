@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:egg"
-    },
-    {
-      "item": "a_christmas_tale:frozen_fruit"
-    }
+    "minecraft:sugar",
+    "minecraft:egg",
+    "a_christmas_tale:frozen_fruit"
   ],
   "result": {
     "count": 2,

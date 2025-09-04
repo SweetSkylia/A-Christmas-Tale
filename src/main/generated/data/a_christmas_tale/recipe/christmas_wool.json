@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "H": {
-      "item": "a_christmas_tale:stellar_heart"
-    },
-    "W": {
-      "tag": "minecraft:wool"
-    }
+    "H": "a_christmas_tale:stellar_heart",
+    "W": "#minecraft:wool"
   },
   "pattern": [
     "WWW",

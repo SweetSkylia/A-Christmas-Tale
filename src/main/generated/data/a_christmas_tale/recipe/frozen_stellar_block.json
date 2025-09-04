@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "a_christmas_tale:frozen_stellar_heart"
-    }
+    "#": "a_christmas_tale:frozen_stellar_heart"
   },
   "pattern": [
     "###",

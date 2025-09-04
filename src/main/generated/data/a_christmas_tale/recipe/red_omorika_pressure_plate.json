@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "#": {
-      "item": "a_christmas_tale:red_omorika_planks"
-    }
+    "#": "a_christmas_tale:red_omorika_planks"
   },
   "pattern": [
     "##"

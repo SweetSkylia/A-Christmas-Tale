@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "a_christmas_tale:candy_block"
-    }
+    "a_christmas_tale:candy_block"
   ],
   "result": {
     "count": 9,

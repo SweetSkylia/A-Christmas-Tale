@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "F": {
-      "item": "a_christmas_tale:frozen_stellar_heart"
-    },
-    "S": {
-      "item": "minecraft:snowball"
-    }
+    "F": "a_christmas_tale:frozen_stellar_heart",
+    "S": "minecraft:snowball"
   },
   "pattern": [
     " S ",

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "W": {
-      "item": "a_christmas_tale:christmas_wool"
-    }
+    "W": "a_christmas_tale:christmas_wool"
   },
   "pattern": [
     "WW"

@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 0.1,
   "group": "candy_from_smelting",
-  "ingredient": {
-    "item": "minecraft:sugar"
-  },
+  "ingredient": "minecraft:sugar",
   "result": {
     "id": "a_christmas_tale:candy"
   }

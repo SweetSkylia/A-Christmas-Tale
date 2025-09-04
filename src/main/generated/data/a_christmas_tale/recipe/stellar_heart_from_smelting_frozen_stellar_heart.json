@@ -4,9 +4,7 @@
   "cookingtime": 200,
   "experience": 0.25,
   "group": "stellar_heart",
-  "ingredient": {
-    "item": "a_christmas_tale:frozen_stellar_heart"
-  },
+  "ingredient": "a_christmas_tale:frozen_stellar_heart",
   "result": {
     "id": "a_christmas_tale:stellar_heart"
   }

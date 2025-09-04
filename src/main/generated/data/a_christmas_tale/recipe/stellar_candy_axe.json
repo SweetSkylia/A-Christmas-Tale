@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "C": {
-      "item": "a_christmas_tale:candy"
-    },
-    "F": {
-      "item": "a_christmas_tale:frozen_stellar_heart"
-    },
-    "|": {
-      "item": "minecraft:stick"
-    }
+    "C": "a_christmas_tale:candy",
+    "F": "a_christmas_tale:frozen_stellar_heart",
+    "|": "minecraft:stick"
   },
   "pattern": [
     "CC",

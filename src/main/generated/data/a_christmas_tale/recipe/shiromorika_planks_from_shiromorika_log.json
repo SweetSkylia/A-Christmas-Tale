@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "building_blocks",
   "ingredients": [
-    {
-      "item": "a_christmas_tale:shiromorika_log"
-    }
+    "a_christmas_tale:shiromorika_log"
   ],
   "result": {
     "count": 4,

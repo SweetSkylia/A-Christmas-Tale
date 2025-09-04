@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "W": {
-      "item": "a_christmas_tale:red_omorika_log"
-    }
+    "W": "a_christmas_tale:red_omorika_log"
   },
   "pattern": [
     "WW",

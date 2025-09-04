@@ -1,16 +1,10 @@
 {
   "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "a_christmas_tale:frozen_stellar_heart"
-  },
-  "base": {
-    "item": "minecraft:iron_sword"
-  },
+  "addition": "a_christmas_tale:frozen_stellar_heart",
+  "base": "minecraft:iron_sword",
   "result": {
     "count": 1,
     "id": "a_christmas_tale:frozen_sword"
   },
-  "template": {
-    "item": "minecraft:paper"
-  }
+  "template": "minecraft:paper"
 }

@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "D": {
-      "item": "minecraft:lime_dye"
-    },
-    "G": {
-      "item": "minecraft:glass"
-    },
-    "S": {
-      "item": "a_christmas_tale:stellar_heart"
-    }
+    "D": "minecraft:lime_dye",
+    "G": "minecraft:glass",
+    "S": "a_christmas_tale:stellar_heart"
   },
   "pattern": [
     "GSG",
