@@ -58,7 +58,7 @@ public class AChristmasTale implements ModInitializer {
                 world.getBottomY(),
                 world.getWorldBorder().getBoundNorth(),
                 world.getWorldBorder().getBoundEast(),
-                world.getTopY(),
+                world.getTopYInclusive(),
                 world.getWorldBorder().getBoundSouth()
         );
         //Pour chaque item on regarde si c'est un Stellar Heart & qu'il est dans un biome froid
