@@ -6,8 +6,6 @@
 		"ExampleMixin"
 	],
 	"client": [
-		"ItemRendererMixin",
-		"ModelLoaderMixin",
 		"ModChristmasHatInitEquipment"
 	],
 	"injectors": {
