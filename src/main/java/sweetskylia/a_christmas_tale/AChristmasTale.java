@@ -3,14 +3,18 @@ package sweetskylia.a_christmas_tale;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.message.v1.ServerMessageEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBiomeTags;
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.FireBlock;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
@@ -87,11 +91,20 @@ public class AChristmasTale implements ModInitializer {
         ServerMessageEvents.CHAT_MESSAGE.register( (message, sender, params) ->{
             String rawText = message.getContent().getString();
             if (rawText.toLowerCase().contains("omorika")) {
-                sender.sendMessage(Text.literal("En mémoire de Mattéo").withColor(2262471));
-                sender.sendMessage(Text.literal("Merci pour tout.").withColor(2262471));
+                sender.getServer().execute(() -> {
+                    sender.sendMessage(Text.literal("En mémoire de Mattéo").withColor(2262471));
+                    sender.sendMessage(Text.literal("Merci pour tout.").withColor(2262471));
+                });
+
             }
         });
 
+
+        CustomPortalBuilder.beginPortal()
+                .frameBlock(ModBlocks.STELLAR_ICE)
+                .destDimID(Identifier.of("the_nether"))
+                .tintColor(131, 66, 184)
+                .registerPortal();
 
 		//INIT WOOD PROPERTIES
 		StrippableBlockRegistry.register(ModBlocks.RED_OMORIKA_LOG, ModBlocks.STRIPPED_RED_OMORIKA_LOG);
