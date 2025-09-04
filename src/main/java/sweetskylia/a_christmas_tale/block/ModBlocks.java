@@ -9,6 +9,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
@@ -20,80 +22,113 @@ import sweetskylia.a_christmas_tale.block.custom.OrnamentBlock;
 import sweetskylia.a_christmas_tale.block.custom.PresentBlock;
 import sweetskylia.a_christmas_tale.world.tree.ModSaplingGenerators;
 
+import java.util.function.Function;
+
 public class ModBlocks {
     //====== BLOCKS
     public static final Block CANDY_BLOCK = registerBlock("candy_block",
-            new Block(AbstractBlock.Settings.create().strength(3f)
+            properties -> new Block(properties.strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.GLASS)));
 
     public static final Block STELLAR_BLOCK = registerBlock("stellar_block",
-            new Block(AbstractBlock.Settings.create().strength(5.5f).requiresTool()));
+            settings -> new Block(settings.strength(5.5f).requiresTool()));
 
     public static final Block FROZEN_STELLAR_BLOCK = registerBlock("frozen_stellar_block",
-            new Block(AbstractBlock.Settings.create().strength(5.5f).requiresTool()));
+           properties -> new Block(properties.strength(5.5f).requiresTool()));
 
     public static final Block CHRISTMAS_CARPET = registerBlock("christmas_carpet",
-            new CarpetBlock(AbstractBlock.Settings.create().strength(0.1F).sounds(BlockSoundGroup.WOOL).burnable()));
+            properties ->new CarpetBlock(properties.strength(0.1F).sounds(BlockSoundGroup.WOOL).burnable()));
 
     public static final Block CHRISTMAS_WOOL = registerBlock("christmas_wool",
-            new Block(AbstractBlock.Settings.create().instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sounds(BlockSoundGroup.WOOL).burnable()));
+            properties ->new Block(properties.instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sounds(BlockSoundGroup.WOOL).burnable()));
 
-    public static final Block WINTER_CARPET = registerBlock("winter_carpet", new CarpetBlock(AbstractBlock.Settings.create().strength(0.1F).sounds(BlockSoundGroup.WOOL).burnable()));
+    public static final Block WINTER_CARPET = registerBlock("winter_carpet",
+            properties ->new CarpetBlock(properties.strength(0.1F).sounds(BlockSoundGroup.WOOL).burnable()));
 
     public static final Block WINTER_WOOL = registerBlock("winter_wool",
-            new Block(AbstractBlock.Settings.create().instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sounds(BlockSoundGroup.WOOL).burnable()));
+            properties ->new Block(properties.instrument(NoteBlockInstrument.GUITAR).strength(0.8F).sounds(BlockSoundGroup.WOOL).burnable()));
     //====== CUSTOM ORES
     public static final Block STELLAR_HEART_ORE = registerBlock("stellar_heart_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
-                    AbstractBlock.Settings.create().strength(5.5f).requiresTool()));
+            properties ->new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    properties.strength(5.5f).requiresTool()));
 
     //RED OMORIKA ========================================================================
     public static final Block RED_OMORIKA_LOG = registerBlock("red_omorika_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+            properties -> new PillarBlock(properties
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block RED_OMORIKA_WOOD = registerBlock("red_omorika_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)));
+            properties -> new PillarBlock(properties
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block STRIPPED_RED_OMORIKA_LOG = registerBlock("stripped_red_omorika_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)));
+            properties -> new PillarBlock(properties
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block STRIPPED_RED_OMORIKA_WOOD= registerBlock("stripped_red_omorika_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)));
+            properties -> new PillarBlock(properties
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block RED_OMORIKA_PLANKS = registerBlock("red_omorika_planks",
-            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+            properties ->new Block(properties.strength(3f)));
 
     public static final Block RED_OMORIKA_LEAVES = registerBlock("red_omorika_leaves",
-            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+            properties -> new LeavesBlock(properties
+                    .mapColor(MapColor.RED).strength(0.2F).ticksRandomly()
+                    .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
+                    .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)));
 
     public static final Block RED_OMORIKA_SAPLING = registerBlock("red_omorika_sapling",
-            new SaplingBlock(ModSaplingGenerators.RED_OMORIKA,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+            properties ->new SaplingBlock(ModSaplingGenerators.RED_OMORIKA,properties.mapColor(MapColor.DARK_GREEN)
+                    .noCollision().ticksRandomly().breakInstantly()
+                    .sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
 
     // WHITE OMORIKA (ShiroMorika) ========================================================
 
     public static final Block SHIROMORIKA_LOG = registerBlock("shiromorika_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_LOG)));
+            properties -> new PillarBlock(properties
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block SHIROMORIKA_WOOD = registerBlock("shiromorika_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.OAK_WOOD)));
+            properties -> new PillarBlock(properties
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block STRIPPED_SHIROMORIKA_LOG = registerBlock("stripped_shiromorika_log",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_LOG)));
+            properties -> new PillarBlock(properties
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block STRIPPED_SHIROMORIKA_WOOD= registerBlock("stripped_shiromorika_wood",
-            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)));
+            properties -> new PillarBlock(properties
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block SHIROMORIKA_PLANKS = registerBlock("shiromorika_planks",
-            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+            properties ->new Block(properties.strength(3f)));
 
     public static final Block SHIROMORIKA_LEAVES = registerBlock("shiromorika_leaves",
-            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
+            properties -> new LeavesBlock(properties
+                    .mapColor(MapColor.WHITE).strength(0.2F).ticksRandomly()
+                    .sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque()
+                    .allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never)
+                    .blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)));
 
     public static final Block SHIROMORIKA_SAPLING = registerBlock("shiromorika_sapling",
-            new ModSaplingBlock(ModSaplingGenerators.SHIROMORIKA,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+            properties -> new ModSaplingBlock(ModSaplingGenerators.SHIROMORIKA,properties.mapColor(MapColor.DARK_GREEN)
+                    .noCollision().ticksRandomly().breakInstantly()
+                    .sounds(BlockSoundGroup.GRASS).pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block PRESENT_BLOCK = registerBlock("present_block",
-            new PresentBlock(AbstractBlock.Settings.create().nonOpaque().strength(0.6f)));
+            properties ->new PresentBlock(properties.nonOpaque().strength(0.6f)));
 
 
 
@@ -101,62 +136,71 @@ public class ModBlocks {
     //WOOD DECORATION FEATURES ============================================
 
     public static final Block RED_OMORIKA_STAIRS = registerBlock("red_omorika_stairs",
-            new StairsBlock(ModBlocks.RED_OMORIKA_PLANKS.getDefaultState(),
-                    AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+            properties ->  new StairsBlock(ModBlocks.RED_OMORIKA_PLANKS.getDefaultState(), properties
+                            .instrument(NoteBlockInstrument.BASS)
+                            .strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+
     public static final Block RED_OMORIKA_SLAB = registerBlock("red_omorika_slab",
-            new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
+            properties -> new SlabBlock(properties
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block RED_OMORIKA_BUTTON = registerBlock("red_omorika_button",
-            new ButtonBlock(BlockSetType.OAK,20, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON).noCollision()));
+            properties -> new ButtonBlock(BlockSetType.OAK,20, properties.noCollision().strength(0.5F).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block RED_OMORIKA_PRESSURE_PLATE = registerBlock("red_omorika_pressure_plate",
-            new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE).noCollision()));
+            properties -> new PressurePlateBlock(BlockSetType.OAK, properties.solid().instrument(NoteBlockInstrument.BASS).noCollision().strength(0.5F).burnable().pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block RED_OMORIKA_FENCE = registerBlock("red_omorika_fence",
-            new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+            properties -> new FenceBlock(properties.solid().instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
     public static final Block RED_OMORIKA_FENCE_GATE = registerBlock("red_omorika_fence_gate",
-            new FenceGateBlock(WoodType.OAK,AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
+            properties -> new FenceGateBlock(WoodType.OAK,properties.solid().instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
     public static final Block RED_OMORIKA_DOOR = registerBlock("red_omorika_door",
-            new DoorBlock(BlockSetType.OAK,AbstractBlock.Settings.copy(Blocks.OAK_SLAB).nonOpaque()));
+            properties ->  new DoorBlock(BlockSetType.OAK,properties.instrument(NoteBlockInstrument.BASS).strength(3.0F).nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block RED_OMORIKA_TRAPDOOR = registerBlock("red_omorika_trapdoor",
-            new TrapdoorBlock(BlockSetType.OAK,AbstractBlock.Settings.copy(Blocks.OAK_SLAB).nonOpaque()));
+            properties -> new TrapdoorBlock(BlockSetType.OAK,properties.instrument(NoteBlockInstrument.BASS).strength(3.0F).nonOpaque().allowsSpawning(Blocks::never).burnable()));
 
 
 
     public static final Block SHIROMORIKA_STAIRS = registerBlock("shiromorika_stairs",
-            new StairsBlock(ModBlocks.RED_OMORIKA_PLANKS.getDefaultState(),
-                    AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+            properties ->  new StairsBlock(ModBlocks.RED_OMORIKA_PLANKS.getDefaultState(),properties
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+
     public static final Block SHIROMORIKA_SLAB = registerBlock("shiromorika_slab",
-            new SlabBlock(AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
+            properties -> new SlabBlock(properties
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block SHIROMORIKA_BUTTON = registerBlock("shiromorika_button",
-            new ButtonBlock(BlockSetType.OAK,20, AbstractBlock.Settings.copy(Blocks.OAK_BUTTON).noCollision()));
+            properties -> new ButtonBlock(BlockSetType.OAK,20, properties.noCollision().strength(0.5F).pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block SHIROMORIKA_PRESSURE_PLATE = registerBlock("shiromorika_pressure_plate",
-            new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE).noCollision()));
+            properties -> new PressurePlateBlock(BlockSetType.OAK, properties.solid().instrument(NoteBlockInstrument.BASS).noCollision().strength(0.5F).burnable().pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block SHIROMORIKA_FENCE = registerBlock("shiromorika_fence",
-            new FenceBlock(AbstractBlock.Settings.copy(Blocks.OAK_STAIRS)));
+            properties ->  new FenceBlock(properties.solid().instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
     public static final Block SHIROMORIKA_FENCE_GATE = registerBlock("shiromorika_fence_gate",
-            new FenceGateBlock(WoodType.OAK,AbstractBlock.Settings.copy(Blocks.OAK_SLAB)));
+            properties -> new FenceGateBlock(WoodType.OAK,properties.solid().instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
     public static final Block SHIROMORIKA_DOOR = registerBlock("shiromorika_door",
-            new DoorBlock(BlockSetType.OAK,AbstractBlock.Settings.copy(Blocks.OAK_SLAB).nonOpaque()));
+            properties ->  new DoorBlock(BlockSetType.OAK,properties.instrument(NoteBlockInstrument.BASS).strength(3.0F).nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block SHIROMORIKA_TRAPDOOR = registerBlock("shiromorika_trapdoor",
-            new TrapdoorBlock(BlockSetType.OAK,AbstractBlock.Settings.copy(Blocks.OAK_SLAB).nonOpaque()));
+            properties -> new TrapdoorBlock(BlockSetType.OAK,properties.instrument(NoteBlockInstrument.BASS).strength(3.0F).nonOpaque().allowsSpawning(Blocks::never).burnable()));
 
 
-    public static final Block FROZEN_BUSH = registerBlock("frozen_bush",
-            new FrozenBushBlock(AbstractBlock.Settings.create()
+    public static final Block FROZEN_BUSH = registerBlockWithoutItem("frozen_bush",
+            properties ->new FrozenBushBlock(properties
                     .mapColor(MapColor.DARK_GREEN)
                     .ticksRandomly()
                     .noCollision()
                     .sounds(BlockSoundGroup.SWEET_BERRY_BUSH)
                     .pistonBehavior(PistonBehavior.DESTROY))
-            , false);
+            );
 
 
     public static final Block STELLAR_ICE = registerBlock("stellar_ice",
-            new Block(AbstractBlock.Settings.copy(Blocks.PACKED_ICE).requiresTool().strength(0.5F)));
+            properties -> new Block(properties.instrument(NoteBlockInstrument.CHIME).slipperiness(0.98F).strength(0.5F).sounds(BlockSoundGroup.GLASS).requiresTool()));
 
-    public static final Block RED_CRYSTAL = registerBlock("red_crystal", new TransparentBlock(AbstractBlock.Settings.create()
+    public static final Block RED_CRYSTAL = registerBlock("red_crystal",
+            properties ->new TransparentBlock(properties
             .nonOpaque()
             .strength(0.3F)
             .sounds(BlockSoundGroup.GLASS)
@@ -164,7 +208,8 @@ public class ModBlocks {
             .allowsSpawning(Blocks::never)
             .solidBlock(Blocks::never)
             .suffocates(Blocks::never)));
-    public static final Block BLUE_CRYSTAL = registerBlock("blue_crystal", new TransparentBlock(AbstractBlock.Settings.create()
+    public static final Block BLUE_CRYSTAL = registerBlock("blue_crystal",
+            properties ->new TransparentBlock(properties
             .nonOpaque()
             .strength(0.3F)
             .sounds(BlockSoundGroup.GLASS)
@@ -172,7 +217,8 @@ public class ModBlocks {
             .allowsSpawning(Blocks::never)
             .solidBlock(Blocks::never)
             .suffocates(Blocks::never)));
-    public static final Block PURPLE_CRYSTAL = registerBlock("purple_crystal", new TransparentBlock(AbstractBlock.Settings.create()
+    public static final Block PURPLE_CRYSTAL = registerBlock("purple_crystal",
+            properties ->new TransparentBlock(properties
             .nonOpaque()
             .strength(0.3F)
             .sounds(BlockSoundGroup.GLASS)
@@ -181,39 +227,52 @@ public class ModBlocks {
             .solidBlock(Blocks::never)
             .suffocates(Blocks::never)));
 
-    public static final Block WHITE_ORNAMENT = registerBlock("white_ornament",createOrnamentBlock(DyeColor.WHITE));
-    public static final Block ORANGE_ORNAMENT = registerBlock("orange_ornament",createOrnamentBlock(DyeColor.ORANGE));
-    public static final Block MAGENTA_ORNAMENT = registerBlock("magenta_ornament",createOrnamentBlock(DyeColor.MAGENTA));
-    public static final Block LIGHT_BLUE_ORNAMENT = registerBlock("light_blue_ornament",createOrnamentBlock(DyeColor.LIGHT_BLUE));
-    public static final Block YELLOW_ORNAMENT = registerBlock("yellow_ornament",createOrnamentBlock(DyeColor.YELLOW));
-    public static final Block LIME_ORNAMENT = registerBlock("lime_ornament",createOrnamentBlock(DyeColor.LIME));
-    public static final Block PINK_ORNAMENT = registerBlock("pink_ornament",createOrnamentBlock(DyeColor.PINK));
-    public static final Block GRAY_ORNAMENT = registerBlock("gray_ornament",createOrnamentBlock(DyeColor.GRAY));
-    public static final Block LIGHT_GRAY_ORNAMENT = registerBlock("light_gray_ornament",createOrnamentBlock(DyeColor.LIGHT_GRAY));
-    public static final Block CYAN_ORNAMENT = registerBlock("cyan_ornament",createOrnamentBlock(DyeColor.CYAN));
-    public static final Block PURPLE_ORNAMENT = registerBlock("purple_ornament",createOrnamentBlock(DyeColor.PURPLE));
-    public static final Block BLUE_ORNAMENT = registerBlock("blue_ornament",createOrnamentBlock(DyeColor.BLUE));
-    public static final Block BROWN_ORNAMENT = registerBlock("brown_ornament",createOrnamentBlock(DyeColor.BROWN));
-    public static final Block GREEN_ORNAMENT = registerBlock("green_ornament",createOrnamentBlock(DyeColor.GREEN));
-    public static final Block RED_ORNAMENT = registerBlock("red_ornament",createOrnamentBlock(DyeColor.RED));
-    public static final Block BLACK_ORNAMENT = registerBlock("black_ornament",createOrnamentBlock(DyeColor.BLACK));
+    public static final Block WHITE_ORNAMENT = registerBlock("white_ornament",properties -> createOrnamentBlock(DyeColor.WHITE, properties));
+    public static final Block ORANGE_ORNAMENT = registerBlock("orange_ornament",properties -> createOrnamentBlock(DyeColor.ORANGE, properties));
+    public static final Block MAGENTA_ORNAMENT = registerBlock("magenta_ornament",properties -> createOrnamentBlock(DyeColor.MAGENTA, properties));
+    public static final Block LIGHT_BLUE_ORNAMENT = registerBlock("light_blue_ornament",properties ->createOrnamentBlock(DyeColor.LIGHT_BLUE, properties));
+    public static final Block YELLOW_ORNAMENT = registerBlock("yellow_ornament",properties -> createOrnamentBlock(DyeColor.YELLOW, properties));
+    public static final Block LIME_ORNAMENT = registerBlock("lime_ornament",properties -> createOrnamentBlock(DyeColor.LIME, properties));
+    public static final Block PINK_ORNAMENT = registerBlock("pink_ornament",properties -> createOrnamentBlock(DyeColor.PINK, properties));
+    public static final Block GRAY_ORNAMENT = registerBlock("gray_ornament",properties -> createOrnamentBlock(DyeColor.GRAY, properties));
+    public static final Block LIGHT_GRAY_ORNAMENT = registerBlock("light_gray_ornament",properties -> createOrnamentBlock(DyeColor.LIGHT_GRAY, properties));
+    public static final Block CYAN_ORNAMENT = registerBlock("cyan_ornament",properties -> createOrnamentBlock(DyeColor.CYAN, properties));
+    public static final Block PURPLE_ORNAMENT = registerBlock("purple_ornament",properties -> createOrnamentBlock(DyeColor.PURPLE, properties));
+    public static final Block BLUE_ORNAMENT = registerBlock("blue_ornament",properties -> createOrnamentBlock(DyeColor.BLUE, properties));
+    public static final Block BROWN_ORNAMENT = registerBlock("brown_ornament",properties -> createOrnamentBlock(DyeColor.BROWN, properties));
+    public static final Block GREEN_ORNAMENT = registerBlock("green_ornament",properties -> createOrnamentBlock(DyeColor.GREEN, properties));
+    public static final Block RED_ORNAMENT = registerBlock("red_ornament",properties -> createOrnamentBlock(DyeColor.RED, properties));
+    public static final Block BLACK_ORNAMENT = registerBlock("black_ornament",properties -> createOrnamentBlock(DyeColor.BLACK, properties));
 
-    private static Block registerBlock(String name, Block block) {
-        return registerBlock(name, block, true);
-    }
+//    private static Block registerBlock(String name, Block block) {
+//        return registerBlock(name, block, true);
+//    }
 
     //Register item without appearing when /give
-    private static Block registerBlock(String name, Block block, boolean hasItem) {
-        if (hasItem) {
-            registerBlockItem(name, block);
-        }
-        return Registry.register(Registries.BLOCK, Identifier.of(AChristmasTale.MOD_ID, name), block);
+//    private static Block registerBlock(String name, Block block, boolean hasItem) {
+//        if (hasItem) {
+//            registerBlockItem(name, block);
+//        }
+//        return Registry.register(Registries.BLOCK, Identifier.of(AChristmasTale.MOD_ID, name), block);
+//    }
+
+    private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function){
+        Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(AChristmasTale.MOD_ID, name))));
+        registerBlockItem(name, toRegister);
+        return Registry.register(Registries.BLOCK, Identifier.of(AChristmasTale.MOD_ID, name), toRegister);
     }
 
     //Register item for block
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(AChristmasTale.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()));
+                new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()
+                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AChristmasTale.MOD_ID, name)))));
+    }
+
+
+    private static Block registerBlockWithoutItem(String name, Function<AbstractBlock.Settings, Block> function) {
+        return Registry.register(Registries.BLOCK, Identifier.of(AChristmasTale.MOD_ID, name),
+                function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK,Identifier.of(AChristmasTale.MOD_ID,name)))));
     }
 
     public static void registerModBlocks() {
@@ -233,9 +292,9 @@ public class ModBlocks {
         });
     }
 
-    private static Block createOrnamentBlock(DyeColor color){
+    private static Block createOrnamentBlock(DyeColor color, AbstractBlock.Settings settings) {
         return new OrnamentBlock(color,
-                AbstractBlock.Settings.create()
+                settings
                         .mapColor(color)
                         .instrument(NoteBlockInstrument.HAT)
                         .strength(0.3F)
