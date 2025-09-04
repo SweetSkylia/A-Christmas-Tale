@@ -8,11 +8,11 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.TagKey;
 import sweetskylia.a_christmas_tale.util.ModTags;
 
-public enum ModToolMaterials implements ToolMaterial {
+public class ModToolMaterials {
 
 
-    STELLAR_CANDY(ModTags.Blocks.INCORRECT_FOR_STELLAR_CANDY_TOOL,
-            512, 7.0F, 2.5F, 22, () -> Ingredient.ofItems(ModItems.FROZEN_STELLAR_HEART));
+    public static ToolMaterial STELLAR_CANDY = new ToolMaterial(ModTags.Blocks.INCORRECT_FOR_STELLAR_CANDY_TOOL, 512, 7.0F, 2.5F, 22, ModTags.Items.STELLAR_CANDY_REPAIR);
+
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
     private final float miningSpeed;
@@ -28,34 +28,5 @@ public enum ModToolMaterials implements ToolMaterial {
         this.attackDamage = attackDamage;
         this.enchantability = enchantability;
         this.repairIngredient = Suppliers.memoize(repairIngredient::get);
-    }
-    @Override
-    public int getDurability() {
-        return itemDurability;
-    }
-
-    @Override
-    public float getMiningSpeedMultiplier() {
-        return miningSpeed;
-    }
-
-    @Override
-    public float getAttackDamage() {
-        return attackDamage;
-    }
-
-    @Override
-    public TagKey<Block> getInverseTag() {
-        return inverseTag;
-    }
-
-    @Override
-    public int getEnchantability() {
-        return enchantability;
-    }
-
-    @Override
-    public Ingredient getRepairIngredient() {
-        return repairIngredient.get();
     }
 }

@@ -12,22 +12,12 @@ import net.minecraft.world.World;
 
 
 public class FrozenSword extends SwordItem {
-    public FrozenSword(ToolMaterial toolMaterial, Settings settings) {
-        super(toolMaterial, settings);
+    public FrozenSword(ToolMaterial toolMaterial, float attackDamage, float attackSpeed, Settings settings) {
+        super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
     public ActionResult useOnBlock(ItemUsageContext context) {
         return super.useOnBlock(context);
-    }
-
-    @Override
-    public boolean isEnchantable(ItemStack stack) {
-        return true;
-    }
-
-    @Override
-    public int getEnchantability() {
-        return ToolMaterials.IRON.getEnchantability();
     }
 
     @Override
