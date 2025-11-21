@@ -4,7 +4,6 @@ import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
-import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.Identifier;
@@ -12,7 +11,7 @@ import net.minecraft.util.math.MathHelper;
 import sweetskylia.a_christmas_tale.AChristmasTale;
 import sweetskylia.a_christmas_tale.entity.custom.ReindeerEntity;
 
-public class ReindeerModel<T extends ReindeerEntity> extends SinglePartEntityModel<T> {
+public class ReindeerModel extends EntityModel<ReindeerRenderState> {
 
     public static final EntityModelLayer REINDEER_LAYER = new EntityModelLayer(Identifier.of(AChristmasTale.MOD_ID, "reindeer"), "main");
 
@@ -29,7 +28,9 @@ public class ReindeerModel<T extends ReindeerEntity> extends SinglePartEntityMod
     private final ModelPart backlag2;
     private final ModelPart middle;
     private final ModelPart tail;
+
     public ReindeerModel(ModelPart root) {
+        super(root);
         this.root = root.getChild("root");
         this.reindeer = this.root.getChild("reindeer");
         this.upper = this.reindeer.getChild("upper");
@@ -82,25 +83,14 @@ public class ReindeerModel<T extends ReindeerEntity> extends SinglePartEntityMod
     }
 
     @Override
-    public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, int color) {
-        root.render(matrices, vertexConsumer, light, overlay, color);
-//        lower.render(matrices, vertexConsumer, light, overlay,color);
+    public void setAngles(ReindeerRenderState state) {
+        super.setAngles(state);
+        this.setHeadAngles(state.yawDegrees, state.pitch);
+
+        this.animateWalking(ReindeerAnimation.ANIM_REINDEER_WALKING, state.limbFrequency,state.limbAmplitudeMultiplier, 2f, 2.5f);
+        this.animate(state.idleAnimationState, ReindeerAnimation.ANIM_REINDEER_IDLE, state.age,1f);
     }
 
-
-    @Override
-    public void setAngles(ReindeerEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        this.getPart().traverse().forEach(ModelPart::resetTransform);
-        this.setHeadAngles(netHeadYaw,headPitch);
-
-        this.animateMovement(ReindeerAnimation.ANIM_REINDEER_WALKING, limbSwing,limbSwingAmount, 2f, 2.5f);
-        this.updateAnimation(entity.idleAnimationState, ReindeerAnimation.ANIM_REINDEER_IDLE, ageInTicks,1f);
-    }
-
-    @Override
-    public ModelPart getPart() {
-        return root;
-    }
 
     private void setHeadAngles(float headYaw, float headPitch) {
         headYaw = MathHelper.clamp(headYaw, -30f,30f);

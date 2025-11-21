@@ -7,6 +7,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -46,8 +47,9 @@ public class ReindeerEntity extends AnimalEntity {
 
     public static DefaultAttributeContainer.Builder createAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0F)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2F);
+                .add(EntityAttributes.MAX_HEALTH, 10.0F)
+                .add(EntityAttributes.MOVEMENT_SPEED, 0.2F)
+                .add(EntityAttributes.TEMPT_RANGE, 1f);
     }
 
 
@@ -75,7 +77,8 @@ public class ReindeerEntity extends AnimalEntity {
 
     @Override
     public @Nullable PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return ModEntities.REINDEER.create(world);
+        ReindeerEntity baby = ModEntities.REINDEER.create(world, SpawnReason.BREEDING);
+        return baby;
     }
 
 }
