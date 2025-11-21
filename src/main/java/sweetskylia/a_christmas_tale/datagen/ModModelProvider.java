@@ -7,9 +7,12 @@ import net.minecraft.block.BlockState;
 import net.minecraft.data.client.*;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.Identifier;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
 import sweetskylia.a_christmas_tale.block.custom.FrozenBushBlock;
 import sweetskylia.a_christmas_tale.item.ModItems;
+
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -97,5 +100,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STELLAR_CANDY_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STELLAR_CANDY_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.FROZEN_FRUIT_PIE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.REINDEER_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
     }
 }

@@ -7,6 +7,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import sweetskylia.a_christmas_tale.AChristmasTale;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
+import sweetskylia.a_christmas_tale.entity.ModEntities;
 import sweetskylia.a_christmas_tale.item.Custom.*;
 
 public class ModItems {
@@ -34,6 +35,9 @@ public class ModItems {
     public static final Item FROZEN_FRUIT = registerItem("frozen_fruit", new AliasedBlockItem(ModBlocks.FROZEN_BUSH,new Item.Settings().food(ModFoodComponents.FROZEN_FRUIT)));
 
     public static final Item CHRISTMAS_HAT = registerItem("christmas_hat", new ModWearableItems(new Item.Settings()));
+
+    public static final Item REINDEER_SPAWN_EGG = registerItem("reindeer_spawn_egg",
+            new SpawnEggItem(ModEntities.REINDEER, 0x947165, 0xbdbdbd,new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(AChristmasTale.MOD_ID, name), item);
