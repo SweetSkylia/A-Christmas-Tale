@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.message.v1.ServerMessageEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBiomeTags;
@@ -21,6 +22,8 @@ import net.minecraft.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
+import sweetskylia.a_christmas_tale.entity.ModEntities;
+import sweetskylia.a_christmas_tale.entity.custom.ReindeerEntity;
 import sweetskylia.a_christmas_tale.item.ModItemGroups;
 import sweetskylia.a_christmas_tale.item.ModItems;
 import net.minecraft.server.world.ServerWorld;
@@ -128,6 +131,8 @@ public class AChristmasTale implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SHIROMORIKA_LEAVES, 30,60);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SHIROMORIKA_SLAB, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.SHIROMORIKA_STAIRS, 5, 20);
+
+        FabricDefaultAttributeRegistry.register(ModEntities.REINDEER, ReindeerEntity.createAttributes());
     }
 
 

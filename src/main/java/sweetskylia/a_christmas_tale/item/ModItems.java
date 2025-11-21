@@ -15,6 +15,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import sweetskylia.a_christmas_tale.AChristmasTale;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
+import sweetskylia.a_christmas_tale.entity.ModEntities;
 import sweetskylia.a_christmas_tale.item.Custom.*;
 
 import java.util.function.Function;
@@ -39,8 +40,12 @@ public class ModItems {
     public static final Item FROZEN_SWORD = registerItem("frozen_sword",
             settings -> new FrozenSword(ToolMaterial.IRON, 3, 5f, settings.enchantable(14)));
 
+
     public static final Item FROZEN_FRUIT_PIE = registerItem("frozen_fruit_pie",
             settings -> new Item(settings.food(ModFoodComponents.FROZEN_FRUIT_PIE, ModFoodComponents.FROZEN_FRUIT_PIE_EFFECT)));
+
+    public static final Item REINDEER_SPAWN_EGG = registerItem("reindeer_spawn_egg",
+            settings -> new SpawnEggItem(ModEntities.REINDEER, 0x947165, 0xbdbdbd, settings));
 
     public static final Item STELLAR_CANDY_SWORD = registerItem("stellar_candy_sword",
             settings -> new SwordItem(ModToolMaterials.STELLAR_CANDY,3,-2.4F, settings));

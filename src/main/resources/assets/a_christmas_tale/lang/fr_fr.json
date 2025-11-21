@@ -14,6 +14,7 @@
   "item.a_christmas_tale.stellar_candy_axe": "Hache en sucre d'orge stellaire",
   "item.a_christmas_tale.stellar_candy_hoe": "Houe en sucre d'orge stellaire",
   "item.a_christmas_tale.christmas_hat": "Chapeau de Noël",
+  "item.a_christmas_tale.reindeer_spawn_egg": "Oeuf d'apparition de Renne",
   "block.a_christmas_tale.stellar_heart_ore": "Minerai de coeur stellaire",
   "block.a_christmas_tale.candy_block": "Bloc de sucre d'orge",
   "block.a_christmas_tale.stellar_block": "Bloc stellaire",
@@ -72,7 +73,6 @@
   "block.a_christmas_tale.stellar_ice": "Glace stellaire",
   "block.a_christmas_tale.red_crystal": "Cristal rouge",
   "block.a_christmas_tale.blue_crystal": "Cristal bleu",
-  "block.a_christmas_tale.purple_crystal": "Cristal violet"
-
-
+  "block.a_christmas_tale.purple_crystal": "Cristal violet",
+  "entity.a_christmas_tale.reindeer": "Renne"
 }

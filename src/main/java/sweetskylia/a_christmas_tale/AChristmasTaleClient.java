@@ -2,9 +2,15 @@ package sweetskylia.a_christmas_tale;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.entity.model.EntityModelLayer;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
+import sweetskylia.a_christmas_tale.entity.ModEntities;
+import sweetskylia.a_christmas_tale.entity.client.ReindeerModel;
+import sweetskylia.a_christmas_tale.entity.client.ReindeerRenderer;
 
 import java.util.List;
 
@@ -49,5 +55,8 @@ public class AChristmasTaleClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_CRYSTAL, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUE_CRYSTAL, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PURPLE_CRYSTAL, RenderLayer.getTranslucent());
+
+        EntityModelLayerRegistry.registerModelLayer(ReindeerModel.REINDEER_LAYER, ReindeerModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.REINDEER, ReindeerRenderer::new);
     }
 }
