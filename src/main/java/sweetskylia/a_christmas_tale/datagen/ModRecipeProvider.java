@@ -175,6 +175,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.SHIROMORIKA_PLANKS), conditionsFromItem(ModBlocks.SHIROMORIKA_PLANKS))
                 .offerTo(exporter);
 
+        createTrapdoorRecipe(ModBlocks.RED_OMORIKA_TRAPDOOR, Ingredient.ofItems(ModBlocks.RED_OMORIKA_PLANKS))
+                .criterion(hasItem(ModBlocks.RED_OMORIKA_PLANKS), conditionsFromItem(ModBlocks.RED_OMORIKA_PLANKS))
+                .offerTo(exporter);
+        createTrapdoorRecipe(ModBlocks.SHIROMORIKA_TRAPDOOR, Ingredient.ofItems(ModBlocks.SHIROMORIKA_PLANKS))
+                .criterion(hasItem(ModBlocks.SHIROMORIKA_PLANKS), conditionsFromItem(ModBlocks.SHIROMORIKA_PLANKS))
+                .offerTo(exporter);
+
+
         //CANDY RECIPES ======================================
 
         //Candy / Smelting
