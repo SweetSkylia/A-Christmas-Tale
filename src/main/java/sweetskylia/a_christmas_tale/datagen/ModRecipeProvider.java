@@ -221,6 +221,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.FROZEN_FRUIT)
                 .criterion(hasItem(ModItems.FROZEN_FRUIT), conditionsFromItem(ModItems.FROZEN_FRUIT))
                 .offerTo(exporter);
+
+        //Mannele
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MANNELE, 6)
+                .pattern(" W ")
+                .pattern("WSW")
+                .pattern(" W ")
+                .input('W', Items.WHEAT)
+                .input('S', Items.SUGAR)
+                .criterion(hasItem(Items.WHEAT), conditionsFromItem(Items.WHEAT))
+                .offerTo(exporter);
+
     }
 
     private static void registerPlankRecipes(RecipeExporter exporter){

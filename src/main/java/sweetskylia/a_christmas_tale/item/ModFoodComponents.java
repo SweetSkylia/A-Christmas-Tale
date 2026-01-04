@@ -19,7 +19,13 @@ public class ModFoodComponents {
             .saturationModifier(0.50f).build();
 
     public static final FoodComponent FROZEN_FRUIT_PIE = new FoodComponent.Builder()
-            .nutrition(6)
+            .nutrition(8)
             .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 180 * 20, 0), 100.0f)
+            .saturationModifier(0.7f)
+            .build();
+
+    public static final FoodComponent MANNELE = new FoodComponent.Builder()
+            .nutrition(6)
+            .saturationModifier(0.7f)
             .build();
 }

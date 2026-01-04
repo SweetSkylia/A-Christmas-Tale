@@ -39,6 +39,9 @@ public class ModItems {
     public static final Item REINDEER_SPAWN_EGG = registerItem("reindeer_spawn_egg",
             new SpawnEggItem(ModEntities.REINDEER, 0x947165, 0xbdbdbd,new Item.Settings()));
 
+    //MANNALA (ici on est haut-rhinois, pas bas-rhinois)
+    public static final Item MANNELE = registerItem("mannele", new Item(new Item.Settings().food(ModFoodComponents.MANNELE)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(AChristmasTale.MOD_ID, name), item);
     }
