@@ -66,6 +66,7 @@ public class ModItemGroups {
                         entries.add(ModItems.STELLAR_CANDY_HOE);
                         entries.add(ModItems.CHRISTMAS_HAT);
                         entries.add(ModItems.REINDEER_SPAWN_EGG);
+                        entries.add(ModItems.MANNELE);
 
 
                     }).build());
