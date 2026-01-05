@@ -8,6 +8,7 @@ import sweetskylia.a_christmas_tale.datagen.*;
 import sweetskylia.a_christmas_tale.world.ModConfiguredFeatures;
 import sweetskylia.a_christmas_tale.world.ModPlacedFeatures;
 import sweetskylia.a_christmas_tale.world.biome.ModBiomes;
+import sweetskylia.a_christmas_tale.world.dimension.ModDimension;
 
 public class AChristmasTaleDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -27,5 +28,6 @@ public class AChristmasTaleDataGenerator implements DataGeneratorEntrypoint {
 		 registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimension::bootstrapType);
 	}
 }

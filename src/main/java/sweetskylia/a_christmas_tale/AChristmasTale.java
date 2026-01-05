@@ -105,8 +105,9 @@ public class AChristmasTale implements ModInitializer {
 
         CustomPortalBuilder.beginPortal()
                 .frameBlock(ModBlocks.STELLAR_ICE)
-                .destDimID(Identifier.of("the_nether"))
+                .destDimID(Identifier.of(AChristmasTale.MOD_ID,"actdim"))
                 .tintColor(131, 66, 184)
+                .lightWithItem(ModItems.STELLAR_HEART)
                 .registerPortal();
 
 		//INIT WOOD PROPERTIES
