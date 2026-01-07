@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:multi_noise",
+  "biomes": [
+    {
+      "biome": "a_christmas_tale:red_forest",
+      "parameters": {
+        "temperature": [-1.0, -0.45],
+        "humidity": [0.0, 1.0],
+        "continentalness": [-1.0, 1.0],
+        "erosion": [-1.0, 1.0],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "biome": "a_christmas_tale:shiro_forest",
+      "parameters": {
+        "temperature": [-1.0, -0.45],
+        "humidity": [0.0, 1.0],
+        "continentalness": [-1.0, 1.0],
+        "erosion": [-1.0, 1.0],
+        "weirdness": [-1.0, 1.0],
+        "depth": 0.0,
+        "offset": 0.0
+      }
+    }
+  ]
+}

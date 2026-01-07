@@ -32,7 +32,7 @@ public class ModDimension {
     public static void bootstrapType(Registerable<DimensionType> context){
         context.register(ACT_DIM_TYPE, new DimensionType(
                 OptionalLong.empty(), //time fixed ?
-                false, //skylight
+                true, //skylight
                 false, //ceiling
                 false, //ultrawarm
                 true, //natural
