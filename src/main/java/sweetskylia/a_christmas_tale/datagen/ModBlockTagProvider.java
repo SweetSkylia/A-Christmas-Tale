@@ -71,5 +71,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.RED_OMORIKA_FENCE_GATE)
                 .add(ModBlocks.SHIROMORIKA_FENCE_GATE);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_STELLAR_CANDY_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+
     }
 }
