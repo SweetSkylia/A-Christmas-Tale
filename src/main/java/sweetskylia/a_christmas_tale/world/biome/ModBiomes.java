@@ -34,7 +34,7 @@ public class ModBiomes {
         DefaultBiomeFeatures.addAmethystGeodes(builder);
         DefaultBiomeFeatures.addDungeons(builder);
         DefaultBiomeFeatures.addMineables(builder);
-//        DefaultBiomeFeatures.addFrozenTopLayer(builder);
+        DefaultBiomeFeatures.addFrozenTopLayer(builder);
         DefaultBiomeFeatures.addSprings(builder);
     }
 
@@ -63,6 +63,7 @@ public class ModBiomes {
                 .precipitation(true)
                 .downfall(0.4f)
                 .temperature(-3f)
+                .temperatureModifier(Biome.TemperatureModifier.FROZEN)
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
                 .effects(new BiomeEffects.Builder()
@@ -71,7 +72,7 @@ public class ModBiomes {
                         .waterFogColor(0xFFDEBA)
                         .skyColor(0x78A7FF)
                         .foliageColor(0x91BD59)
-                        .grassColor(0xBF7462)
+                        .grassColor(0x82bf9a)
                         .build())
 
                 .build();
@@ -106,7 +107,8 @@ public class ModBiomes {
         return new Biome.Builder()
                 .precipitation(true)
                 .downfall(0.4f)
-                .temperature(-3f)
+                .temperature(-1f)
+                .temperatureModifier(Biome.TemperatureModifier.FROZEN)
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
                 .effects(new BiomeEffects.Builder()

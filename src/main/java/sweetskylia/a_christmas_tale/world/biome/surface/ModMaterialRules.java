@@ -20,6 +20,7 @@ public class ModMaterialRules {
     public static MaterialRules.MaterialRule makeRules() {
         MaterialRules.MaterialCondition isAtOrAboveWaterLevel = MaterialRules.water(-1, 0);
         MaterialRules.MaterialCondition isShiroForest = MaterialRules.biome(ModBiomes.SHIRO_FOREST);
+        MaterialRules.MaterialCondition isRedForest = MaterialRules.biome(ModBiomes.RED_FOREST);
 
 
         MaterialRules.MaterialCondition blueIcePatch = MaterialRules.noiseThreshold(
@@ -46,10 +47,17 @@ public class ModMaterialRules {
                 DIRT
         );
 
+        MaterialRules.MaterialRule redForestSurface = MaterialRules.sequence(
+                MaterialRules.condition(isAtOrAboveWaterLevel, SNOW_BLOCK )
+        );
+
         return MaterialRules.sequence(
                 MaterialRules.condition(
                         isShiroForest,
                         MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH, shiroSurface)
+                ),
+                MaterialRules.condition(
+                  isRedForest, MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH, redForestSurface)
                 ),
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, defaultSurface)
         );

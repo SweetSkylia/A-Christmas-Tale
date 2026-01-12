@@ -67,7 +67,7 @@ public class ModBlocks {
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
 
     public static final Block RED_OMORIKA_SAPLING = registerBlock("red_omorika_sapling",
-            new SaplingBlock(ModSaplingGenerators.RED_OMORIKA,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
+            new ModSaplingBlock(ModSaplingGenerators.RED_OMORIKA,AbstractBlock.Settings.copy(Blocks.OAK_SAPLING)));
 
     // WHITE OMORIKA (ShiroMorika) ========================================================
 
