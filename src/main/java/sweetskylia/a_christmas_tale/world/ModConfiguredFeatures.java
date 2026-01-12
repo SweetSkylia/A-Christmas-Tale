@@ -10,14 +10,18 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.FeatureSize;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
+import net.minecraft.world.gen.foliage.PineFoliagePlacer;
 import net.minecraft.world.gen.foliage.SpruceFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import sweetskylia.a_christmas_tale.AChristmasTale;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
 import sweetskylia.a_christmas_tale.block.custom.FrozenBushBlock;
+import sweetskylia.a_christmas_tale.world.tree.foliagePlacer.RedFoliagePlacer;
+import sweetskylia.a_christmas_tale.world.tree.trunkPlacer.RedTrunkPlacer;
 import sweetskylia.a_christmas_tale.world.tree.trunkPlacer.ShiroTrunkPlacer;
 
 import java.util.List;
@@ -46,12 +50,13 @@ public class ModConfiguredFeatures {
         //TREES ================================================================================
         register(context, RED_OMORIKA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.RED_OMORIKA_LOG),
-                new StraightTrunkPlacer(7, 2, 1), //Trunk of the tree
-
+                new RedTrunkPlacer(15, 4, 1), //Trunk of the tree
                 BlockStateProvider.of(ModBlocks.RED_OMORIKA_LEAVES),
-                new SpruceFoliagePlacer(UniformIntProvider.create(2, 3), UniformIntProvider.create(0, 2), UniformIntProvider.create(1, 2)),
-                new TwoLayersFeatureSize(2, 0, 2)
+                new RedFoliagePlacer(UniformIntProvider.create(2, 3), UniformIntProvider.create(0, 0)),
+                new TwoLayersFeatureSize(0,0,0)
         ).build());
+
+
 
         register(context, SHIROMORIKA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.SHIROMORIKA_LOG),
