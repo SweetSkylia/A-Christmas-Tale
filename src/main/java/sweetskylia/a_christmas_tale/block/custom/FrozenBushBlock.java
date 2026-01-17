@@ -111,11 +111,7 @@ public class FrozenBushBlock extends PlantBlock implements Fertilizable {
     protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         BlockPos blockPos = pos.down();
         BlockState groundState = world.getBlockState(blockPos);
-        if(groundState.isOf(Blocks.SNOW)){
-            BlockState belowSnow = world.getBlockState(blockPos.down());
-            return this.canPlantOnTop(belowSnow,world,blockPos.down());
-        }
-        return super.canPlantOnTop(groundState, world, blockPos);
+        return this.canPlantOnTop(groundState, world, blockPos);
     }
 
     @Override
