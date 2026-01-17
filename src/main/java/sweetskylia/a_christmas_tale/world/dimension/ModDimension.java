@@ -39,7 +39,7 @@ public class ModDimension {
                 1.0, //scale of coordinates
                 true, //usage of beds
                 false, //usage of respawn anchors
-                0, //min y
+                -64, //min y
                 256, //max y
                 256, //local height
                 BlockTags.INFINIBURN_OVERWORLD, //infiniburn
