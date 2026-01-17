@@ -35,18 +35,23 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.FROZEN_SWORD)
-                .add(ModItems.STELLAR_CANDY_SWORD);
+                .add(ModItems.STELLAR_CANDY_SWORD)
+                .add(ModItems.STELLAR_SWORD);
 
         getOrCreateTagBuilder(ItemTags.AXES)
-                .add(ModItems.STELLAR_CANDY_AXE);
+                .add(ModItems.STELLAR_CANDY_AXE)
+                .add(ModItems.STELLAR_AXE);
 
         getOrCreateTagBuilder(ItemTags.PICKAXES)
-                .add(ModItems.STELLAR_CANDY_PICKAXE);
+                .add(ModItems.STELLAR_CANDY_PICKAXE)
+                .add(ModItems.STELLAR_PICKAXE);
 
         getOrCreateTagBuilder(ItemTags.SHOVELS)
-                .add(ModItems.STELLAR_CANDY_SHOVEL);
+                .add(ModItems.STELLAR_CANDY_SHOVEL)
+                .add(ModItems.STELLAR_SHOVEL);
 
         getOrCreateTagBuilder(ItemTags.HOES)
-                .add(ModItems.STELLAR_CANDY_HOE);
+                .add(ModItems.STELLAR_CANDY_HOE)
+                .add(ModItems.STELLAR_HOE);
     }
 }

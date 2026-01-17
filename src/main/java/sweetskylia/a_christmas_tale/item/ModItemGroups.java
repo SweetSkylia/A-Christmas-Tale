@@ -64,6 +64,11 @@ public class ModItemGroups {
                         entries.add(ModItems.STELLAR_CANDY_AXE);
                         entries.add(ModItems.STELLAR_CANDY_SHOVEL);
                         entries.add(ModItems.STELLAR_CANDY_HOE);
+                        entries.add(ModItems.STELLAR_SWORD);
+                        entries.add(ModItems.STELLAR_PICKAXE);
+                        entries.add(ModItems.STELLAR_AXE);
+                        entries.add(ModItems.STELLAR_SHOVEL);
+                        entries.add(ModItems.STELLAR_HOE);
                         entries.add(ModItems.CHRISTMAS_HAT);
                         entries.add(ModItems.REINDEER_SPAWN_EGG);
                         entries.add(ModItems.MANNELE);

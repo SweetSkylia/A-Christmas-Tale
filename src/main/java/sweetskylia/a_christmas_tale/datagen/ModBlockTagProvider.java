@@ -6,6 +6,7 @@ import net.minecraft.block.CandleBlock;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import sweetskylia.a_christmas_tale.block.ModBlocks;
+import sweetskylia.a_christmas_tale.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -75,5 +76,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_STELLAR_CANDY_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
 
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_STELLAR_HEART_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
     }
 }

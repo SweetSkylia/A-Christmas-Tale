@@ -7,15 +7,12 @@
     },
     "F": {
       "item": "a_christmas_tale:frozen_stellar_heart"
-    },
-    "|": {
-      "item": "minecraft:stick"
     }
   },
   "pattern": [
     " C",
     " F",
-    " |"
+    " C"
   ],
   "result": {
     "count": 1,

@@ -120,8 +120,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STELLAR_CANDY_SWORD, 1)
                 .pattern(" C")
                 .pattern(" F")
-                .pattern(" |")
-                .input('|', Items.STICK)
+                .pattern(" C")
                 .input('F', ModItems.FROZEN_STELLAR_HEART)
                 .input('C', ModItems.CANDY)
                 .criterion(hasItem(ModItems.CANDY), conditionsFromItem(ModItems.CANDY))
@@ -133,6 +132,57 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('F', ModItems.FROZEN_STELLAR_HEART).input('I', Blocks.PACKED_ICE).
                 criterion(hasItem(ModItems.FROZEN_STELLAR_HEART), conditionsFromItem(ModItems.FROZEN_STELLAR_HEART))
                 .offerTo(exporter);
+
+        //STELLAR TOOLS
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STELLAR_PICKAXE, 1)
+                .pattern("III")
+                .pattern(" S ")
+                .pattern(" | ")
+                .input('|', Items.STICK)
+                .input('S', ModItems.STELLAR_HEART)
+                .input('I', Items.IRON_INGOT)
+                .criterion(hasItem(ModItems.STELLAR_HEART), conditionsFromItem(ModItems.STELLAR_HEART))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STELLAR_AXE, 1)
+                .pattern("II")
+                .pattern("SI")
+                .pattern("| ")
+                .input('|', Items.STICK)
+                .input('I', ModItems.STELLAR_HEART)
+                .input('S', Items.IRON_INGOT)
+                .criterion(hasItem(ModItems.STELLAR_HEART), conditionsFromItem(ModItems.STELLAR_HEART))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STELLAR_SHOVEL, 1)
+                .pattern("I")
+                .pattern("S")
+                .pattern("|")
+                .input('|', Items.STICK)
+                .input('S', ModItems.STELLAR_HEART)
+                .input('I', Items.IRON_INGOT)
+                .criterion(hasItem(ModItems.STELLAR_HEART), conditionsFromItem(ModItems.STELLAR_HEART))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STELLAR_HOE, 1)
+                .pattern("II")
+                .pattern(" S")
+                .pattern(" |")
+                .input('|', Items.STICK)
+                .input('S', ModItems.STELLAR_HEART)
+                .input('I', Items.IRON_INGOT)
+                .criterion(hasItem(ModItems.STELLAR_HEART), conditionsFromItem(ModItems.STELLAR_HEART))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.STELLAR_SWORD, 1)
+                .pattern("S")
+                .pattern("S")
+                .pattern("|")
+                .input('|', Items.STICK)
+                .input('S', ModItems.STELLAR_HEART)
+                .criterion(hasItem(ModItems.STELLAR_HEART), conditionsFromItem(ModItems.STELLAR_HEART))
+                .offerTo(exporter);
+
 
         //WOOD RECIPES ======================================
         registerPlankRecipes(exporter); //logs to planks

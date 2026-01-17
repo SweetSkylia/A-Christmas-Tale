@@ -100,6 +100,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STELLAR_CANDY_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STELLAR_CANDY_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.FROZEN_FRUIT_PIE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STELLAR_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STELLAR_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STELLAR_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STELLAR_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STELLAR_HOE, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.REINDEER_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));

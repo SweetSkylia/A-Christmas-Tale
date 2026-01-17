@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "a_christmas_tale:item/stellar_sword"
+  }
+}

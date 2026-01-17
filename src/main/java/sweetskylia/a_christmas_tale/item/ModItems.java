@@ -42,6 +42,18 @@ public class ModItems {
     //MANNALA (ici on est haut-rhinois, pas bas-rhinois)
     public static final Item MANNELE = registerItem("mannele", new Item(new Item.Settings().food(ModFoodComponents.MANNELE)));
 
+    public static final Item STELLAR_SWORD = registerItem("stellar_sword", new SwordItem(ModToolMaterials.STELLAR_HEART, new Item.Settings()
+            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STELLAR_HEART, 3, -2.0F))));
+
+    public static final Item STELLAR_PICKAXE = registerItem("stellar_pickaxe", new PickaxeItem(ModToolMaterials.STELLAR_HEART, new Item.Settings()
+            .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.STELLAR_HEART, 1.0F, -2.4F))));
+    public static final Item STELLAR_AXE = registerItem("stellar_axe", new AxeItem(ModToolMaterials.STELLAR_HEART, new Item.Settings()
+            .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.STELLAR_HEART, 6.0F, -2.7F))));
+    public static final Item STELLAR_SHOVEL = registerItem("stellar_shovel", new ShovelItem(ModToolMaterials.STELLAR_HEART, new Item.Settings()
+            .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.STELLAR_HEART, 1.5F, -2.6F))));
+    public static final Item STELLAR_HOE = registerItem("stellar_hoe", new HoeItem(ModToolMaterials.STELLAR_HEART, new Item.Settings()
+            .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.STELLAR_HEART, 0, -0.6F))));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(AChristmasTale.MOD_ID, name), item);
     }
