@@ -97,6 +97,12 @@
         "weight": 3
       },
       {
+        "type": "a_christmas_tale:reindeer",
+        "maxCount": 8,
+        "minCount": 4,
+        "weight": 5
+      },
+      {
         "type": "minecraft:sheep",
         "maxCount": 4,
         "minCount": 4,
